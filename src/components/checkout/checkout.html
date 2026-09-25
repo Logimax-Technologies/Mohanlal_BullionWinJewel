@@ -1,0 +1,130 @@
+<!-- Generated template for the CheckoutComponent component -->
+<!-- <ion-grid>
+	<ion-card
+	*ngFor=" let item of checkoutitems; let i=index " [@flyAlternameSlow]="i%2">
+		<ion-item >
+			<ion-avatar item-left>
+				<img src="{{item.prodefaultimg}}">
+			</ion-avatar>
+			<h2>
+				<ion-badge> {{item.qty}}</ion-badge>
+				{{item.code}}
+			</h2>
+		</ion-item>
+ 	</ion-card>
+</ion-grid>
+ -->
+<!--  <ion-list>
+ 	<ion-list-header>
+    	Confirm your order
+  </ion-list-header>
+ 	<ion-item *ngFor=" let item of checkoutitems; let i=index " [@flyAlternameSlow]="i%2">
+    <ion-avatar item-start>
+      <img src="{{item.prodefaultimg}}">
+    </ion-avatar>
+    <h2>{{item.code}}</h2>
+    <p>{{item.qty}}</p>
+  </ion-item>
+ </ion-list> -->
+ <ion-card *ngFor=" let order of checkoutitems let i=index "
+ [@flyAlternameSlow]="i%2" style="background:#f2f2f2">
+ <ion-item >
+  <ion-label style="display:none">Is
+Urgent</ion-label> <ion-checkbox  style="display:none" color="dark" [(ngModel)]="order.isurgent"
+ (ionChange)="orderisurgent($event, order)"> </ion-checkbox>
+ {{order}}
+ <!-- <ion-label  *ngIf="order.is_customeitem==0">{{order.code}}
+ </ion-label> -->
+ <ion-label style="    font-weight: bold !important;">{{order.name}}
+ </ion-label>
+ <!-- <ion-label style="max-width: fit-content;font-weight: bolder;" (click)="view(order)">View Quote</ion-label> -->
+
+</ion-item>
+
+<ion-item>
+<ion-avatar item-left >
+ <img *ngIf="order.prodefaultimg" src='{{order.prodefaultimg}}' imageViewer="{{order.prodefaultimg}}"/>
+ <img *ngIf="!order.prodefaultimg && order.customimages[0]" src='{{order.customimages[0]}}' imageViewer="{{order.customimages[0]}}"/>
+ <img *ngIf="!order.prodefaultimg && !order.customimages[0] && !order.productimgdetails[0]" src='https://winjewel.mohanlaljewellers.in/winjewel_test/winjewel_api/assets/images/no-image.png' imageViewer="https://winjewel.mohanlaljewellers.in/winjewel_test/winjewel_api/assets/images/no-image.png" />
+</ion-avatar>
+<h3>
+ <ion-row>
+	 <ion-col width-50>
+		 <p>
+			 Qty :
+			 <ion-badge>{{order.qty}} {{(order.qty_type == "1" ? "Pieces" : (order.qty_type == "2" ? "Sets" : (order.qty_type == "3" ? "Pairs" : '')))}}</ion-badge>
+		 </p>
+	 </ion-col>
+	 <ion-col width-50>
+
+		 <p>
+			 Wgt(g) :
+			 <span >{{order.reqweight}}</span>
+		 </p>
+	 </ion-col>
+ </ion-row>
+ <ion-row>
+	 <ion-col width-50>
+		 <p>
+			 S/L   :
+			 <span>{{order.sizeorlen}}</span>
+		 </p>
+	 </ion-col><!--  | myfilter:{id_purity:order.id_purity} -->
+	 <ion-col width-50>
+		 <p>
+			 Purity   :
+			 <span *ngFor="let item of order.purities"><span *ngIf="item.id_purity == order.id_purity">{{item.purity}}</span></span>
+		 </p>
+	 </ion-col>
+ </ion-row>
+ <ion-row>
+	<ion-col width-50>
+		<p>
+			Reference :
+			<span >{{order.customer_ref_no}}</span>
+		</p>
+	</ion-col>
+	<ion-col width-50>
+		<p>
+			Remarks :
+			<span>{{order.remarks}}</span>
+		</p>
+	</ion-col>
+</ion-row>
+ <!-- <p *ngIf="order.isurgent.remarks !=null">
+	 Remarks   :
+	 <span>{{order.remarks}}</span>
+ </p> -->
+</h3>
+</ion-item> <ion-item *ngIf="order.isurgent"> <ion-label>Delivery Date</ion-label> <ion-datetime
+ displayFormat="DD-MM-YYYY" [(ngModel)]="order.deliverydate" (ionChange)="changeDate(order)" required></ion-datetime> </ion-item> </ion-card>
+ <ion-card style="box-shadow: none !important;" class="card card-md" padding="" align="right">
+		 Total weight&nbsp;&nbsp;&nbsp;&nbsp;<b style="font-size: large;">{{total_weight | number : '1.3-3'}} g</b>
+		 <!-- <ion-grid text-center>
+		 <ion-row *ngFor=" let order of checkoutitems "
+		 [@flyAlternameSlow]="i%2" class="card-content">
+			 <ion-col width:25>
+				 {{order.qty}}X{{order.reqweight}} 
+			 </ion-col>
+			 <ion-col width:50>
+				 =
+			 </ion-col>
+			 <ion-col width:25>
+				 {{order.qty * order.reqweight}}
+			 </ion-col>
+		 </ion-row>
+		 </ion-grid> -->
+		 <!-- <ion-grid text-center>
+		 <ion-row class="card-content">
+			 <ion-col width:25>
+				 
+			 </ion-col>
+			 <ion-col width:50>
+				 =
+			 </ion-col>
+			 <ion-col width:25>
+				 <span>{{ getTotal() }}</span>
+			 </ion-col>
+		 </ion-row>
+	 </ion-grid> -->
+	 </ion-card>

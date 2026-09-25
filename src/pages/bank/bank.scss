@@ -1,0 +1,27 @@
+page-bank {
+  ion-card-header{
+    background-color: #B14C18 !important;
+    color:#fff !important;
+    font-family:Montserrat,sans-serif !important;
+  }
+  .contact-us{
+    padding: 0.2em;
+    line-height: 24px;
+    margin-bottom: 5px;
+    }
+	.bank-details{
+		font-size: 1.2rem;
+	}
+    .about_li{
+    	list-style: disc outside none;
+    	display: list-item;
+    }
+    .card-md{
+      border-radius: 10px;
+    }
+    .light-border-btm{
+      /* border-bottom:2px solid lightgray !important; */
+      margin-top:4px;
+      border-style: outset ;
+    }
+}

@@ -1,0 +1,29 @@
+page-auto {
+    .searchbar-md .searchbar-input{
+
+        // background: white !important;
+        color: white !important;
+    }
+    .scroll-content{
+
+        padding: 0px !important;
+    }
+    .label-md{
+
+        font-weight: bold !important;
+    }
+    .scroll-content{
+        margin-bottom: 20px !important;
+    }
+    .itemempty{
+      font-weight:bold;
+      padding-top: 50%;
+      text-align:center !important;
+    }
+    .row .itemempty{
+      text-align:center !important;
+      margin:0 auto;
+       top: 50%;
+        left: 50%;
+      }
+}

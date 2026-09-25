@@ -1,0 +1,26 @@
+page-chart {
+    .Srcoll1[scrollX] {
+        white-space: nowrap;
+        height: 170px;
+        overflow: hidden;
+    
+        .scroll-item {
+          display: inline-block;
+        }
+    
+        .selectable-icon{
+          margin: 10px 20px 10px 20px;
+          color: red;
+          font-size: 100px;
+        }
+    
+        ion-avatar img{
+          margin: 10px;
+        }
+      }
+      .card-md{
+          margin-right:0px !important;
+          margin-left:0px !important;
+          width: calc(100% - 0px) !important;
+      }
+}

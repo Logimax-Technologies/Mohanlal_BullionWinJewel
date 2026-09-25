@@ -1,0 +1,456 @@
+<ion-header align-title=”center”>
+  <ion-navbar align-title=”center”>
+    <ion-title align-title=”center”><img alt="logo" height="55" cache="true" src="assets/imgs/header.svg" ></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content text-center padding>
+  <ion-card>
+    <ion-card-header text-center>
+     Registration
+   </ion-card-header>
+
+
+   <div style="margin-bottom: 100px !important;">
+    <ion-segment [(ngModel)]="type" (ngModelChange)="checkseg()" mode="ios" color="label-color">
+        <ion-segment-button value="p">
+            Personal
+        </ion-segment-button>
+        <ion-segment-button value="o">
+            Business
+        </ion-segment-button>
+    </ion-segment>
+  
+  
+    <form [formGroup]="registerForm" novalidate padding>
+  
+        <span *ngIf="type == 'p'">
+            <ion-label style="text-align: left;" color="label-color" stacked>First Name<span class="required"> *</span></ion-label>
+            <input type="text" style="font-size: 1.6rem;
+            font-weight: normal;color: #000;padding-top: 10px;
+    padding-bottom: 10px;margin: 5px 0px;width: calc(100% - 0px - 0px);border:none !important;background:transparent;    border-bottom: 1px solid lightgray !important;"   [formControl]="firstname" (keyup)="texto($event)"/>
+      <!-- <ion-item no-padding>
+                <ion-label color="label-color" stacked>Relation Type</ion-label>
+                <ion-select [formControl]="relation_type">
+                    <ion-option value="1">S/O</ion-option>
+                    <ion-option value="2">D/O</ion-option>
+                    <ion-option value="3">W/O</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-item no-padding>
+                <ion-label color="label-color" stacked>Relation Name</ion-label>
+                <ion-input type="text" [formControl]="relation_name"></ion-input>
+            </ion-item> -->
+            <ion-item no-padding>
+                <ion-label color="label-color" stacked>Mobile<span class="required"> *</span></ion-label>
+                <ion-input type="tel" [formControl]="mobile" placeholder="10 Digit Mobile Number" maxlength="10">
+                </ion-input>
+            </ion-item>
+            <ion-item no-padding>
+                <ion-label color="label-color" stacked>Email</ion-label>
+                <ion-input type="email" [formControl]="email" placeholder="youremailid@domain.com"></ion-input>
+            </ion-item>
+            <ion-item no-padding>
+                <ion-label color="label-color" stacked>Gender</ion-label>
+                <ion-select interface="popover" [formControl]="gender">
+                    <ion-option value="0">Male</ion-option>
+                    <ion-option value="1">Female</ion-option>
+                    <ion-option value="3">Others</ion-option>
+                </ion-select>
+            </ion-item>
+  
+  
+            <!-- <ion-item no-padding>
+                <ion-label color="label-color" stacked>Marital Status</ion-label>
+                <ion-select (ionChange)="onSelectChange($event)" [formControl]="marital_status">
+                    <ion-option value="1">Single</ion-option>
+                    <ion-option value="2">Married</ion-option>
+                    <ion-option value="3">Others</ion-option>
+                </ion-select>
+            </ion-item> -->
+              <!--    <ion-item no-padding *ngIf="selected == 2 || selected == 3 ">
+                <ion-label color="label-color" stacked>Wedding Date</ion-label>
+                <ion-input readonly="true" class="ion_datetime" [formControl]="spouse_wed" displayFormat="DD-MM-YYYY" placeholder="Wedding date"
+                    (tap)="wed('spouse')"></ion-input>
+            </ion-item> -->
+  
+  
+            <!--   </ion-item> -->
+  
+  
+  
+            <!-- <ion-item no-padding>
+                <ion-label color="label-color" stacked>Password<span class="required"> *</span></ion-label>
+                <ion-input [formControl]="passwd" type="{{typechecknew}}"></ion-input>
+                <button style="padding: 0px !important" *ngIf="!showPassnew" ion-button clear color="dark" type="button" item-right (click)="shownewPassword()"> <ion-icon style="background:none !important;"  name="eye"></ion-icon></button>
+                <button style="padding: 0px !important" *ngIf="showPassnew" ion-button clear color="dark" type="button" item-right (click)="shownewPassword()">  <ion-icon style="background:none !important;" name="eye-off"></ion-icon></button>
+            </ion-item>
+            <ion-item no-padding>
+                <ion-label color="label-color" stacked>Confirm Password<span class="required"> *</span></ion-label>
+                <ion-input [formControl]="cpasswd" type="{{typecheckconfirm}}"></ion-input>
+                <button style="padding: 0px !important" *ngIf="!showPassconfirm" ion-button clear color="dark" type="button" item-right (click)="showconfirmPassword()"> <ion-icon style="background:none !important;"  name="eye"></ion-icon></button>
+                <button style="padding: 0px !important" *ngIf="showPassconfirm" ion-button clear color="dark" type="button" item-right (click)="showconfirmPassword()">  <ion-icon style="background:none !important;" name="eye-off"></ion-icon></button>
+            </ion-item>   -->
+            <ion-item no-padding>
+                <ion-label color="label-color" stacked>Address 1<span class="required"> *</span></ion-label>
+                <ion-input type="text" [formControl]="address1"></ion-input>
+            </ion-item>
+            <ion-item no-padding>
+                <ion-label color="label-color" stacked>Address 2</ion-label>
+                <ion-input type="text" [formControl]="address2"></ion-input>
+            </ion-item>
+  
+            <ion-item no-padding>
+              <ion-label color="label-color" stacked>Passport</ion-label>
+              <ion-input type="text" [formControl]="passport"     (ionChange)="validateCaptilize(passport,'pass')"></ion-input>
+          </ion-item>
+  
+          <ion-item no-padding>
+            <ion-label color="label-color" stacked>DL Number</ion-label>
+            <ion-input type="text" [formControl]="dl_number"  (ionChange)="validateCaptilize(dl_number,'dl_num')"></ion-input>
+        </ion-item>
+  
+            <ion-item no-padding>
+                <ion-label color="label-color" stacked>Country<span class="required"> *</span></ion-label>
+                <ion-input (tap)="getmodal('Country',country)" type="text" readonly='true' [formControl]="countryname">
+                </ion-input>
+                <button item-right ion-button clear color="dark" class="no-padding no-margin"
+                    (click)="getmodal('Country',country)">
+                    <ion-icon name="arrow-dropdown"></ion-icon>
+                </button>
+            </ion-item>
+            <ion-item no-padding>
+                <ion-label color="label-color" stacked>State<span class="required"> *</span></ion-label>
+                <ion-input [formControl]="statename" type="text" readonly='true'></ion-input>
+                <button item-right ion-button clear color="dark" class="no-padding no-margin"
+                    (click)="getmodal('State',state)">
+                    <ion-icon name="arrow-dropdown"></ion-icon>
+                </button>
+            </ion-item>
+            <ion-item no-padding>
+                <ion-label color="label-color" stacked>City<span class="required"> *</span></ion-label>
+                <ion-input [formControl]="cityname" type="text" readonly='true'></ion-input>
+                <button item-right ion-button clear color="dark" class="no-padding no-margin"
+                    (click)="getmodal('City',city)">
+                    <ion-icon name="arrow-dropdown"></ion-icon>
+                </button>
+            </ion-item>
+            <!-- <ion-item no-padding>
+                <ion-label color="label-color" stacked>Village</ion-label>
+                <ion-input [formControl]="village_name" (tap)="getmodal('Village',village)" type="text" readonly='true'></ion-input>
+                <button item-right ion-button clear color="dark" class="no-padding no-margin" (click)="getmodal('Village',village)" ><ion-icon name="arrow-dropdown"></ion-icon></button>
+            </ion-item>          -->
+            <ion-item no-padding>
+                <ion-label color="label-color" stacked>Pincode<span class="required"> *</span></ion-label>
+                <ion-input type="tel" [formControl]="pincode" maxlength="6"></ion-input>
+            </ion-item>
+            <!-- <ion-item no-padding>
+                <ion-label color="label-color" stacked>Select Religion</ion-label>
+                <ion-select interface="popover" [formControl]="religion">
+                    <ion-option value="1">Hindu</ion-option>
+                    <ion-option value="2">Muslim</ion-option>
+                    <ion-option value="3">Christian</ion-option>
+                </ion-select>
+            </ion-item> -->
+            <!-- <ion-item no-padding>
+                <ion-label color="label-color" stacked>Gender</ion-label>
+                <ion-select [formControl]="gender">
+                    <ion-option value="0">Male</ion-option>
+                    <ion-option value="1">Female</ion-option>
+                    <ion-option value="3">Others</ion-option>
+                </ion-select>
+            </ion-item>   -->
+            <!-- <ion-item no-padding>
+                <ion-label color="label-color" stacked>Customer Type</ion-label>
+                <ion-select interface="popover" [formControl]="cus_type" (ionChange)="typecheck()">
+                    <ion-option value="1" >Individual</ion-option>
+                </ion-select>
+            </ion-item>    -->
+            <ion-item no-padding>
+                <ion-label color="label-color" stacked>Date Of Birth</ion-label>
+                <ion-input readonly="true" class="ion_datetime" [formControl]="date_of_birth" displayFormat="DD-MM-YYYY"
+                    (tap)="birth('common','')"></ion-input>
+            </ion-item>
+            <ion-item no-padding>
+                <ion-label color="label-color" stacked>Date Of Wed</ion-label>
+                <ion-input readonly="true" class="ion_datetime" [formControl]="date_of_wed" displayFormat="DD-MM-YYYY"
+                    (tap)="wed('common')"></ion-input>
+            </ion-item>
+  
+            <!--         <ion-row style="padding-left: 10px;padding-right: 0; position: relative; font-weight: normal;" *ngIf="branchSettings['settings']['branch_settings'] == 1 && branchSettings['settings']['is_branchwise_cus_reg'] == 1 ">
+          <ion-col col-10 style="margin: auto;">
+              <ion-input [formControl]="branchname" (tap)="openmodal()" type="text" readonly='true' placeholder="Select Branch" style="font-size: medium;"></ion-input>
+          </ion-col>
+          <ion-col col-2>
+              <ion-icon (tap)="openmodal()" style="margin-top: 10px !important;" name="arrow-dropdown"></ion-icon>
+          </ion-col>
+      </ion-row> -->
+  
+  
+            <!-- <ion-item no-padding>
+        <ion-label color="label-color" stacked>Company Name </ion-label>
+        <ion-input type="text" [formControl]="company_name" ></ion-input>
+    </ion-item>
+  
+    <ion-item no-padding>
+        <ion-label color="label-color" stacked>GST Number </ion-label>
+        <ion-input type="text" [formControl]="gst_number"  maxlength="15" (ionChange)="validateCaptilize(gst_number,'gstno')"></ion-input>
+    </ion-item> -->
+  
+    <ion-item no-padding>
+      <ion-label color="label-color" stacked>Aadhaar Card No </ion-label>
+      <ion-input type="text" [formControl]="adhaar_no"  (ionChange)="validateCaptilize(adhaar_no,'adhar')"></ion-input>
+  </ion-item>
+  
+            <ion-item no-padding>
+                <ion-label color="label-color" stacked>Pancard No </ion-label>
+                <ion-input type="text" [formControl]="pan"
+                    (ionChange)="validateCaptilize(pan,'pancard')"></ion-input>
+            </ion-item>
+  
+            <!-- <ion-item no-padding>
+                <ion-label color="label-color" stacked>Voter ID No </ion-label>
+                <ion-input type="text" [formControl]="voterid" maxlength="10"
+                    (ionChange)="validateCaptilize(voterid,'voter')"></ion-input>
+            </ion-item> -->
+            <!--
+    <ion-item no-padding>
+        <ion-label color="label-color" stacked>Rationcard No </ion-label>
+        <ion-input type="text" [formControl]="rationcard" maxlength="15" (ionChange)="validateCaptilize(rationcard,'ration')"></ion-input>
+    </ion-item> -->
+  
+    <ion-item no-padding>
+        <ion-label color="label-color" stacked>Refered Person</ion-label>
+        <ion-input type="text" [formControl]="refperson"></ion-input>
+    </ion-item>
+    <ion-item no-padding>
+        <ion-label color="label-color" stacked>Refered Person Mobile</ion-label>
+        <ion-input type="tel" [formControl]="refmobile" placeholder="10 Digit Mobile Number" maxlength="10">
+        </ion-input>
+    </ion-item>
+    <ion-item no-padding>
+        <ion-label color="label-color" stacked>Spouse Name</ion-label>
+        <ion-input type="text" placeholder="Spouse Name" [formControl]="spouse_name"></ion-input>
+    </ion-item>
+  
+    <ion-item no-padding>
+        <ion-label color="label-color" stacked>Spouse DOB</ion-label>
+        <ion-input readonly="true" class="ion_datetime" [formControl]="spouse_dob" displayFormat="DD-MM-YYYY" placeholder="Spouse DOB"
+            (tap)="birth('spouse','')"></ion-input>
+    </ion-item>
+  
+  
+  
+    <div formArrayName="childrendata" >
+        <ion-label  color="label-color" align="left" stacked>Add Childrens  </ion-label>
+        <div *ngFor="let p of registerForm.get('childrendata').controls; let i = index;">
+            <div [formGroupName]="i">
+                <ion-row no-padding>
+                    <ion-col col-5>
+                        <ion-input type="text" formControlName="child_name" placeholder="name"
+                            style="border-bottom: 1px solid gray;"></ion-input>
+                    </ion-col>
+                    <ion-col col-5>
+                        <ion-input readonly="true" class="ion_datetime" formControlName="child_dob" displayFormat="DD-MM-YYYY" placeholder="DOB"
+                        (tap)="birth('child',i)" style="border-bottom: 1px solid gray;"></ion-input>
+                    </ion-col>
+                    <ion-col col-1 style="margin: auto;">
+                        <ion-icon (click)="add(i)"
+                            style="color: red;text-transform: initial;float: right;font-size: 2rem;" name="add">
+                        </ion-icon>
+                    </ion-col>
+                    <ion-col col-1 style="margin: auto;" *ngIf="i != 0">
+                        <ion-icon (click)="delete(i)"
+                            style="color: red;text-transform: initial;float: right;font-size: 2rem;"
+                            name="trash"></ion-icon>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </div>
+    </div>
+  
+  
+            <ion-item no-padding>
+                <ion-label color="label-color" stacked>Comments </ion-label>
+                <ion-textarea [formControl]="comments" placeholder="Enter a description"></ion-textarea>
+            </ion-item>
+        </span>
+  
+        <span *ngIf="type == 'o'">
+            <!-- <ion-item no-padding> -->
+                <ion-label style="text-align: left;" color="label-color" stacked>Company Name<span class="required"> *</span></ion-label>
+                <input type="text" style="font-size: 1.6rem;
+                font-weight: normal;color: #000;padding-top: 10px;
+    padding-bottom: 10px;margin: 5px 0px;width: calc(100% - 0px - 0px);border:none !important;background:transparent;    border-bottom: 1px solid lightgray !important;"   [formControl]="firstname" (keyup)="texto($event)"/>
+            <!-- </ion-item> -->
+            <!-- <ion-item no-padding>
+                <ion-label color="label-color" stacked>Last Name</ion-label>
+                <ion-input type="text" [formControl]="lastname"></ion-input>
+            </ion-item>  -->
+            <ion-item no-padding>
+                <ion-label color="label-color" stacked>Mobile<span class="required"> *</span></ion-label>
+                <ion-input type="tel" [formControl]="mobile" placeholder="10 Digit Mobile Number" maxlength="10">
+                </ion-input>
+            </ion-item>
+            <ion-item no-padding>
+                <ion-label color="label-color" stacked>Email<span class="required"> *</span></ion-label>
+                <ion-input type="email" [formControl]="email" placeholder="youremailid@domain.com"></ion-input>
+            </ion-item>
+            <!-- <ion-item no-padding>
+                <ion-label color="label-color" stacked>Password<span class="required"> *</span></ion-label>
+                <ion-input [formControl]="passwd" type="{{typechecknew}}"></ion-input>
+                <button style="padding: 0px !important" *ngIf="!showPassnew" ion-button clear color="dark" type="button" item-right (click)="shownewPassword()"> <ion-icon style="background:none !important;"  name="eye"></ion-icon></button>
+                <button style="padding: 0px !important" *ngIf="showPassnew" ion-button clear color="dark" type="button" item-right (click)="shownewPassword()">  <ion-icon style="background:none !important;" name="eye-off"></ion-icon></button>
+            </ion-item>
+            <ion-item no-padding>
+                <ion-label color="label-color" stacked>Confirm Password<span class="required"> *</span></ion-label>
+                <ion-input [formControl]="cpasswd" type="{{typecheckconfirm}}"></ion-input>
+                <button style="padding: 0px !important" *ngIf="!showPassconfirm" ion-button clear color="dark" type="button" item-right (click)="showconfirmPassword()"> <ion-icon style="background:none !important;"  name="eye"></ion-icon></button>
+                <button style="padding: 0px !important" *ngIf="showPassconfirm" ion-button clear color="dark" type="button" item-right (click)="showconfirmPassword()">  <ion-icon style="background:none !important;" name="eye-off"></ion-icon></button>
+            </ion-item>   -->
+            <ion-item no-padding>
+                <ion-label color="label-color" stacked>Address 1<span class="required"> *</span></ion-label>
+                <ion-input type="text" [formControl]="address1"></ion-input>
+            </ion-item>
+            <ion-item no-padding>
+                <ion-label color="label-color" stacked>Address 2</ion-label>
+                <ion-input type="text" [formControl]="address2"></ion-input>
+            </ion-item>
+            <ion-item no-padding>
+                <ion-label color="label-color" stacked>Country<span class="required"> *</span></ion-label>
+                <ion-input (tap)="getmodal('Country',country)" type="text" readonly='true' [formControl]="countryname">
+                </ion-input>
+                <button item-right ion-button clear color="dark" class="no-padding no-margin"
+                    (click)="getmodal('Country',country)">
+                    <ion-icon name="arrow-dropdown"></ion-icon>
+                </button>
+            </ion-item>
+            <ion-item no-padding>
+                <ion-label color="label-color" stacked>State<span class="required"> *</span></ion-label>
+                <ion-input [formControl]="statename" type="text" readonly='true'></ion-input>
+                <button item-right ion-button clear color="dark" class="no-padding no-margin"
+                    (click)="getmodal('State',state)">
+                    <ion-icon name="arrow-dropdown"></ion-icon>
+                </button>
+            </ion-item>
+            <ion-item no-padding>
+                <ion-label color="label-color" stacked>City<span class="required"> *</span></ion-label>
+                <ion-input [formControl]="cityname" type="text" readonly='true'></ion-input>
+                <button item-right ion-button clear color="dark" class="no-padding no-margin"
+                    (click)="getmodal('City',city)">
+                    <ion-icon name="arrow-dropdown"></ion-icon>
+                </button>
+            </ion-item>
+            <!-- <ion-item no-padding>
+                <ion-label color="label-color" stacked>Village</ion-label>
+                <ion-input [formControl]="village_name" (tap)="getmodal('Village',village)" type="text" readonly='true'></ion-input>
+                <button item-right ion-button clear color="dark" class="no-padding no-margin" (click)="getmodal('Village',village)" ><ion-icon name="arrow-dropdown"></ion-icon></button>
+            </ion-item>          -->
+            <ion-item no-padding>
+                <ion-label color="label-color" stacked>Pincode<span class="required"> *</span></ion-label>
+                <ion-input type="tel" [formControl]="pincode" maxlength="6"></ion-input>
+            </ion-item>
+            <!-- <ion-item no-padding>
+                <ion-label color="label-color" stacked>Select Religion</ion-label>
+                <ion-select interface="popover" [formControl]="religion">
+                    <ion-option value="1">Hindu</ion-option>
+                    <ion-option value="2">Muslim</ion-option>
+                    <ion-option value="3">Christian</ion-option>
+                </ion-select>
+            </ion-item>   -->
+            <!-- <ion-item no-padding>
+                <ion-label color="label-color" stacked>Gender</ion-label>
+                <ion-select [formControl]="gender">
+                    <ion-option value="0">Male</ion-option>
+                    <ion-option value="1">Female</ion-option>
+                    <ion-option value="3">Others</ion-option>
+                </ion-select>
+            </ion-item>   -->
+            <!-- <ion-item no-padding>
+                <ion-label color="label-color" stacked>Customer Type</ion-label>
+                <ion-select interface="popover" [formControl]="cus_type" (ionChange)="typecheck()">
+                    <ion-option value="2" >Company</ion-option>
+                </ion-select>
+            </ion-item>    -->
+            <!-- <ion-item no-padding>
+                <ion-label color="label-color" stacked>Date Of Birth</ion-label>
+                <ion-input readonly="true" class="ion_datetime"  [formControl]="date_of_birth" displayFormat="DD-MM-YYYY" (tap)="birth()"></ion-input>
+            </ion-item>
+            <ion-item no-padding>
+                <ion-label color="label-color" stacked>Date Of Wed</ion-label>
+                <ion-input readonly="true" class="ion_datetime"  [formControl]="date_of_wed" displayFormat="DD-MM-YYYY" (tap)="wed()"></ion-input>
+            </ion-item>    -->
+            <!-- <ion-item no-padding>
+                <ion-label color="label-color" stacked>Nominee Name </ion-label>
+                <ion-input type="text" [formControl]="nominee_name" ></ion-input>
+            </ion-item>
+  
+            <ion-item no-padding>
+                <ion-label color="label-color" stacked>Relationship </ion-label>
+                <ion-input type="text" [formControl]="nominee_relationship" ></ion-input>
+            </ion-item> -->
+  
+            <!-- <ion-item no-padding>
+                <ion-label color="label-color" stacked>Mobile </ion-label>
+                <ion-input type="number" [formControl]="nominee_mobile" placeholder="10 Digit Mobile Number" maxlength="10"></ion-input>
+            </ion-item> -->
+  
+            <!-- <ion-item no-padding>
+                <ion-label color="label-color" stacked>Company Name </ion-label>
+                <ion-input type="text" [formControl]="company_name"></ion-input>
+            </ion-item> -->
+  
+            <ion-item no-padding>
+                <ion-label color="label-color" stacked>GST Number<span class="required"> *</span> </ion-label>
+                <ion-input type="text" [formControl]="gst_number" maxlength="15"
+                    (ionChange)="validateCaptilize(gst_number,'gstno')"></ion-input>
+            </ion-item>
+  
+  
+            <ion-item no-padding>
+                <ion-label color="label-color" stacked>Pancard No </ion-label>
+                <ion-input type="text" [formControl]="pan" maxlength="10"
+                    (ionChange)="validateCaptilize(pan,'pancard')"></ion-input>
+            </ion-item>
+  
+            <!-- <ion-item no-padding>
+                <ion-label color="label-color" stacked>Voter ID No </ion-label>
+                <ion-input type="text" [formControl]="voterid"  maxlength="10" (ionChange)="validateCaptilize(voterid,'voter')"></ion-input>
+            </ion-item> -->
+            <!--
+            <ion-item no-padding>
+                <ion-label color="label-color" stacked>Rationcard No </ion-label>
+                <ion-input type="text" [formControl]="rationcard" maxlength="15" (ionChange)="validateCaptilize(rationcard,'ration')"></ion-input>
+            </ion-item> -->
+  
+            <ion-item no-padding>
+                <ion-label color="label-color" stacked>Comments </ion-label>
+                <ion-textarea [formControl]="comments" placeholder="Enter a description"></ion-textarea>
+            </ion-item>
+        </span>
+  
+  
+        <!-- <ion-row style="border: none !important;" *ngIf="type == 'o'">
+            <ion-col style="text-align: -webkit-center !important;">
+                <button (click)="onSubmit(registerForm.value)" ion-button class="joinbtn" block color="dark">
+                  Submit</button>
+            </ion-col>
+        </ion-row> -->
+  
+    </form>
+  </div>
+  </ion-card>
+</ion-content>
+
+<ion-footer style="bottom: 80px !important;">
+  <button ion-button icon-start full class="theme-btn" (click)="onSubmit(registerForm.value)">Save</button>
+</ion-footer>
+
+<!-- <ion-footer class="footer-bottom">
+  <ion-grid>
+    <ion-row>
+      <ion-col>&copy;Mohanlal Jewellers 2020</ion-col>
+      <ion-col text-right>LOGIMAX</ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer> -->

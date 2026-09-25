@@ -1,0 +1,60 @@
+<ion-header> <ion-navbar>
+	<button ion-button menuToggle>
+		<ion-icon name="menu"></ion-icon>
+	</button>
+	<ion-title>Checkout</ion-title> </ion-navbar> </ion-header>
+	<ion-content>
+			 <checkout></checkout> 
+			
+			<!-- <ion-list radio-group [(ngModel)]="customerdetails.order_for">
+				<ion-grid>
+					 <ion-row>
+						  <ion-col>
+							<ion-item>
+								<ion-label>Branch</ion-label>
+								<ion-radio value="1"></ion-radio>
+							  </ion-item>
+						   </ion-col> 
+						   <ion-col>
+							<ion-item>
+								<ion-label>Customer</ion-label>
+								<ion-radio value="2"></ion-radio>
+							  </ion-item>
+						   </ion-col> 
+					   </ion-row>
+				  </ion-grid>
+			</ion-list>
+		 <form  #ordercustfrm="ngForm" novalidate>
+			 <ion-list *ngIf="customerdetails.order_for==2">
+			  <ion-item>
+				<ion-label stacked>Name*</ion-label>
+				<ion-input type="text" name="cusName" [(ngModel)]="customerdetails.cus_name" required></ion-input>
+			  </ion-item>
+			  <ion-item>
+				<ion-label stacked>Mobile Number*</ion-label>
+				<ion-input type="number" name="cusMobile" [(ngModel)]="customerdetails.cus_mobile" required></ion-input>
+			  </ion-item>
+			  <ion-item>
+				<ion-label stacked>Address*</ion-label>
+				<ion-textarea height="60px" name="cusAddress" [(ngModel)]="customerdetails.cus_address" required></ion-textarea>
+			  </ion-item>
+			</ion-list>
+		</form> -->
+	</ion-content>
+	<ion-footer style="margin-bottom: 80px;">
+		<ion-toolbar style="padding: 0px;min-height: 0px;">
+			<ion-grid style="padding: 0px;">
+				<ion-row style="padding: 0px;">
+					<ion-col style="padding: 0px;text-align: center;" >
+
+						<!-- <button [disabled]="!ordercustfrm.valid" class="footer-b1" ion-button full (click)="confirmOrder()">Confirm
+							<ion-icon style="padding-left:10px" name="md-send"></ion-icon>
+						</button> -->
+						<button class="footer-b1" ion-button  (click)="confirmOrder()">CONFIRM
+							<ion-icon style="padding-left:10px" name="md-send"></ion-icon>
+						</button>
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+		</ion-toolbar>
+	</ion-footer>

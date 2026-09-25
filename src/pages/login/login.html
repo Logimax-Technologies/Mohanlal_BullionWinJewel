@@ -1,0 +1,118 @@
+ <ion-header>
+<!--     <ion-navbar>
+        <ion-title>Login</ion-title>
+    </ion-navbar> -->
+</ion-header>
+
+<ion-content scroll="true" scroll-y="true" keyboard-scroll="true" no-padding text-center>
+    <ion-row>
+      <ion-note style="text-align: center;text-align: end !important;">
+        <a (click)="skip()" style="text-transform: initial;height: 20px;font-weight: bolder !important;" ion-button clear>Skip</a>
+      </ion-note>
+    </ion-row>
+
+    <carousel></carousel>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- <p style="margin-top: 70px;margin-bottom: 0px;font-weight: bold;font-size: 2rem !important;color:#8f2b29 !important"> -->
+        <img style="width: 190px !important;margin-top: 15px;" src='assets/log.svg' />
+       <!-- Vithraag Jewels -->
+    <!-- </p> -->
+    <ion-card>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)" style="" novalidate padding>
+            <ion-list>
+                <ion-item class="errMsg">{{errorMessage}}&nbsp;&nbsp;<a style="color: #387ef5 !important;" *ngIf="contact_store_no != '' && contact_store_no !=undefined"  href="tel:{{contact_store_no}}">( {{contact_store_no}} )</a></ion-item>
+                <ion-row *ngIf="errorMessage == 'Contact store to activate your account'">
+                    <ion-col>
+                    <ion-icon name="phone-portrait"></ion-icon><a href="tel:+914425350600">44-25350600</a>
+                    </ion-col>
+                    <ion-col>
+                        <ion-icon name="phone-portrait"></ion-icon><a href="tel:+914425350800">44-25350800</a>
+                        </ion-col>
+                </ion-row>
+
+                <!-- <ion-row *ngIf="errorMessage == 'Contact store to activate your account'">
+                    <ion-col col-6>
+                        <ion-icon name="phone-portrait"></ion-icon><a href="tel:04448543134">044-48543134</a>
+                        </ion-col>
+                </ion-row> -->
+                <!-- <ion-item>
+                    <ion-label floating>Mobile Number</ion-label>
+                    <ion-input [formControl]="username" type="number"></ion-input>
+                </ion-item> -->
+                <ion-row style="margin-bottom:5px;">
+                    <ion-col style="border: 1px solid #827373;background: black;color: white;border-top-left-radius: 5px;border-bottom-left-radius: 5px;" col-2 no-padding>
+                      <!--  <p style="color: white;
+                        margin-top: 12px;">+91</p> -->
+                        <i style="
+                        height: 44px;
+                        padding-top: 15px;width: -webkit-fill-available;"  class="fa fa-user icon"></i>
+                    </ion-col>
+                    <ion-col style="border: 1px solid #827373;border-top-right-radius: 5px;border-bottom-right-radius: 5px;" no-padding>
+                <!-- <ion-item> -->
+                    <!-- <ion-label floating>Password</ion-label> -->
+                    <input style="    background: transparent !important;
+                    border: none !important;
+                    padding: 13px !important;
+                    width: calc(100% - 0px - 0px) !important;" type="tel" maxlength="10" [formControl]="username"  placeholder="Enter Your Mobile Number" />
+                <!-- </ion-item> -->
+            </ion-col>
+            </ion-row>
+            <ion-row style="margin-bottom:5px;">
+                <ion-col style="border: 1px solid #827373;background: black;color: white;border-top-left-radius: 5px;border-bottom-left-radius: 5px;" col-2 no-padding>
+                    <i style="
+                        height: 44px;
+                        padding-top: 15px;width: -webkit-fill-available;"  class="fa fa-key icon"></i>
+                </ion-col>
+                <ion-col style="display: flex;border: 1px solid #827373;border-top-right-radius: 5px;border-bottom-right-radius: 5px;" no-padding>
+                    <!-- <ion-label floating>Password</ion-label> -->
+                <ion-input placeholder="Enter Your Password"  [formControl]="password" type="{{typecheck}}"></ion-input>
+                <button *ngIf="!showPass" ion-button clear color="dark" type="button"  item-right (click)="showPassword()"> <ion-icon style="background:none !important;color: #544d4d !important;"  name="eye-off"></ion-icon>
+                </button>
+                <button *ngIf="showPass" ion-button clear color="dark" type="button" item-right  (click)="showPassword()">  <ion-icon style="background:none !important;color: #544d4d !important;" name="eye"></ion-icon>
+                </button>
+        </ion-col>
+        </ion-row>
+                <!-- <ion-item>
+                    <ion-label floating>Password</ion-label>
+                    <ion-input [formControl]="password" type="password"></ion-input>
+                </ion-item> -->
+            </ion-list>
+            <br>
+            <div style="text-align: center;">
+            <button  [disabled]="!loginForm.valid || isDisabled" style="background: #aa792b;" ion-button  color="dark"  type="submit" >Submit</button>
+        </div>
+            <br>
+            <!-- <div style=""> -->
+               <ion-note style="text-align: center;">
+                    <a (click)="forgotpass()" style="text-transform: initial;height: 20px;" ion-button clear>Forgot Your Password?</a>
+                </ion-note>
+                <!-- <ion-note style="float: right">
+                    <a (click)="register()" style="text-transform: initial;" ion-button clear>Register</a>
+                </ion-note>  -->
+            <!-- </div> -->
+            <!-- <div style=""> -->
+                <!-- <ion-note style="float: left">
+                     <a (click)="forgotpass()" style="text-transform: initial;" ion-button clear>Forgot Password </a>
+                 </ion-note> -->
+                 <ion-note style="text-align: center;">
+                     <a (click)="register()" style="text-transform: initial;height: 20px;" ion-button clear><span style="">New User ?</span><span style="margin-left: 5px;color: orange;">Register Here</span></a>
+                 </ion-note>
+             <!-- </div> -->
+        </form>
+    </ion-card>
+
+    <!-- <ion-row style="padding-bottom: 13px;">
+        <ion-col>
+            <button text-lowercase ion-button icon-right color="dark" outline>Login with
+                <ion-icon name="logo-facebook"></ion-icon>
+            </button>
+        </ion-col>
+        <ion-col>
+            <button text-lowercase ion-button icon-right color="dark" outline>Login with
+                <ion-icon name="logo-twitter"></ion-icon>
+            </button>
+        </ion-col>
+    </ion-row> -->
+
+</ion-content>

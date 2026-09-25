@@ -1,0 +1,75 @@
+<!--
+  Generated template for the SubcategoryPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Sub Categories</ion-title>
+    </ion-navbar>
+    <!-- <ion-toolbar color="primary">
+            <ion-buttons float-right>
+              <button ion-button  (click)="openModal()">
+                <ion-icon name="options"></ion-icon> Filter
+              </button>
+            </ion-buttons>
+          
+        </ion-toolbar> -->
+    <!-- <ion-searchbar [(ngModel)]="mySearch"  (search)="onInputFilter($event)" [showCancelButton]="shouldShowCancel"> -->
+    <!-- </ion-searchbar> -->
+</ion-header>
+
+
+<ion-content padding>
+<ion-row *ngIf="show == true">
+    <ion-col col-6 [ngClass]="animateClass" *ngFor=" let item of subcategoryItems; let i=index " (click)="openproducts(item.id_subcategory)">
+        <ion-card style="margin:0px;border: 1px solid #e4e4e4;height: 179px;border-radius:7px;">
+                <div style="margin: 3px;"><span *ngIf="item.is_stock_avail==1 && item.stock_manage == 1" class="instock">Instock</span><span *ngIf="item.is_stock_avail==0 && item.stock_manage == 1"  class="outofstock">Out of stock</span><span *ngIf="item.is_new == 1" style="float:right;"><ion-badge color="secondary">New</ion-badge></span></div>
+
+            <img style="height: 120px;width: auto;margin: 0 auto;" *ngIf='item.imgurl != null' src='{{item.imgurl}}' imageCache/>
+            <img style="height: 120px;margin: 0 auto;" *ngIf='item.imgurl == null' src='assets/images/no-img.png' imageCache/>
+          
+            <div style="    text-align: center;
+            font-weight: bold;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;padding: 5px;font-size: 14px  ;color: #656565;">
+               {{item.name}}
+            </div>
+        </ion-card>
+        <!-- <div style="    text-align: center;margin-top:7px;margin-bottom: 10px;
+        font-weight: bold;text-overflow: ellipsis;padding: 5px;font-size: 14px;overflow: hidden;color: black; white-space: nowrap; ">
+            {{item.name}}
+        </div> -->
+    </ion-col>
+</ion-row>
+<ion-row *ngIf="show == false">
+        <ion-col col-6 [ngClass]="animateClass" *ngFor=" let item of subcategoryItems; let i=index " (click)="openProductdetails(item.id_product)">
+            <ion-card style="margin:0px;border: 1px solid #e4e4e4;height: 179px;border-radius:7px;">
+                    <div style="margin: 3px;"><span *ngIf="item.is_stock_avail==1 && item.stock_manage == 1" class="instock">Instock</span><span *ngIf="item.is_stock_avail==0 && item.stock_manage == 1"  class="outofstock">Out of stock</span><span *ngIf="item.is_new == 1" style="float:right;"><ion-badge color="secondary">New</ion-badge></span></div>
+
+                <img style="height: 120px;width: auto;margin: 0 auto;" *ngIf='item.imgurl != null' src='{{item.imgurl}}' imageCache/>
+                <img style="height: 120px;margin: 0 auto;" *ngIf='item.imgurl == null' src='assets/images/no-img.png' imageCache/>
+               
+                <!-- <div style="    text-align: center;
+                font-weight: bold;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;padding: 5px;font-size: 14px;  ;color: #656565;">
+                   {{item.subcategory_code}}
+                </div> -->
+            </ion-card>
+            <div style="    text-align: center;margin-top:7px;margin-bottom: 10px;
+            font-weight: bold;text-overflow: ellipsis;padding: 5px;font-size: 14px;overflow: hidden;color:black; white-space: nowrap; ">
+                {{item.name}}
+            </div>
+        </ion-col>
+    </ion-row>
+<ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content
+          pullingIcon="arrow-dropdown"
+          pullingText="Pull to refresh"
+          refreshingSpinner="circles"
+          refreshingText="Refreshing...">
+        </ion-refresher-content>
+    </ion-refresher>
+
+</ion-content>

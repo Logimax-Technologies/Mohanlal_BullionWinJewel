@@ -1,0 +1,56 @@
+filter {
+	background:white;
+	ion-col{
+		border-right: 1px solid #eee;
+	}
+	ion-item,.scroll-content{
+		padding:0px !important ;
+		font-size:12px !important;
+		background-color: white !important;
+	}
+	ion-label{
+	    margin:2px !important ;
+	}
+	ion-checkbox{
+	  margin:2px !important ;
+	}
+
+  ion-item.selected-filter {
+  background: #e3f2fd;
+  font-weight: 600;
+  border-left: 4px solid #1e88e5;
+  transition: all 0.3s ease-in-out;
+}
+
+.selected-filter {
+  background-color: #e0f7fa !important; /* Light cyan */
+  font-weight: bold;
+  border-left: 4px solid #0097a7; /* Teal accent */
+}
+
+.list-md {
+    margin: -1px 0 16px;
+    padding-bottom: 55px !important;
+}
+
+
+
+// .selected-filter {
+// //  background-color: #1e88e5;       /* A slightly softer, material blue */
+//   color: #64b5f6;                  /* White text */
+//   font-weight: 600;                /* Medium boldness for better readability */
+//   border-radius: 8px;              /* More modern rounded corners */
+//   padding: 6px 12px;               /* Adds spacing inside the item */
+//   transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+//   cursor: pointer;
+//   display: inline-block;
+// }
+
+// .selected-filter:hover {
+//  // background-color: #1565c0;  /* Darker blue on hover */
+// }
+
+
+
+}
+

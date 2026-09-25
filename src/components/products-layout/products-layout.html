@@ -1,0 +1,16 @@
+<ion-row>
+    <ion-col col-6 [ngClass]="animateClass" *ngFor=" let item of animateItems; let i=index " (click)="openProduct(item)">
+        <ion-card style="margin: 0px 0px 0px 0px;     border: 1px solid #e4e4e4;   height: 220px;">
+            <img style="height: 130px;    padding: 5px 5px 0px 5px;width: auto;margin: 0 auto;" src='assets/img/Products/{{item.id}}/{{item.img}}' />
+            <div style="text-overflow: ellipsis;padding: 4%;font-size: 14px;overflow: hidden;color: #656565; white-space: nowrap; ">
+                {{item.name}}
+            </div>
+            <div style="text-overflow: ellipsis;overflow: hidden;white-space: nowrap;padding: 4%;font-size: 14px;    background: rgba(41, 71, 119, 0.17);color: #656565;  ">
+                <span style="float: left">${{item.price}}</span><span style="text-decoration: line-through;float: right">$2,599</span>
+            </div>
+            <div style="padding: 4%;font-size: 12px; ">
+                <ion-icon name="star"> {{item.rating}} <i>({{item.reviews}})</i></ion-icon>
+            </div>
+        </ion-card>
+    </ion-col>
+</ion-row>

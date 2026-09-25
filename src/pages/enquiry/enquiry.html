@@ -1,0 +1,60 @@
+<!-- <ion-header>
+  <ion-navbar>
+    <ion-title style="text-align: center !important;"><img alt="logo" height="55" cache="true" src="assets/imgs/header.svg" ></ion-title>
+  </ion-navbar>
+</ion-header> -->
+<ion-header align-title=”center”>
+	<ion-navbar align-title=”center”>
+		<ion-row style="align-items: center;">
+			<ion-col col-2>				
+			</ion-col>
+			<ion-col col-8 style="text-align: center !important;"><img alt="logo" height="55" cache="true" src="assets/imgs/header.svg"></ion-col>
+			<ion-col col-2>
+			</ion-col>
+		</ion-row>	
+	</ion-navbar>
+</ion-header>
+
+<ion-content text-center>
+  <ion-card>
+    <ion-card-header text-center>
+      Get in touch
+   </ion-card-header>
+
+   <form [formGroup]="enquiryForm" (ngSubmit)="onSubmit(enquiryForm.value)" style="" novalidate>
+    <ion-list>
+    <ion-item class="errMsg" *ngIf="errorMessage != ''">{{errorMessage}}</ion-item>
+     <ion-item>
+        <ion-label floating>Name(*)</ion-label>
+        <ion-input [formControl]="name" placeholder="Must be 4 characters" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Mobile Number(*)</ion-label>
+        <ion-input [formControl]="mobile" placeholder="Minimum 10 number" type="tel" (ionChange)="onNumberInput($event)" minlength="10" maxlength="10"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Email</ion-label>
+        <ion-input [formControl]="emailid" type="email" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Address</ion-label>
+        <ion-input type="text" [formControl]="address"></ion-input>
+      </ion-item>
+     <ion-item>
+        <ion-label floating>Message(*)</ion-label>
+        <ion-textarea type="text" placeholder="Must be 10 characters" [formControl]="message"></ion-textarea>
+      </ion-item>
+    </ion-list>
+    <br>
+    <button [disabled]="!enquiryForm.valid || isDisabled" style="background: #E7A519;color:#fff" ion-button class="button-login" block color="dark">Submit</button>
+  </form>
+  </ion-card>
+</ion-content>
+<ion-footer class="footer-bottom">
+  <ion-grid>
+    <ion-row>
+      <ion-col>&copy;SB Ornaments</ion-col>
+      <ion-col text-right>Logimax</ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>

@@ -1,0 +1,181 @@
+<!--
+  Generated template for the CollectionPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Products</ion-title>
+
+        <ion-buttons end>
+          <button ion-button icon-only (click)="openModal()">
+            <ion-icon name="funnel"></ion-icon>
+          </button>
+        </ion-buttons>
+    </ion-navbar>
+    <!-- <ion-searchbar [(ngModel)]="mySearch" (input)="searchCollection()" placeholder="Search Collection" [showCancelButton]="shouldShowCancel">
+    </ion-searchbar> -->
+</ion-header>
+
+<ion-content>
+  <br>
+<!-- <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="Refreshing...">
+    </ion-refresher-content>
+</ion-refresher> -->
+<!-- <collection></collection> -->
+
+<!-- <ion-row style="background:#eee;">
+  <ion-col col-12 align="right">
+      <ion-icon   *ngIf="!checkStatus" (click)="grid()" name="grid" ></ion-icon>
+      <ion-icon  *ngIf="checkStatus"  (click)="listgrid()" name="list"></ion-icon>
+  </ion-col>
+</ion-row> -->
+<!-- <ion-row [class.hide]="checkStatus">
+<ion-col col-6 [ngClass]="animateClass" *ngFor=" let item of products; let i=index " >
+  <ion-card imageCache style="margin:0px;border: 1px solid #e4e4e4;height: 173px;border-radius: 7px;">
+    <div style="margin: 3px;">
+      <span *ngIf="item.is_stock_avail==1 && item.stock_manage == 1" class="instock">Instock</span>
+      <span *ngIf="item.is_stock_avail==0 && item.stock_manage == 1"  class="outofstock">Out of stock</span>
+      <span *ngIf="item.is_new == 1" style="float:right;"><ion-badge color="secondary">New</ion-badge></span>
+    </div>
+    <span *ngIf="!isquickselect" (click)="openProductdetails(item.id_product)">
+        <img style="height: 120px;width: auto;margin: 0 auto;" *ngIf='item.imgurl != null' src='{{item.imgurl}}' imageCache/>
+        <img style="height: 120px;margin: 0 auto;" *ngIf='item.imgurl == null' src='assets/images/no-img.png' imageCache/>
+    </span>
+    <ion-item no-padding style="height: 120px;" *ngIf="isquickselect" >
+      <ion-label >
+        <img style="height: 120px;width: auto;margin: 0 auto;" *ngIf='item.imgurl != null' src='{{item.imgurl}}' imageCache/>
+        <img style="height: 120px;margin: 0 auto;" *ngIf='item.imgurl == null' src='assets/images/no-img.png' imageCache/>
+      </ion-label>
+      <ion-checkbox style="margin: 0px;" color="dark" (ionChange)="productschange($event, item)" ></ion-checkbox>
+    </ion-item>
+    <div style="text-align: center;font-weight: bold;text-overflow: ellipsis;overflow: hidden;padding: 5px;font-size: 14px  ;color: #656565;">
+      {{item.name}}
+    </div>
+    <div style="text-align: center;font-weight: bold;text-overflow: ellipsis;overflow: hidden;padding: 5px;font-size: 14px  ;color: #656565;">
+     weight :  {{item.weight}}
+    </div>
+  </ion-card>
+
+  <div style="box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);">
+    <ion-row class="card-detail" no-padding *ngIf="isquickselect">
+      <ion-col no-padding class="col-6">N.Wgt :{{item.reqweight}}g</ion-col>
+      <ion-col no-padding class="col-6"  *ngIf="item.sizeorlen != null">S/L : {{item.sizeorlen}}</ion-col>
+    </ion-row>
+    <ion-row class="card-detail" no-padding *ngIf="isquickselect">
+      <ion-col no-padding class="col-6">Purity : <span *ngFor="let i of item.purities"><span *ngIf="i.id_purity == item.id_purity">{{i.purity}}</span></span></ion-col>
+      <ion-col no-padding class="col-6" *ngIf="item.is_chain == 1">Hook : {{item.hook_type == 1 ? "S Hook" : "M Hook"}}</ion-col>
+    </ion-row>
+  </div>
+</ion-col>
+<div class="itemempty" *ngIf="products.length == 0">No item to display</div>
+</ion-row> -->
+
+
+<ion-row [class.hide]="checkStatus">
+  <ion-col col-6 [ngClass]="animateClass" *ngFor="let item of products; let i = index">
+    <ion-card style="height: 250px !important;margin: 0px !important; border: 1px solid #e0e0e0; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);">
+
+      <!-- Status & Badge Row -->
+      <div style="padding: 6px; display: flex; justify-content: space-between; align-items: center;">
+        <span *ngIf="item.is_stock_avail == 1 && item.stock_manage == 1" class="instock">In Stock</span>
+        <span *ngIf="item.is_stock_avail == 0 && item.stock_manage == 1" class="outofstock">Out of Stock</span>
+        <ion-badge *ngIf="item.is_new == 1" color="secondary" style="margin-left: auto;">New</ion-badge>
+      </div>
+
+      <!-- Product Image (Normal View or Quick Select) -->
+      <ng-container *ngIf="!isquickselect; else quickSelectTemplate">
+        <div (click)="openProductdetails(item.id_product)" style="display: flex; justify-content: center; align-items: center; height: 170px;">
+          <img *ngIf="item.imgurl != null" [src]="item.imgurl" style="max-height: 100%; max-width: 100%;object-fit: contain;" />
+          <img *ngIf="item.imgurl == null" src="assets/images/no-img.png" style="max-height: 100%; max-width: 100%;object-fit: contain;" />
+        </div>
+      </ng-container>
+
+      <ng-template #quickSelectTemplate>
+        <ion-item lines="none" style="height: 170px; display: flex; align-items: center; padding: 4px 8px;">
+          <ion-label style="flex: 1;">
+            <img *ngIf="item.imgurl != null" [src]="item.imgurl" style="max-height: 100%; max-width: 100%;object-fit: contain;" />
+            <img *ngIf="item.imgurl == null" src="assets/images/no-img.png" style="max-height: 100%; max-width: 100%;object-fit: contain;" />
+          </ion-label>
+          <ion-checkbox slot="end" color="dark" (ionChange)="productschange($event, item)"></ion-checkbox>
+        </ion-item>
+      </ng-template>
+
+      <!-- Product Name -->
+      <div style="text-align: center; font-weight: 600; padding: 4px 8px; font-size: 15px; color: #444;">
+        {{ item.name }}
+      </div>
+
+      <!-- Weight -->
+      <div style="text-align: center; font-size: 14px; color: #666; padding-bottom: 6px;font-weight: 400;" *ngIf="item.weight > 0" >
+        Weight: {{ item.weight }}Gm
+      </div>
+
+      <!-- Quick Select Details -->
+      <div *ngIf="isquickselect" style="background: #fafafa; padding: 6px 8px; border-top: 1px solid #eee;">
+        <ion-row class="card-detail" no-padding>
+          <ion-col size="6" class="text-small">N. Wgt: {{ item.reqweight }}g</ion-col>
+          <ion-col size="6" *ngIf="item.sizeorlen != null" class="text-small">S/L: {{ item.sizeorlen }}</ion-col>
+        </ion-row>
+        <ion-row class="card-detail" no-padding>
+          <ion-col size="6" class="text-small">
+            Purity:
+            <span *ngFor="let i of item.purities">
+              <span *ngIf="i.id_purity == item.id_purity">{{ i.purity }}</span>
+            </span>
+          </ion-col>
+          <ion-col size="6" *ngIf="item.is_chain == 1" class="text-small">
+            Hook: {{ item.hook_type == 1 ? 'S Hook' : 'M Hook' }}
+          </ion-col>
+        </ion-row>
+      </div>
+    </ion-card>
+  </ion-col>
+
+  <!-- Empty State -->
+  <div class="itemempty" *ngIf="products.length == 0">No item to display</div>
+</ion-row>
+
+<!-- <ion-refresher (ionRefresh)="doRefresh($event)">
+<ion-refresher-content></ion-refresher-content>
+</ion-refresher>
+ -->
+<ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+<ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data..."></ion-infinite-scroll-content>
+</ion-infinite-scroll>
+
+
+</ion-content>
+
+
+
+
+<!-- <ion-footer style="margin-bottom: 78px;">
+  <ion-toolbar color="primary">
+    <ion-buttons>
+      <button ion-button  (click)="openModal()">
+        <ion-icon name="options"></ion-icon> Filter
+      </button>
+    </ion-buttons>
+    <ion-buttons end *ngIf="addcartbtn">
+      <button ion-button ng-model="addcartbth" (click)="addcart()">
+        <ion-icon name="cart" ></ion-icon> Add
+      </button>
+    </ion-buttons>
+    <ion-buttons  end>
+      <button ion-button ng-model="isquickselect" (click)="quickselect()">
+        <ion-icon name="md-checkmark-circle-outline" ></ion-icon> Quick
+      </button>
+    </ion-buttons>
+</ion-toolbar>
+</ion-footer> -->
+

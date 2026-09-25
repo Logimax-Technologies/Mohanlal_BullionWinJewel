@@ -1,0 +1,28 @@
+<ion-item class="dealsHeader1">
+    <ion-note item-left>
+        Deals of the Day
+    </ion-note>
+    <ion-note item-right style="color:#548eec;">
+        {{timer}}
+    </ion-note>
+</ion-item>
+<ion-scroll scrollX='true' style=" height: 200px">
+    <ion-grid>
+        <ion-row nowrap>
+            <ion-col [ngClass]="animateClass" col-4 style="padding: 5px;" *ngFor=" let item of animateItems; let i=index " (click)="openProduct(item)">
+                <ion-card style="margin: 0px 0px 0px 0px;    width: calc(100%);">
+                    <img style="height: 110px;    padding: 5px;width: auto;margin: 0 auto;" src='assets/img/Products/{{item.id}}/{{item.img}}' />
+                    <div class="name">
+                        {{item.name}}
+                    </div>
+                    <div class="price">
+                        <span style="float: left">${{item.price}}</span><span style="text-decoration: line-through;float: right">$2,599</span>
+                    </div>
+                    <div class="reviewsBlock">
+                        <ion-icon class="reviews" name="star"> {{item.rating}} <i>({{item.reviews}})</i></ion-icon>
+                    </div>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-scroll>

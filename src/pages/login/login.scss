@@ -1,0 +1,40 @@
+page-login {
+    .toolbar-background-md {
+        border-color: none;
+        background: transparent;
+    }
+    .toolbar-title-md {
+        padding: 0 12px;
+        font-size: 2rem;
+        font-weight: 500;
+        color: #303030;
+    }
+    .scroll-content {
+        background-size: cover;
+        // background-image: url(../assets/img/back.jpg) !important;
+        padding-bottom: 300px !important;
+    }
+    .button-md {
+        text-transform: none;
+    }
+    .card-md {
+        opacity: 0.9;
+        box-shadow: none !important;
+        background: transparent !important;
+    }
+	ion-label{
+	white-space: normal !important;
+	}
+	.errMsg{
+		color:red !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    text-align: justify !important;
+    }
+    .text-input-md {
+        margin: 13px 10px !important;
+        font-weight: initial !important;
+    }
+
+
+}

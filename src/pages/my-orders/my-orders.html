@@ -1,0 +1,75 @@
+<ion-header> <ion-navbar>
+<button ion-button menuToggle>
+	<ion-icon name="menu"></ion-icon>
+</button>
+<ion-title>My Orders</ion-title> </ion-navbar> </ion-header>
+<ion-content>
+		<!-- <ion-segment [(ngModel)]="relationship" color="primary" (ionChange)="segmentChanged($event)">
+				<ion-segment-button   value="cat">
+				  Orders
+				</ion-segment-button>
+				<ion-segment-button  value="posts">
+				  Quotes
+				</ion-segment-button>
+
+				</ion-segment> -->
+	<p  *ngIf="myorders.length == 0 && relationship == 'cat'" class="empty">No result found</p>
+	<p  *ngIf="quotes.length == 0 && relationship == 'posts'" class="empty">No result found</p>
+
+	<p *ngIf="relationship == 'cat'" >
+		<ion-card *ngFor=" let order of myorders let i=index " [@flyAlternameSlow]="i%2">
+			<ion-item *ngIf="order.status !=8" >
+        <ion-badge color="light">{{order.productcode}} -	{{order.orderstatus}}</ion-badge>
+      </ion-item>
+      <ion-item *ngIf="order.status == 8 " >
+        <ion-badge color="danger">{{order.orderstatus}}</ion-badge>
+      </ion-item>
+			<button ion-item (click)="viewdetails(order,i)">
+				<ion-avatar item-left> <img src="{{order.image}}"> </ion-avatar>
+				<h3>
+					<p>Order No :<ion-badge>{{order.orderno}}</ion-badge></p>
+					<p>{{order.productname}}</p>
+					<p style="display:none">Customer : {{order.orderfor}}</p>
+				</h3>
+				<ion-row no-padding> <ion-col *ngIf='order.ref_no !=null'><h3>Cus.Ref no :{{order.customer_ref_no}}</h3></ion-col></ion-row>
+				<ion-row><ion-col *ngIf='order.due_date !=null'><h3>Cus.Due date : {{order.due_date}}</h3></ion-col></ion-row>
+				<ion-row no-padding>
+					<ion-col><h3>Wt : {{order.weight}}</h3></ion-col>
+					<ion-col><h3>Qty : {{order.totalitems}}</h3></ion-col>
+				</ion-row>
+				<ion-row no-padding>
+					<ion-col><h4>O.Dt: {{order.order_date}}</h4></ion-col>
+					<ion-col *ngIf="order.status == 3"><h4>D.Dt: {{order.delivery_date}}</h4></ion-col>
+				</ion-row>
+				<h4>{{order.sample_details}}</h4>
+			</button>
+		</ion-card>
+	</p>
+	<ion-fab *ngIf="relationship == 'cat'" bottom right #fab>
+	    <button ion-fab>Filter</button>
+	    <ion-fab-list side="top" #filterBtn>
+			<button ion-fab (click)="filterbyStatus('ALL', fab)">All</button>
+			<button ion-fab (click)="filterbyStatus('0', fab)">Pending</button>
+			<button ion-fab (click)="filterbyStatus('1', fab)">Process</button>
+			<button ion-fab (click)="filterbyStatus('2', fab)">Confirm</button>
+			<button ion-fab (click)="filterbyStatus('3', fab)">Progress</button>
+			<button ion-fab (click)="filterbyStatus('4', fab)">Ready</button>
+			<button ion-fab (click)="filterbyStatus('5', fab)">Delivered</button>
+			<button ion-fab (click)="filterbyStatus('6', fab)">Rejected</button>
+      <button ion-fab (click)="filterbyStatus('8', fab)">Cancelled</button>
+	    </ion-fab-list>
+	</ion-fab>
+	<ion-fab bottom right #fab *ngIf="relationship == 'posts'">
+		<button ion-fab *ngIf="!checkStatus" (click)="Ascending()">Sort</button>
+		<button ion-fab *ngIf="checkStatus"  (click)="Descending()">Sort</button>
+	</ion-fab>
+</ion-content>
+<!-- <ion-footer>
+<ion-toolbar color="primary">
+    <ion-buttons>
+      <button ion-button  (click)="openModal()">
+        <ion-icon name="options"></ion-icon> Filter
+      </button>
+    </ion-buttons>
+</ion-toolbar>
+</ion-footer> -->

@@ -1,0 +1,98 @@
+<!--
+  Generated template for the WriteReview page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!-- <ion-header>
+    <ion-navbar>
+        <ion-title>Write a Review</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content [@flyInTopSlow]="0">
+    <div style="margin-top: 0px;color: #515151;padding: 10px;word-wrap: break-word;background:#fff;border-bottom:1px solid #4958b2;text-align: center;font-size: 15px;">
+        {{item.name}}
+    </div>
+    <ion-list>
+        <ion-item style="background-color: #fff;color:#548eec;border-top: 0px solid #ccc;text-align: center;border-bottom: 0px solid #ccc;margin-bottom: -15px;">
+            <ion-note style="color:#548eec;">
+                Your rating
+            </ion-note>
+        </ion-item>
+        <ion-item style="background-color: #fff;color:#548eec;border-top: 0px solid #ccc;height: 25px;border-bottom: 0px solid #ccc;margin-bottom: -15px;">
+            <ion-note style="color:#548eec;">
+                <rating [(ngModel)]="rating"></rating>
+            </ion-note>
+        </ion-item>
+    </ion-list>
+    <ion-item>
+        <ion-label color="primary" stacked>Title (optional)</ion-label>
+        <ion-input clearInput="true" type="text" placeholder="Review Title..."></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label color="primary" stacked>Description</ion-label>
+        <ion-textarea clearInput="true" type="text" placeholder="Description..."></ion-textarea>
+    </ion-item>
+    <ion-item>
+        <ion-label color="primary" stacked>Name</ion-label>
+        <ion-input clearInput="true" type="text" placeholder="Name"></ion-input>
+    </ion-item>
+</ion-content>
+<ion-footer>
+    <ion-toolbar style="padding: 0px;min-height: 0px;">
+        <ion-grid style="padding: 0px;">
+            <ion-row style="padding: 0px;">
+                <ion-col style="padding: 0px;">
+                    <button class="footer-b1" ion-button full>Submit
+                        <ion-icon style="padding-left:10px" name="md-send"></ion-icon>
+                    </button>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-toolbar>
+</ion-footer> -->
+<h2 style="text-align:center">Write a Review</h2>
+<ionic3-star-rating  style="text-align:center;"
+activeIcon = "ios-star"
+defaultIcon = "ios-star-outline"
+activeColor = "#488aff" 
+defaultColor = "#f4f4f4"
+readonly="false"
+[rating]="0">
+</ionic3-star-rating>
+<ion-row>
+    <ion-col>
+            <ion-item>
+                    <ion-textarea  [(ngModel)]="description" clearInput="true" type="text" placeholder="Description..."></ion-textarea>
+                </ion-item>
+    </ion-col>
+</ion-row>
+<ion-row>
+    <ion-col col-6>
+    
+
+
+                <ion-col col-6>
+                        <input float-left style="background:#387ef5 !important; cursor: pointer;
+                        -webkit-appearance: button;
+                        border-radius: 2px;
+                        overflow: hidden;
+                        height: 3.6rem;
+                        font-size: 1.4rem;
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        color: #fff;" type="button" (click)="closeModal()" value="Close">
+                </ion-col>
+    </ion-col>
+    <ion-col col-6>
+            <input style="background:#387ef5 !important; cursor: pointer;
+            -webkit-appearance: button;
+            border-radius: 2px;
+            overflow: hidden;
+            height: 3.6rem;
+            font-size: 1.4rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            color: #fff;" float-right type="button" (click)="submit()" value="Submit">
+    </ion-col>
+</ion-row>

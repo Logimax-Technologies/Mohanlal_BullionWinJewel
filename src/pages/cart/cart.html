@@ -1,0 +1,51 @@
+<ion-header>
+    <ion-navbar>
+        <ion-row>
+          <ion-col col-2 style="margin: auto;">
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+      </button>
+      </ion-col>
+      <ion-col>
+      <ion-title style="margin-top:5px !important;font-weight: bold !important">Cart</ion-title>
+      <!-- <img height="47px" src="assets/log.svg" /> -->
+      </ion-col>
+      <ion-col style="    max-width: 72px !important;margin: auto;" no-padding>
+        <ion-row float-right>
+        <ion-col no-padding>
+                <div  style="margin-top:6px !important" id="notification-button" >
+                    <ion-icon style="color:#aa792b !important;margin-left: 8px !important;font-size:1.4em !important" name="cart">
+                      <ion-badge *ngIf="totalcartitems != 0" style="font-size: 1rem !important;color: black;"  id="notifications-badge" color="danger">{{totalcartitems}}</ion-badge>
+                    </ion-icon>              
+                </div>
+      </ion-col>
+      </ion-row>
+      </ion-col>
+        </ion-row>
+      <!-- <ion-buttons end royal> 
+      <button ion-button icon-only (click)="openCart()">
+          <ion-badge>{{totalcartitems}}</ion-badge>
+          <ion-icon name="cart"></ion-icon>
+      </button>
+      </ion-buttons>  -->
+      </ion-navbar> 
+</ion-header>
+<ion-content>
+<cart></cart>
+</ion-content>
+<ion-footer style="margin-bottom: 80px;">
+    <ion-toolbar style="padding: 0px;min-height: 0px;">
+        <ion-grid style="padding: 0px;">
+            <ion-row style="padding: 0px;">
+                <!-- <ion-col style="padding: 0px;" width-50>
+                    <button class="footer-b1" [disabled]="iscartempty" ion-button full (click)="emptyCart()">Empty Cart</button>
+                </ion-col> -->
+                <ion-col style="padding: 0px;text-align: center;" >
+                    <button [disabled]="!checkoutstatus" class="footer-b1" ion-button  (click)="checkoutCart()">
+                        <ion-icon style="padding-left:10px" name="cart"></ion-icon> PLACE ORDER 
+                    </button>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-toolbar>
+</ion-footer>

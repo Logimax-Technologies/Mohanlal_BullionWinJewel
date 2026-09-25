@@ -1,0 +1,14 @@
+{
+  "ios": {
+    "debug": {
+      "developmentTeam": "7NFUMFAE2A",
+      "packageType": "development",
+      "automaticProvisioning": true
+    },
+    "release": {
+      "developmentTeam": "7NFUMFAE2A",
+      "packageType": "app-store",
+      "automaticProvisioning": true
+    }
+  }
+}

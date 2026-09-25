@@ -1,0 +1,99 @@
+<ion-header>
+  <ion-navbar>
+    <ion-row>
+      <ion-col col-2 style="margin: auto" *ngIf="loginstatus" >
+        <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col style="text-align: center">
+        <img height="47px" src="assets/log.svg" />
+      </ion-col>
+      <ion-col style="max-width: 72px !important; margin: auto" no-padding>
+        <ion-row float-right>
+          <ion-col no-padding>
+            <ion-icon style="margin-top: 8px !important;color: #aa792b !important;font-size: 1.4em !important;" name="search" (click)="openModal()"></ion-icon>
+          </ion-col>
+          <ion-col no-padding *ngIf="loginstatus">
+            <div (click)="openCart()" style="margin-top: 6px !important" id="notification-button">
+              <ion-icon style="color: #aa792b !important;margin-left: 8px !important;font-size: 1.4em !important;" name="cart">
+                <ion-badge *ngIf="totalcartitems != 0" style="font-size: 1rem !important; color: black" id="notifications-badge" color="danger">{{totalcartitems}}</ion-badge>
+              </ion-icon>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+
+  <ion-slides *ngIf="slides && slides.length"  [ngClass]="animateClass" style="height: auto !important;margin-top: 10px;" autoplay='4000' zoom ='true' speed='500' loop='true' initialSlide='0' pager='true'>
+    <ion-slide *ngFor="let slide of slides">
+      <img [src]="slide.image" class="slide-image"/>
+    </ion-slide>
+  </ion-slides>
+  <!-- take data from component carousel. -->
+  <!-- <carousel></carousel>   -->
+  <!-- take data from component category-tile. -->
+  <!-- <category-tile></category-tile> -->
+<!--   <homecollection></homecollection> -->
+  <!-- take data from component deals. -->
+  <!-- <deals></deals> -->
+
+  <div>
+    <ion-row>
+        <ion-col no-padding>
+          <p style="margin-left: 15px;color: white;font-weight: bold;border-bottom-left-radius: 10px;border-top-right-radius: 10px;background: #f9c52e;padding: 8px;width: max-content;">Collections</p>
+        </ion-col>
+        <ion-col style="margin: auto;">
+        </ion-col>
+      </ion-row>
+
+      <ion-scroll  scrollX="true" style="height:175px;margin-left: 8px !important;" >
+      <ion-row nowrap>
+        <ion-col col-5  *ngFor=" let item of collections; let i=index"  (click)="openproducts(item['id_collection'])">
+            <ion-card style="margin:0px;border: 1px solid #e4e4e4;height: 142px;border-radius: 7px">
+                <img style="height: 100px;width: auto;margin: 0 auto;" *ngIf='item.imgurl != null' src='{{item.imgurl}}' imageCache/>
+                 <img style="height: 100px;margin: 0 auto;" *ngIf='item.imgurl == null' src='assets/images/no-img.png' imageCache/>
+                  <div style="font-weight: bold;text-align: center;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;padding: 5px;font-size: 14px;color: #656565;">
+                     <span>{{item['name_collection']}} </span>
+                 </div>
+             </ion-card>
+      </ion-col>
+      </ion-row>
+      </ion-scroll>
+    </div>
+
+    <ion-row *ngIf="newarr.length != 0">
+      <ion-col no-padding>
+        <p style="margin-left: 15px;color: white;font-weight: bold;border-bottom-left-radius: 10px;border-top-right-radius: 10px;background: #f9c52e;padding: 8px;width: max-content;">NEW ARRIVAL</p>
+      </ion-col>
+      <ion-col style="margin: auto;">
+          <span (click)="new()" style="float: right;background: #3c3a3a;padding: 5px;color: white;border-radius: 5px;font-weight: bold !important;">View All ></span>
+      </ion-col>
+    </ion-row>
+
+    <ion-scroll *ngIf="newarr.length != 0" scrollX="true" style="height:175px;margin-left: 8px !important;" >
+
+    <ion-row nowrap>
+      <ion-col col-5  *ngFor=" let item of newarr; let i=index "  (click)="openProductdetails(item.id_product)">
+          <ion-card style="margin:0px;border: 1px solid #e4e4e4;height: 142px;border-radius: 7px">
+              <!-- <div style="margin: 3px;"><span *ngIf="item.is_stock_avail==1 && item.stock_manage == 1" class="instock">Instock</span><span *ngIf="item.is_stock_avail==0 && item.stock_manage == 1"  class="outofstock">Out of stock</span></div> -->
+               <img style="height: 100px;width: auto;margin: 0 auto;" *ngIf='item.imgurl != null' src='{{item.imgurl}}' imageCache/>
+               <img style="height: 100px;margin: 0 auto;" *ngIf='item.imgurl == null' src='assets/images/no-img.png' imageCache/>
+                <div style="font-weight: bold;text-align: center;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;padding: 5px;font-size: 14px;color: #656565;">
+                   <span >{{item.name}}</span>
+               </div>
+           </ion-card>
+           <!-- <div style="text-align:center;margin-top:3px;margin-bottom:10px; font-weight:bold; text-overflow: ellipsis;padding: 5px;font-size: 14px;overflow: hidden;color: #656565; white-space: nowrap; ">
+               {{item.name}}
+           </div> -->
+
+    </ion-col>
+    </ion-row>
+    </ion-scroll>
+
+
+
+</ion-content>

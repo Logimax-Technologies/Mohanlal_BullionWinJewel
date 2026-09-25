@@ -1,0 +1,49 @@
+page-contact {
+  ion-card-header{
+    background-color: #f9c52e  !important;
+    color:#fff !important;
+    font-family:Montserrat,sans-serif !important;
+    font-weight: bold !important;
+  }
+  .contact-us{
+    padding: 0.5em;
+    line-height: 24px;
+    margin-bottom: 5px;
+  }
+  ion-card img{
+    width: auto !important;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .header-row{
+    background: #89969f;
+	  color:#E7A519 !important;
+  }
+  .hide {
+    display: none;
+  }
+  .contact_content{
+     border-bottom: 1px dashed lightgray;
+  }
+  .text-input::-moz-placeholder {
+    color: #E7A519;
+  }
+
+  .text-input:-ms-input-placeholder {
+    color: #E7A519;
+  }
+
+  .text-input::-webkit-input-placeholder {
+    color: #E7A519;
+  }
+  .item-input ion-input, .item-input ion-textarea{
+    padding-top: 25px;
+  }
+  .scroll-content{
+    padding-bottom: 300px !important;
+  }
+      ion-title{
+  text-align: center !important;
+}
+}

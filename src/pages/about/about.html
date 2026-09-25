@@ -1,0 +1,28 @@
+<!-- <ion-header align-title=”center”>
+  <ion-navbar align-title=”center”>
+    <ion-title align-title=”center”><img alt="logo" height="55" cache="true" src="assets/imgs/header.svg" ></ion-title>
+  </ion-navbar>
+</ion-header> -->
+<ion-header align-title=”center”>
+	<ion-navbar align-title=”center”>
+		<ion-row style="align-items: center;">
+			<ion-col col-2>				
+			</ion-col>
+			<ion-col col-8 style="text-align: center !important;"><img alt="logo" height="55" cache="true" src="assets/imgs/header.svg"></ion-col>
+			<ion-col col-2>
+			</ion-col>
+		</ion-row>	
+	</ion-navbar>
+</ion-header>
+
+<ion-content text-justify padding-bottom>
+  <ion-card *ngFor="let about of aboutusdetails; let i = index" margin-bottom >
+         <ion-card-header text-center>
+           {{about.title}}
+         </ion-card-header>
+         <ion-card-content class="contact-us" text-justify [innerHTML]="about.content">
+         
+         </ion-card-content>
+         
+         </ion-card>
+ </ion-content>

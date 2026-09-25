@@ -1,0 +1,65 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Forgot Password</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content text-center padding style="background-size: cover; background-image: url(assets/img/back.jpg);">
+    <!-- <p style="margin-top: -10px;margin-bottom: 0px;"> -->
+            <!-- <img style=" max-width: 35% !important;" src='assets/images/logo/front.svg' /> -->
+        <!-- </p> -->
+    <ion-card>
+        <form [formGroup]="forgotpasswordForm" *ngIf="!resetpass" (ngSubmit)="onSubmit(forgotpasswordForm.value)" style="" novalidate padding>
+            <ion-list>
+				<ion-item class="errMsg">{{errorMessage}}</ion-item>
+                <ion-item>
+                    <ion-label floating>Username</ion-label>
+                    <ion-input [formControl]="username" type="text"></ion-input>
+                </ion-item>
+<!--                 <ion-item>
+                    <ion-label floating>Registered Mobile</ion-label>
+                    <ion-input  [formControl]="mobileno" type="tel" maxlength="10"></ion-input>
+                </ion-item> -->
+            </ion-list>
+            <br>
+            <button [disabled]="!forgotpasswordForm.valid || isDisabled" style="background: #aa792b;" ion-button class="button-login" block color="dark" type="submit" >Submit</button>
+            <br>
+            <div style="">
+                 <ion-note style="float: left">
+                    <a (click)="login()" style="text-transform: initial;" ion-button clear>Login </a>
+                </ion-note> 
+                 <ion-note style="float: right">
+                    <a (click)="register()" style="text-transform: initial;" ion-button clear>Register</a>
+                </ion-note> 
+            </div>
+        </form>
+        <form [formGroup]="resetpasswordForm" *ngIf="resetpass" (ngSubmit)="onPasswordreset(resetpasswordForm.value)" style="" novalidate padding>
+            <ion-list>
+				<ion-item class="errMsg">{{errorMessage}}</ion-item>
+                <ion-item>
+                    <ion-label floating>Password</ion-label>
+                    <ion-input [formControl]="password"  type="{{typechecknew}}"></ion-input>
+                    <button style="padding: 0px !important" *ngIf="!showPassnew" ion-button clear color="dark" type="button" item-right (click)="shownewPassword()"> <ion-icon style="background:none !important;"  name="eye"></ion-icon></button>
+                    <button style="padding: 0px !important" *ngIf="showPassnew" ion-button clear color="dark" type="button" item-right (click)="shownewPassword()">  <ion-icon style="background:none !important;" name="eye-off"></ion-icon></button>
+                </ion-item>
+                <ion-item>
+                    <ion-label floating>Confirm Password</ion-label>
+                    <ion-input [formControl]="confirmPass" type="{{typecheckconfirm}}"></ion-input>
+                    <button style="padding: 0px !important" *ngIf="!showPassconfirm" ion-button clear color="dark" type="button" item-right (click)="showconfirmPassword()"> <ion-icon style="background:none !important;"  name="eye"></ion-icon></button>
+                    <button style="padding: 0px !important" *ngIf="showPassconfirm" ion-button clear color="dark" type="button" item-right (click)="showconfirmPassword()">  <ion-icon style="background:none !important;" name="eye-off"></ion-icon></button>
+                </ion-item>
+            </ion-list>
+            <br>
+            <button [disabled]="!resetpasswordForm.valid || isDisabled" style="background: #aa792b;" ion-button class="button-login" block color="dark" type="submit" >Submit</button>
+            <br>
+            <div style="">
+                 <ion-note style="float: left">
+                    <a (click)="login()" style="text-transform: initial;" ion-button clear>Login </a>
+                </ion-note> 
+                 <ion-note style="float: right">
+                    <a (click)="register()" style="text-transform: initial;" ion-button clear>Register</a>
+                </ion-note> 
+            </div>
+        </form>
+    </ion-card>
+
+</ion-content>

@@ -1,0 +1,20 @@
+{"filters":
+	[{"id_filter":1,"filter_head":"Product","show":1},
+	{"id_filter":2,"filter_head":"Product Style","show":1},
+	{"id_filter":3,"filter_head":"Weight Range","show":1},
+	{"id_filter":4,"filter_head":"Price Range","show":1},
+	{"id_filter":5,"filter_head":"Occasion","show":1},
+	{"id_filter":6,"filter_head":"Gold Karatage","show":1},
+	{"id_filter":7,"filter_head":"Shop For","show":1},
+	{"id_filter":8,"filter_head":"Metal","show":1},
+	{"id_filter":9,"filter_head":"Collections","show":1},
+	{"id_filter":10,"filter_head":"Metal Color","show":1},
+	{"id_filter":11,"filter_head":"Theme","show":1},
+	{"id_filter":12,"filter_head":"Brand","show":1},
+	{"id_filter":13,"filter_head":"Gifts","show":0},
+	{"id_filter":14,"filter_head":"Discounts","show":1}],
+"filter_options" :
+ 	[{"id_filter":1,"id_opt":1,"filter":"ring","show":0,"is_selected":1},{"id_filter":1,"id_opt":2,"filter":"Bangle","show":1,"is_selected":0},{"id_filter":2,"id_opt":3,"filter":"Nail Ring","show":1,"is_selected":1},{"id_filter":1,"id_opt":4,"filter":"Spiral","show":1,"is_selected":0}],
+"filterargs":
+	{"id_filter":1,"show":1}
+}

@@ -1,0 +1,101 @@
+<ion-grid *ngIf="items?.length > 0"> <ion-card style="background: #f2f2f2 !important;border-bottom: 1px solid gray;"
+	*ngFor=" let item of items; let i=index " [@flyAlternameSlow]="i%2">
+<ion-row nowrap>
+<ion-col col-4 style="padding: 5px;">
+
+	<img *ngIf="item.prodefaultimg" style="height: 110px; padding: 5px; width: auto; margin: 0 auto;border-radius: 10px;"
+		src='{{item.prodefaultimg}}' imageViewer="{{item.prodefaultimg}}"/>
+
+	<img *ngIf="!item.prodefaultimg && item.customimages[0]" style="height: 110px; padding: 5px; width: auto; margin: 0 auto;border-radius: 10px;"
+		src='{{item.customimages[0]}}' imageViewer="{{item.customimages[0]}}"/>
+
+	<img *ngIf="!item.prodefaultimg && !item.customimages[0] && !item.productimgdetails[0]" style="height: 110px; padding: 5px; width: auto; margin: 0 auto;border-radius: 10px;"
+		src='https://winjewel.mohanlaljewellers.in/winjewel_test/winjewel_api/assets/images/no-image.png' imageViewer="https://winjewel.mohanlaljewellers.in/winjewel_test/winjewel_api/assets/images/no-image.png"/>
+
+</ion-col>
+<ion-col col-6
+	style="padding: 5px;margin: auto;">
+<div class="name" style="    font-weight: bold;padding: 11px;">
+	<ion-badge></ion-badge>
+	{{item.name}}
+</div>
+<ion-row>
+	<ion-col width:50>
+		Wgt(g) :
+	</ion-col>
+	<ion-col width:50 *ngIf="item.reqweight > 0" >
+		{{item.reqweight}}
+	</ion-col>
+</ion-row>
+<ion-row>
+	<ion-col width:50>
+		Purity   :
+	</ion-col>
+	<ion-col width:50>
+		<span *ngFor="let i of item.purities"><span *ngIf="i.id_purity == item.id_purity">{{i.purity}}</span></span>
+	</ion-col>
+</ion-row>
+<div style="">
+	<ion-grid> <ion-row> <ion-col col-4 style="color: darkgray;" class="add">Qty</ion-col>
+	<ion-col col-2>
+    <button ion-button small outline (click)="sub(item)" block>
+      <ion-icon name="remove"></ion-icon>
+    </button>
+	</ion-col> <ion-col col-2>
+	<button ion-button small outline full block color="dark">{{item.qty}}</button>
+	</ion-col> <ion-col col-2>
+  <button ion-button small outline (click)="add(item)" block>
+		<ion-icon name="add"></ion-icon>
+	</button>
+	</ion-col> <ion-col col-2>
+	<!-- <button ion-button small color="danger" (click)="remove(item)" block>
+		<ion-icon name="md-trash"></ion-icon>
+	</button> -->
+	</ion-col> </ion-row> </ion-grid>
+</div>
+<ion-row>
+	<ion-col width:50>
+		Qty Type :
+	</ion-col>
+	<ion-col width:50>
+		{{(item.qty_type == "1" ? "Pieces" : (item.qty_type == "2" ? "Sets" : (item.qty_type == "3" ? "Pairs" : '')))}}
+	</ion-col>
+</ion-row>
+<ion-row>
+	<ion-col width:50>
+		Length :
+	</ion-col>
+	<ion-col width:50>
+		{{item.sizeorlen}}
+	</ion-col>
+</ion-row>
+<ion-row>
+	<ion-col width:50>
+		Reference :
+	</ion-col>
+	<ion-col width:50>
+		{{item.customer_ref_no}}
+	</ion-col>
+</ion-row>
+<ion-row>
+	<ion-col width:50>
+		Remarks :
+	</ion-col>
+	<ion-col width:50>
+		{{item.remarks}}
+	</ion-col>
+</ion-row>
+</ion-col>
+<ion-col col-2 style="margin: auto;">
+	<button style="    width: 30px !important;margin: 0 auto;border-radius: 7px;" ion-button small color="danger" (click)="remove(item)" block>
+		<ion-icon name="close"></ion-icon>
+	</button>
+</ion-col>
+ </ion-row> </ion-card>
+</ion-grid>
+<ion-grid>
+<p *ngIf="items.length == 0" class="emptycart">Cart Is Empty</p>
+</ion-grid>
+<ion-card *ngIf="items.length > 0" class="card card-md" padding="" align="right">
+	Total weight&nbsp;&nbsp;&nbsp;&nbsp;<b style="font-size: large;">{{total_weight | number : '1.3-3'}} g</b>
+</ion-card>

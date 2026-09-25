@@ -1,0 +1,61 @@
+newarrivals {
+/*   .card-md{
+    width: 100%;
+    }
+  [col-6] {
+      padding: 2px;
+  } */
+  ion-col[col-6] {
+    padding: 4px !important;
+  }
+
+  ion-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .searchbar-md .searchbar-input{
+    background: white !important;
+  }
+  .searchbar-md{
+    background: #4958B2 !important;
+  }
+  .scroll-content{
+    //margin-bottom: 43px;
+  }
+  .toolbar .toolbar-title {
+    color: #aa792b !important;
+    font-weight: bold !important;
+    text-align: left !important;
+  }
+
+  .instock {
+    color: #2e7d32;
+    font-weight: 500;
+    font-size: 13px;
+  }
+
+  .outofstock {
+    color: #c62828;
+    font-weight: 500;
+    font-size: 13px;
+  }
+
+  .text-small {
+    font-size: 13px;
+    color: #555;
+  }
+
+  .itemempty{
+    font-weight:bold;
+    padding-top: 50%;
+    text-align:center !important;
+  }
+  .row .itemempty{
+    text-align:center !important;
+    margin:0 auto;
+     top: 50%;
+      left: 50%;
+    }
+
+}

@@ -1,0 +1,65 @@
+{
+  "_args": [
+    [
+      "cordova-plugin-filepath@1.6.0",
+      "/Users/apple/Documents/wintrade/Bcbullion/mrksilver"
+    ]
+  ],
+  "_development": true,
+  "_from": "cordova-plugin-filepath@1.6.0",
+  "_id": "cordova-plugin-filepath@1.6.0",
+  "_inBundle": false,
+  "_integrity": "sha512-DwKuH5tXhZJImU/rHDzQhG3bY2ihAUw5QqdNllso96MZ9TQTAbFvKPLppuJwx21XxYS2g3uB9R17AXEEme+sKA==",
+  "_location": "/cordova-plugin-filepath",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "cordova-plugin-filepath@1.6.0",
+    "name": "cordova-plugin-filepath",
+    "escapedName": "cordova-plugin-filepath",
+    "rawSpec": "1.6.0",
+    "saveSpec": null,
+    "fetchSpec": "1.6.0"
+  },
+  "_requiredBy": [
+    "#DEV:/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-filepath/-/cordova-plugin-filepath-1.6.0.tgz",
+  "_spec": "1.6.0",
+  "_where": "/Users/apple/Documents/wintrade/Bcbullion/mrksilver",
+  "author": {
+    "name": "Ramesh Nair",
+    "email": "ram@hiddentao.com"
+  },
+  "bugs": {
+    "url": "https://github.com/hiddentao/cordova-plugin-filepath/issues"
+  },
+  "cordova": {
+    "id": "cordova-plugin-filepath",
+    "platforms": [
+      "android"
+    ]
+  },
+  "description": "Resolve native file paths from content URLs for Cordova platforms",
+  "devDependencies": {
+    "sync-cordova-xml": "^0.4.0"
+  },
+  "homepage": "https://github.com/hiddentao/cordova-plugin-filepath#readme",
+  "keywords": [
+    "cordova",
+    "file",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "license": "Apache 2.0",
+  "name": "cordova-plugin-filepath",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hiddentao/cordova-plugin-filepath.git"
+  },
+  "scripts": {
+    "version": "sync-cordova-xml package.json plugin.xml --output plugin.xml && git add plugin.xml"
+  },
+  "version": "1.6.0"
+}

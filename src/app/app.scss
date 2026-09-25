@@ -1,0 +1,406 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+ion-app.md [padding] .scroll-content{
+  padding: 5px;
+}
+.content-md, .content-ios {
+    color: #000;
+    background-color: #fff;
+}
+ion-navbar .toolbar-background-md{
+  background: #FFFFFF;
+}
+.toolbar-md{
+  //-bottom: 1px solid #A10A01;
+}
+.toolbar-ios ion-title{
+  padding: 0 0px 1px !important;
+  background-color: #FFFFFF;
+}
+.toolbar.toolbar-ios{
+  border-bottom: 1px solid #FFF;
+}
+
+ion-title{
+  text-align: left;
+}
+ion-footer{
+  background: #aa792b;
+    color: #fff;
+    font-size: 12px;
+    font-family: "Source Code Pro", Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+.footer-bottom .col{
+  padding: 0px !important;
+}
+.tabbar{
+  bottom: 25px !important;
+}
+$SIDEMENU_TOP: #B14C18;
+$SIDEMENU_BOTTOM: #B14C18;
+$FONT_COLOR:#FFFFFF;
+.tabs-md .tabbar,
+// .tabs-ios .tabbar {
+//     background: -webkit-gradient(left top, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+//     background: -o-linear-gradient(bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+//     background: -moz-linear-gradient(bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+//     background: linear-gradient(to bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+//     background-repeat: repeat-x;
+// }
+.tabs-ios .tabbar {
+    background: -webkit-gradient($SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+    background: -o-linear-gradient($SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+    background: -moz-linear-gradient($SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+    background: linear-gradient($SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+    background-repeat: repeat-x;
+}
+
+.tabs-ios .tab-button,
+.tabs-ios .tab-button,
+.tab-button-text {
+  min-height: 0.6rem;
+  color: $FONT_COLOR;
+  font-size: 10px !important;
+}
+
+.bar-button,
+.tabs-ios .bar-button:hover {
+    color: $FONT_COLOR;
+}
+.tabs-ios .tab-button-icon,
+.tabs-ios .tab-button-icon{
+    color: $FONT_COLOR;
+}
+.tabs-ios .tab-button[aria-selected=true],
+.tabs-ios .tab-button[aria-selected=true]{
+  background-color: #FBDA8D !important;
+  color:#5D452C !important;
+}
+.tabs-ios .tab-button[aria-selected=true] .tab-button-icon,
+.tabs-ios .tab-button[aria-selected=true] .tab-button-icon,
+.tabs-ios .tab-button[aria-selected=true] .tab-button-text,
+.tabs-ios .tab-button[aria-selected=true] .tab-button-text
+{
+    color: #5D452C;
+    font-weight:bold !important;
+}
+div.col-10{
+  padding-top: 16px !important;
+}
+.alert-sub-title img{
+  height:20px !important;
+}
+.alert-wrapper{
+  border-radius: 10px !important;
+  border:1px solid lightgrey;
+  background-color: rgb(233, 233, 233) !important;
+
+}
+.alert-title{
+  color:#FFF;
+  text-align: center;
+  background-color: #434142;
+  border-radius: 0px 140px 30px 140px;
+}
+.alert-ios .alert-button{
+  color:#FFF;
+  background: #E7A519;
+  border-radius: 6px;
+}
+.alert-head{
+  border-bottom:1px dashed #E7A519;
+  padding:8px !important;
+  margin-bottom:5px !important;
+}
+.alert-message{
+  text-align: center !important;
+  color:#E7A519 !important;
+  text-decoration: none;
+}
+.alert-message img{
+  height:16px !important;
+}
+.alert-sub-title p a{
+	text-decoration:none;
+	color:#000;
+	line-height:1.65em;
+}
+/* ion-icon {
+  &[class*="custom-"] {
+      margin: 0 5px 0 0;
+      vertical-align: middle;
+      $sz: 25px;
+      width: $sz;
+      height: $sz;
+  } // custom icons
+  &[class*="pulse"][ng-reflG:\Projects\winbullLite\baystar_bullionect-is-active="true"] {
+      background: url("../assets/imgs/Liverate.svg") no-repeat 50% 50%;
+      background-size: 20px;
+  }//in case of active
+  &[class*="pulse"][ng-reflect-is-active="false"] {
+      background: url("../assets/imgs/Liverate1.svg") no-repeat 50% 50%;
+      background-size: 20px;
+  }//in case of inactive
+  &[class*="circle"][ng-reflect-is-active="true"]{
+      background: url("../assets/imgs/About Us.svg") no-repeat 50% 50%;
+      background-size: 20px;
+  }
+  &[class*="circle"][ng-reflect-is-active="false"]{
+    background: url("../assets/imgs/About Us1.svg") no-repeat 50% 50%;
+    background-size: 20px;
+  }
+  &[class*="contacts"][ng-reflect-is-active="true"]{
+    background: url("../assets/imgs/Contact.svg") no-repeat 50% 50%;
+    background-size: 20px;
+  }
+  &[class*="contacts"][ng-reflect-is-active="false"]{
+    background: url("../assets/imgs/Contact1.svg") no-repeat 50% 50%;
+    background-size: 20px;
+  }
+  &[class*="chatboxes"][ng-reflect-is-active="true"]{
+    background: url("../assets/imgs/Bank Details.svg") no-repeat 50% 50%;
+    background-size: 20px;
+  }
+  &[class*="chatboxes"][ng-reflect-is-active="false"]{
+    background: url("../assets/imgs/Bank Details1.svg") no-repeat 50% 50%;
+    background-size: 20px;
+  }
+} */
+
+.ch{
+  background: white;
+  color: #f9c52e;
+  padding: 5px !important;
+  border-radius: 5px;
+}
+.noch{
+  background: transparent;
+  color: black;
+  padding: 5px !important;
+}
+
+
+// winjewel  css
+
+
+.header-background-image {
+  background-image: url('../assets/images/background/16.jpg');
+
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-bottom: 1px solid #fff;
+}
+
+.header-background-image ion-thumbnail {
+  padding-top: 77px !important;
+  // padding-left: 77px !important;
+}
+.alert-ios .alert-title{
+  font-size: 21px !important;
+}
+.scroll-content{
+      background-color: #f9f8f8 !important;
+      padding-bottom: 100px !important;
+}
+.item-ios, .item-md{
+  background-color: transparent !important;
+}
+.header-background-image::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  background-color: #525D61 !important;
+}
+a {
+  color: black !important;
+  font-weight: bold !important;
+  text-decoration:none !important;
+}
+.ch{
+  background: white;
+  color: #f9c52e;
+  padding: 5px !important;
+  border-radius: 5px;
+}
+.noch{
+  background: transparent;
+  color: black;
+  padding: 5px !important;
+}
+.toolbar .bar-button-default{
+  color: #aa792b !important
+}
+.toolbar .toolbar-title{
+  color: #aa792b !important;
+  font-weight:bold !important;
+}
+
+.zoom-in {
+  -webkit-animation: zoomIn 500ms;
+  -moz-animation: zoomIn 500ms;
+  -o-animation: zoomIn 500ms;
+  animation: zoomIn 500ms;
+}
+
+.menu-title {
+  text-align: center;
+  color: white !important;
+/*color: #FFF !important;*/
+  font-weight: bold;
+font-family:Bookman old stlye;
+font-size: 18px !important;
+}
+h2.menu-title{
+margin-top: 1.4rem !important;
+}
+// Spiner View
+.spinner-view {
+  img {
+      width: 100px;
+      height: 100px;
+      margin: 0 auto;
+  }
+}
+ion-navbar.toolbar{
+  padding-top:15px;
+}
+// Settings Style Main Meni
+.header-background-image {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  @include darkening-blend-mode;
+  ion-thumbnail {
+      padding-top: 40px;
+      img {
+          margin: 0 auto;
+          position: relative;
+          z-index: 9;
+          max-width: 80px;
+      }
+  }
+  [item-title] {
+      position: relative;
+      z-index: 9;
+  }
+}
+
+// Settings Main  Menu
+.main-menu {
+  h2 {
+      color: theme-colors('textColors', 'primary');
+      font-weight: 300 !important;
+  }
+  ion-icon {
+      color: theme-colors('textColors', 'primary');
+      float: left;
+      padding-left: 30px;
+      margin-right: 10px;
+  }
+}
+
+// Settings Submenu
+.submenu {
+  h2 {
+      color: theme-colors('textColors', 'primary');
+      font-weight: 300 !important;
+  }
+  ion-label {
+      padding-left: 30px !important;
+  }
+}
+
+
+.footer-b1 {
+  // margin: 0px;
+  height: 45px;
+  color: black;
+  background: #f9c52e;
+  text-transform: none;
+  border-radius: 10px;
+}
+
+.fiveStar {
+  width: 100%;
+  background: #388e3c;
+  height: 5px;
+  float: left;
+}
+
+.fourStar {
+  width: 80%;
+  background: #388e3c;
+  height: 5px;
+  float: left;
+}
+
+.threeStar {
+  width: 30%;
+  background: #388e3c;
+  height: 5px;
+  float: left;
+}
+
+.twoStar {
+  width: 20%;
+  background: #ff9f00;
+  height: 5px;
+  float: left;
+}
+
+.oneStar {
+  width: 50%;
+  background: #ff6161;
+  height: 5px;
+  float: left;
+}
+.toolbar .toolbar-ios .statusbar-padding{
+  padding-top:24px !important
+}
+.alert-ios .alert-button{
+  text-transform: none !important;
+}
+
+    .toolbar-ios ion-title{
+    padding:0px !important;
+    position:relative !important;
+    margin-left: 10px !important;
+}
+ion-navbar.toolbar {
+    padding-top: 0px !important;
+}
+
+.alert-ios .alert-button-group {
+    margin-right: -0.55px;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: flex-end !important;
+    padding: 8px 8px 8px 24px !important;
+}
+
+  .toolbar .toolbar-title {
+    text-align: left !important;
+}
