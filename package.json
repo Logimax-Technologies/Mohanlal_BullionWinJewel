@@ -92,7 +92,10 @@
       "cordova-plugin-file": {},
       "cordova-plugin-network-information": {},
       "cordova-plugin-app-version": {},
-      "cordova-plugin-x-socialsharing": {},
+      "cordova-plugin-x-socialsharing": {
+        "PHOTO_LIBRARY_ADD_USAGE_DESCRIPTION": "Photo library access is used to save product images you choose to download or share.",
+        "PHOTO_LIBRARY_USAGE_DESCRIPTION": "Your photo library is used to choose jewellery design images you attach to a custom order."
+      },
       "cordova-plugin-file-opener2": {},
       "cordova-plugin-android-permissions": {},
       "cordova-plugin-market": {},

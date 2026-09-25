@@ -1,61 +1,6 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
   module.exports = [
     {
-      "id": "com-badrit-base64.Base64",
-      "file": "plugins/com-badrit-base64/www/Base64.js",
-      "pluginId": "com-badrit-base64",
-      "clobbers": [
-        "navigator.Base64"
-      ]
-    },
-    {
-      "id": "es6-promise-plugin.Promise",
-      "file": "plugins/es6-promise-plugin/www/promise.js",
-      "pluginId": "es6-promise-plugin",
-      "runs": true
-    },
-    {
-      "id": "cordova-plugin-device.device",
-      "file": "plugins/cordova-plugin-device/www/device.js",
-      "pluginId": "cordova-plugin-device",
-      "clobbers": [
-        "device"
-      ]
-    },
-    {
-      "id": "cordova-plugin-network-information.network",
-      "file": "plugins/cordova-plugin-network-information/www/network.js",
-      "pluginId": "cordova-plugin-network-information",
-      "clobbers": [
-        "navigator.connection",
-        "navigator.network.connection"
-      ]
-    },
-    {
-      "id": "cordova-plugin-network-information.Connection",
-      "file": "plugins/cordova-plugin-network-information/www/Connection.js",
-      "pluginId": "cordova-plugin-network-information",
-      "clobbers": [
-        "Connection"
-      ]
-    },
-    {
-      "id": "phonegap-plugin-mobile-accessibility.mobile-accessibility",
-      "file": "plugins/phonegap-plugin-mobile-accessibility/www/mobile-accessibility.js",
-      "pluginId": "phonegap-plugin-mobile-accessibility",
-      "clobbers": [
-        "window.MobileAccessibility"
-      ]
-    },
-    {
-      "id": "phonegap-plugin-mobile-accessibility.MobileAccessibilityNotifications",
-      "file": "plugins/phonegap-plugin-mobile-accessibility/www/MobileAccessibilityNotifications.js",
-      "pluginId": "phonegap-plugin-mobile-accessibility",
-      "clobbers": [
-        "MobileAccessibilityNotifications"
-      ]
-    },
-    {
       "id": "cordova-plugin-camera.Camera",
       "file": "plugins/cordova-plugin-camera/www/CameraConstants.js",
       "pluginId": "cordova-plugin-camera",
@@ -261,12 +206,34 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       "runs": true
     },
     {
+      "id": "cordova-plugin-network-information.network",
+      "file": "plugins/cordova-plugin-network-information/www/network.js",
+      "pluginId": "cordova-plugin-network-information",
+      "clobbers": [
+        "navigator.connection"
+      ]
+    },
+    {
+      "id": "cordova-plugin-network-information.Connection",
+      "file": "plugins/cordova-plugin-network-information/www/Connection.js",
+      "pluginId": "cordova-plugin-network-information",
+      "clobbers": [
+        "Connection"
+      ]
+    },
+    {
       "id": "cordova-plugin-app-version.AppVersionPlugin",
       "file": "plugins/cordova-plugin-app-version/www/AppVersionPlugin.js",
       "pluginId": "cordova-plugin-app-version",
       "clobbers": [
         "cordova.getAppVersion"
       ]
+    },
+    {
+      "id": "es6-promise-plugin.Promise",
+      "file": "plugins/es6-promise-plugin/www/promise.js",
+      "pluginId": "es6-promise-plugin",
+      "runs": true
     },
     {
       "id": "cordova-plugin-x-socialsharing.SocialSharing",
@@ -333,11 +300,11 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       ]
     },
     {
-      "id": "cordova-plugin-splashscreen.SplashScreen",
-      "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
-      "pluginId": "cordova-plugin-splashscreen",
+      "id": "cordova-plugin-device.device",
+      "file": "plugins/cordova-plugin-device/www/device.js",
+      "pluginId": "cordova-plugin-device",
       "clobbers": [
-        "navigator.splashscreen"
+        "device"
       ]
     },
     {
@@ -371,29 +338,44 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       "clobbers": [
         "cordova.exec"
       ]
+    },
+    {
+      "id": "cordova-plugin-firebasex-core.FirebasexCorePlugin",
+      "file": "plugins/cordova-plugin-firebasex-core/www/firebasex-core.js",
+      "pluginId": "cordova-plugin-firebasex-core",
+      "clobbers": [
+        "FirebasexCore"
+      ]
+    },
+    {
+      "id": "cordova-plugin-firebasex-messaging.FirebasexMessagingPlugin",
+      "file": "plugins/cordova-plugin-firebasex-messaging/www/firebasex-messaging.js",
+      "pluginId": "cordova-plugin-firebasex-messaging",
+      "clobbers": [
+        "FirebasexMessaging"
+      ]
     }
   ];
   module.exports.metadata = {
-    "com-badrit-base64": "0.2.0",
-    "es6-promise-plugin": "4.2.2",
-    "cordova-plugin-device": "2.0.2",
-    "cordova-plugin-network-information": "2.0.2",
-    "phonegap-plugin-mobile-accessibility": "1.0.5-dev",
     "cordova-plugin-camera": "5.0.3",
     "cordova-plugin-file": "6.0.2",
-    "cordova-plugin-app-version": "0.1.12",
-    "cordova-plugin-x-socialsharing": "6.0.3",
+    "cordova-plugin-network-information": "3.1.0",
+    "cordova-plugin-app-version": "0.1.14",
+    "es6-promise-plugin": "4.2.2",
+    "cordova-plugin-x-socialsharing": "6.0.4",
     "cordova-plugin-file-opener2": "3.0.5",
-    "cordova-plugin-android-permissions": "1.1.2",
+    "cordova-plugin-android-permissions": "1.1.5",
     "cordova-plugin-market": "1.2.0",
     "cordova-plugin-datepicker": "0.9.3",
     "cordova-plugin-filepath": "1.6.0",
-    "cordova-plugin-x-toast": "2.7.2",
+    "cordova-plugin-x-toast": "2.7.3",
     "cordova-plugin-telerik-imagepicker": "2.3.5",
     "cordova-plugin-statusbar": "2.4.2",
-    "cordova-plugin-splashscreen": "5.0.2",
+    "cordova-plugin-device": "2.1.0",
     "cordova-plugin-ionic-keyboard": "2.2.0",
     "cordova-plugin-inappbrowser": "5.0.0",
-    "cordova-plugin-ionic-webview": "5.0.0"
+    "cordova-plugin-ionic-webview": "5.0.0",
+    "cordova-plugin-firebasex-core": "2.0.1",
+    "cordova-plugin-firebasex-messaging": "2.0.2"
   };
 });

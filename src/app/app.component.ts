@@ -39,7 +39,6 @@ import { Toast } from '@ionic-native/toast';
 import { CategoryComponent } from '../components/category/category';
 import { AndroidPermissions } from '@ionic-native/android-permissions';
 import { count } from 'rxjs/operators';
-import { normalizeUrl } from 'ionic-angular/umd/navigation/deep-linker';
 import { SocialSharing } from '@ionic-native/social-sharing';
 import { WinhomePage } from '../pages/winhome/winhome';
 import { AboutPage } from '../pages/about/about';

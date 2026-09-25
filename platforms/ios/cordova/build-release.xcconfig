@@ -23,8 +23,8 @@
 
 #include "build.xcconfig"
 
-CODE_SIGN_IDENTITY = iPhone Distribution
-CODE_SIGN_IDENTITY[sdk=iphoneos*] = iPhone Distribution
+// CODE_SIGN_IDENTITY = iPhone Distribution  // disabled: conflicts with automatic signing
+// CODE_SIGN_IDENTITY[sdk=iphoneos*] = iPhone Distribution  // disabled: conflicts with automatic signing
 
 #include "build-extras.xcconfig"
 

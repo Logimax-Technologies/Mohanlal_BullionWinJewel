@@ -7,12 +7,6 @@
     "files": {}
   },
   "installed_plugins": {
-    "com-badrit-base64": {
-      "PACKAGE_NAME": "com.logimax.mohanlal.MohanlalJewellery"
-    },
-    "phonegap-plugin-mobile-accessibility": {
-      "PACKAGE_NAME": "com.logimax.mohanlal.MohanlalJewellery"
-    },
     "cordova-plugin-camera": {
       "PACKAGE_NAME": "com.logimax.mohanlal.MohanlalJewellery"
     },
@@ -26,8 +20,8 @@
       "PACKAGE_NAME": "com.logimax.mohanlal.MohanlalJewellery"
     },
     "cordova-plugin-x-socialsharing": {
-      "PHOTO_LIBRARY_ADD_USAGE_DESCRIPTION": "This app requires photo library access to function properly.",
-      "PHOTO_LIBRARY_USAGE_DESCRIPTION": "This app requires photo library access to function properly.",
+      "PHOTO_LIBRARY_ADD_USAGE_DESCRIPTION": "Photo library access is used to save product images you choose to download or share.",
+      "PHOTO_LIBRARY_USAGE_DESCRIPTION": "Your photo library is used to choose jewellery design images you attach to a custom order.",
       "PACKAGE_NAME": "com.logimax.mohanlal.MohanlalJewellery"
     },
     "cordova-plugin-file-opener2": {
@@ -49,16 +43,13 @@
       "PACKAGE_NAME": "com.logimax.mohanlal.MohanlalJewellery"
     },
     "cordova-plugin-telerik-imagepicker": {
-      "PHOTO_LIBRARY_USAGE_DESCRIPTION": "your usage message",
+      "PHOTO_LIBRARY_USAGE_DESCRIPTION": "Your photo library is used to choose jewellery design images you attach to a custom order.",
       "PACKAGE_NAME": "com.logimax.mohanlal.MohanlalJewellery"
     },
     "cordova-plugin-statusbar": {
       "PACKAGE_NAME": "com.logimax.mohanlal.MohanlalJewellery"
     },
     "cordova-plugin-device": {
-      "PACKAGE_NAME": "com.logimax.mohanlal.MohanlalJewellery"
-    },
-    "cordova-plugin-splashscreen": {
       "PACKAGE_NAME": "com.logimax.mohanlal.MohanlalJewellery"
     },
     "cordova-plugin-ionic-keyboard": {
@@ -69,10 +60,22 @@
     },
     "cordova-plugin-ionic-webview": {
       "PACKAGE_NAME": "com.logimax.mohanlal.MohanlalJewellery"
+    },
+    "cordova-plugin-firebasex-messaging": {
+      "FIREBASE_FCM_AUTOINIT_ENABLED": "true",
+      "FIREBASE_MESSAGING_IMMEDIATE_PAYLOAD_DELIVERY": "false",
+      "IOS_FCM_ENABLED": "true",
+      "IOS_ENABLE_CRITICAL_ALERTS_ENABLED": "false",
+      "IOS_FIREBASE_SDK_VERSION": "12.14.0",
+      "PACKAGE_NAME": "com.logimax.mohanlal.MohanlalJewellery"
     }
   },
   "dependent_plugins": {
     "es6-promise-plugin": {
+      "PACKAGE_NAME": "com.logimax.mohanlal.MohanlalJewellery"
+    },
+    "cordova-plugin-firebasex-core": {
+      "IOS_FIREBASE_SDK_VERSION": "12.14.0",
       "PACKAGE_NAME": "com.logimax.mohanlal.MohanlalJewellery"
     }
   }

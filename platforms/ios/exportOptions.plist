@@ -6,5 +6,7 @@
     <false/>
     <key>method</key>
     <string>development</string>
+    <key>teamID</key>
+    <string>7NFUMFAE2A</string>
   </dict>
 </plist>

@@ -13,18 +13,18 @@
 		<key>CFBundleIdentifier</key>
 		<string>com.logimax.mohanlal.MohanlalJewellery</string>
 		<key>CFBundleShortVersionString</key>
-		<string>2.0.8</string>
+		<string>2.0.9</string>
 		<key>CFBundleVersion</key>
-		<string>2.0.8</string>
+		<string>2.0.9</string>
 		<key>SigningIdentity</key>
-		<string>Apple Development: Vinoth Kumar Rathinavel (Y8W6B27DLP)</string>
+		<string>Apple Development: Muthukumar Veluswamy (9EYTVS57BK)</string>
 		<key>Team</key>
 		<string>7NFUMFAE2A</string>
 	</dict>
 	<key>ArchiveVersion</key>
 	<integer>2</integer>
 	<key>CreationDate</key>
-	<date>2025-07-30T08:54:26Z</date>
+	<date>2026-09-25T08:02:02Z</date>
 	<key>Name</key>
 	<string>Mohanlal Jewellers</string>
 	<key>SchemeName</key>

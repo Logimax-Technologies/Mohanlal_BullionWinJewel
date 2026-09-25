@@ -14,31 +14,203 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		x22I7tIm7dmtxEsTObWHOOpYPYI=
+		pVumF2BdjJf4cySnFZtOoDEkm1U=
 		</data>
-		<key>CDVLaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/objects-13.0+.nib</key>
+		<key>CDVLaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		lfA503RZNztX4I2aM8h+quhMnEw=
-		</data>
-		<key>CDVLaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/runtime.nib</key>
-		<data>
-		IGfNxGad34FrJfeJ/2a451+tKEI=
+		hbs4jMV6D6eeY46oGjAWTyXJSA8=
 		</data>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
 		<data>
 		n2t8gsDpfE6XkhG31p7IQJRxTxU=
 		</data>
-		<key>CDVLaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib/objects-13.0+.nib</key>
-		<data>
-		ZVgM1+KwZcZnwhgaI0F7Bt1ba2c=
-		</data>
-		<key>CDVLaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib/runtime.nib</key>
+		<key>CDVLaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
 		ZVgM1+KwZcZnwhgaI0F7Bt1ba2c=
 		</data>
 		<key>DatePicker.nib</key>
 		<data>
-		D10Fwq2Qs5lGaJ4DoNAGIzVwJLo=
+		Dl633ZpOV5xYCRc6XlS/A41C+Rw=
+		</data>
+		<key>Frameworks/FBLPromises.framework/FBLPromises</key>
+		<data>
+		X+kKrrbJFHsxW6xe9GmvJUVLm28=
+		</data>
+		<key>Frameworks/FBLPromises.framework/FBLPromises_Privacy.bundle/Info.plist</key>
+		<data>
+		9ZSuky8cWyhkLBNio4nQYIbjDds=
+		</data>
+		<key>Frameworks/FBLPromises.framework/FBLPromises_Privacy.bundle/PrivacyInfo.xcprivacy</key>
+		<data>
+		ZajnvEs/MYRS3X4TPLAhBWi8mc4=
+		</data>
+		<key>Frameworks/FBLPromises.framework/Info.plist</key>
+		<data>
+		43Beguw1Vfcx7QUvWkWqlvEdyqo=
+		</data>
+		<key>Frameworks/FBLPromises.framework/_CodeSignature/CodeResources</key>
+		<data>
+		1ZkJ2BHwJHwORA+4D+rUrxJmQxA=
+		</data>
+		<key>Frameworks/FirebaseCore.framework/FirebaseCore</key>
+		<data>
+		YUMxGA+WdsglHsaDC2mLnPL3WD8=
+		</data>
+		<key>Frameworks/FirebaseCore.framework/FirebaseCore_Privacy.bundle/Info.plist</key>
+		<data>
+		Pul7ozvnp9u0v/ESfkX5ybXOViE=
+		</data>
+		<key>Frameworks/FirebaseCore.framework/FirebaseCore_Privacy.bundle/PrivacyInfo.xcprivacy</key>
+		<data>
+		sa2OhFlqdCIyz9oV7fUdDKWzFL0=
+		</data>
+		<key>Frameworks/FirebaseCore.framework/Info.plist</key>
+		<data>
+		vPtineGx2q5k2Xr0bz1BbBaTqtA=
+		</data>
+		<key>Frameworks/FirebaseCore.framework/_CodeSignature/CodeResources</key>
+		<data>
+		GYRs3tZc0bk1P8GD/auBS3JxdNI=
+		</data>
+		<key>Frameworks/FirebaseCoreExtension.framework/FirebaseCoreExtension</key>
+		<data>
+		lSLvdL2LEJKuI6XsW76odMgRfsw=
+		</data>
+		<key>Frameworks/FirebaseCoreExtension.framework/FirebaseCoreExtension_Privacy.bundle/Info.plist</key>
+		<data>
+		i1RMJ7eiQTjnVfW+J1ZF/ZmrP8Y=
+		</data>
+		<key>Frameworks/FirebaseCoreExtension.framework/FirebaseCoreExtension_Privacy.bundle/PrivacyInfo.xcprivacy</key>
+		<data>
+		6iBlSEWzrD6zouHx4NqeDhjKSGQ=
+		</data>
+		<key>Frameworks/FirebaseCoreExtension.framework/Info.plist</key>
+		<data>
+		olGvCcEjsHZ1kdM5dylZw305L3E=
+		</data>
+		<key>Frameworks/FirebaseCoreExtension.framework/_CodeSignature/CodeResources</key>
+		<data>
+		3+XsYvDlLwK743aRdHe53RH9R4c=
+		</data>
+		<key>Frameworks/FirebaseCoreInternal.framework/FirebaseCoreInternal</key>
+		<data>
+		BXDooQrajQAHOnv8hL6x/4969BU=
+		</data>
+		<key>Frameworks/FirebaseCoreInternal.framework/FirebaseCoreInternal_Privacy.bundle/Info.plist</key>
+		<data>
+		dleVb00Eg7H4YAKTv9/c4l/4RPE=
+		</data>
+		<key>Frameworks/FirebaseCoreInternal.framework/FirebaseCoreInternal_Privacy.bundle/PrivacyInfo.xcprivacy</key>
+		<data>
+		ifoThrqbbqoLG4yjAruMQRaf0Dw=
+		</data>
+		<key>Frameworks/FirebaseCoreInternal.framework/Info.plist</key>
+		<data>
+		1OFCX97Len2Io262CJiD7EVBWbo=
+		</data>
+		<key>Frameworks/FirebaseCoreInternal.framework/_CodeSignature/CodeResources</key>
+		<data>
+		ydlxySKi5498ai2uULHJxejlmeI=
+		</data>
+		<key>Frameworks/FirebaseInstallations.framework/FirebaseInstallations</key>
+		<data>
+		reJBXVAKjcdFLTFiwfLj/itvsnI=
+		</data>
+		<key>Frameworks/FirebaseInstallations.framework/FirebaseInstallations_Privacy.bundle/Info.plist</key>
+		<data>
+		zCV4A4G8QA7zRkzG6DJ/XiMB4dg=
+		</data>
+		<key>Frameworks/FirebaseInstallations.framework/FirebaseInstallations_Privacy.bundle/PrivacyInfo.xcprivacy</key>
+		<data>
+		WXQUJr75eMRgiVnLGyf8Gr3uLUU=
+		</data>
+		<key>Frameworks/FirebaseInstallations.framework/Info.plist</key>
+		<data>
+		aHGPvvc9bJdPHw4s7ukmYY6cpFU=
+		</data>
+		<key>Frameworks/FirebaseInstallations.framework/_CodeSignature/CodeResources</key>
+		<data>
+		DOLWmMOz9CkMikhKdQ0YdGf3psw=
+		</data>
+		<key>Frameworks/FirebaseMessaging.framework/FirebaseMessaging</key>
+		<data>
+		BlkNKSzHKKV0QMNW7v8TpXc9dYI=
+		</data>
+		<key>Frameworks/FirebaseMessaging.framework/FirebaseMessaging_Privacy.bundle/Info.plist</key>
+		<data>
+		26dYye/XDO21CU9zS2tGX2xJtZw=
+		</data>
+		<key>Frameworks/FirebaseMessaging.framework/FirebaseMessaging_Privacy.bundle/PrivacyInfo.xcprivacy</key>
+		<data>
+		gwv2NsO/6s7ik6Px6eTTTvacWN4=
+		</data>
+		<key>Frameworks/FirebaseMessaging.framework/Info.plist</key>
+		<data>
+		FV6k98Vj16KhkqepME58nXtGYxA=
+		</data>
+		<key>Frameworks/FirebaseMessaging.framework/_CodeSignature/CodeResources</key>
+		<data>
+		jc44aUlv4+PI+Z4AYv0rczuGhqY=
+		</data>
+		<key>Frameworks/GoogleDataTransport.framework/GoogleDataTransport</key>
+		<data>
+		0+R8ghtZmM6OsdIxnV8M/0N+fTI=
+		</data>
+		<key>Frameworks/GoogleDataTransport.framework/GoogleDataTransport_Privacy.bundle/Info.plist</key>
+		<data>
+		Y5/rd0IkB3VxFBYGshNWTuAD/F0=
+		</data>
+		<key>Frameworks/GoogleDataTransport.framework/GoogleDataTransport_Privacy.bundle/PrivacyInfo.xcprivacy</key>
+		<data>
+		WXQUJr75eMRgiVnLGyf8Gr3uLUU=
+		</data>
+		<key>Frameworks/GoogleDataTransport.framework/Info.plist</key>
+		<data>
+		oTVQCIwl6ND+Eeo1GM1GNvHpoho=
+		</data>
+		<key>Frameworks/GoogleDataTransport.framework/_CodeSignature/CodeResources</key>
+		<data>
+		HJcsAmVbOMdk5h7pML4B3Ai4+sM=
+		</data>
+		<key>Frameworks/GoogleUtilities.framework/GoogleUtilities</key>
+		<data>
+		KKuNFXs11MN6ar/jPSjq7cr6HjI=
+		</data>
+		<key>Frameworks/GoogleUtilities.framework/GoogleUtilities_Privacy.bundle/Info.plist</key>
+		<data>
+		oS+U73vARfs8v8EjTAP1XaYrbcY=
+		</data>
+		<key>Frameworks/GoogleUtilities.framework/GoogleUtilities_Privacy.bundle/PrivacyInfo.xcprivacy</key>
+		<data>
+		9Dge7JFNlx7Vk430tsjNsK3d0Ng=
+		</data>
+		<key>Frameworks/GoogleUtilities.framework/Info.plist</key>
+		<data>
+		NIP4HuZbZbt1Ktwr87TZFBYMe9c=
+		</data>
+		<key>Frameworks/GoogleUtilities.framework/_CodeSignature/CodeResources</key>
+		<data>
+		Kuq1VgSAS2OlqbcMLd8Bpqclhg4=
+		</data>
+		<key>Frameworks/nanopb.framework/Info.plist</key>
+		<data>
+		tHjf5lR/dja/s7rEsp+WtKtrW74=
+		</data>
+		<key>Frameworks/nanopb.framework/_CodeSignature/CodeResources</key>
+		<data>
+		BfRGR9pjlVIYoMoV9yk0WN/3BsQ=
+		</data>
+		<key>Frameworks/nanopb.framework/nanopb</key>
+		<data>
+		HYQZ1QelyJM5/iYd6VSpp8x6ujk=
+		</data>
+		<key>Frameworks/nanopb.framework/nanopb_Privacy.bundle/Info.plist</key>
+		<data>
+		6pgQDYz5Y/zZuzRSqlc98j4Ju+A=
+		</data>
+		<key>Frameworks/nanopb.framework/nanopb_Privacy.bundle/PrivacyInfo.xcprivacy</key>
+		<data>
+		KY5lfwC2TvsgFj4wt7hkMmainbs=
 		</data>
 		<key>GMEmptyFolder@1x.png</key>
 		<data>
@@ -64,9 +236,13 @@
 		<data>
 		+oBUakBslNRvR14HvkkK/wfRC74=
 		</data>
+		<key>GoogleService-Info.plist</key>
+		<data>
+		XE2ufUYX+bMF98mp22B0+GqOlY0=
+		</data>
 		<key>Info.plist</key>
 		<data>
-		GrgwB8J+llYIb41ginfn3p/0PgY=
+		trqS5t0eYg+pKbMDtgpOx4ql1zA=
 		</data>
 		<key>MainViewController.nib</key>
 		<data>
@@ -75,6 +251,10 @@
 		<key>PkgInfo</key>
 		<data>
 		n57qDP4tZfLD1rCS43W0B4LQjzE=
+		</data>
+		<key>PrivacyInfo.xcprivacy</key>
+		<data>
+		iD7jvdWgRh7QYF8vo5FMwcKZ9nQ=
 		</data>
 		<key>ca.lproj/GMImagePicker.strings</key>
 		<dict>
@@ -87,7 +267,7 @@
 		</dict>
 		<key>config.xml</key>
 		<data>
-		9i4Q6oumTDQS0k8UU3eW/DOQuE0=
+		Trxq+YXdQ6XxJ5j4SAIucEy9fVg=
 		</data>
 		<key>de.lproj/GMImagePicker.strings</key>
 		<dict>
@@ -100,7 +280,7 @@
 		</dict>
 		<key>embedded.mobileprovision</key>
 		<data>
-		TRJIMSTcTiqRm/cWA8J5tI5e8es=
+		AXtbWLGA3/9/6uKYZCdGKgoBr4U=
 		</data>
 		<key>en.lproj/GMImagePicker.strings</key>
 		<dict>
@@ -474,19 +654,11 @@
 		</data>
 		<key>www/build/main.css</key>
 		<data>
-		Jn9ritS72RD7cGWddFfzEA+K9mE=
-		</data>
-		<key>www/build/main.css.map</key>
-		<data>
-		K+iMpCQsduglOsYkdIUQZQMtaDM=
+		hecsHXoOi+QuMK6oSLh+ZC5yo6k=
 		</data>
 		<key>www/build/main.js</key>
 		<data>
-		gmwK8XNCcYq9fubW3bfXSBtmQVc=
-		</data>
-		<key>www/build/main.js.map</key>
-		<data>
-		35dHWE7KqscCw1LD46fvI66CwZw=
+		cMORYQMgpscScQhISf7vmNnWqeg=
 		</data>
 		<key>www/build/polyfills.js</key>
 		<data>
@@ -498,43 +670,15 @@
 		</data>
 		<key>www/build/vendor.js</key>
 		<data>
-		Rm4CHYZ6uYia0+ZEHO86iaXyDrk=
-		</data>
-		<key>www/build/vendor.js.map</key>
-		<data>
-		sYwI5x1pJNSlyUFLFRAWXNjFMic=
-		</data>
-		<key>www/cordova-js-src/exec.js</key>
-		<data>
-		AeFQ6qjr2tcMNVPPVkqfHrV6IZA=
-		</data>
-		<key>www/cordova-js-src/platform.js</key>
-		<data>
-		BE1CcpMz3w6aKhXmXsOm0p+Az00=
-		</data>
-		<key>www/cordova-js-src/plugin/ios/console.js</key>
-		<data>
-		JxsXQKuPPSgt9+pzHn59exrCEE8=
-		</data>
-		<key>www/cordova-js-src/plugin/ios/launchscreen.js</key>
-		<data>
-		jY23HLemhJLqgZ5EwTYOnoSqO2A=
-		</data>
-		<key>www/cordova-js-src/plugin/ios/logger.js</key>
-		<data>
-		PQ9t01dGnm6HmW1BKdNWeuEgjsM=
-		</data>
-		<key>www/cordova-js-src/plugin/ios/wkwebkit.js</key>
-		<data>
-		CoyM4VnDuqAd3JKdWTdowYJVfmQ=
+		pfNKwD2hpsElQzRuGFJCmaGC1jA=
 		</data>
 		<key>www/cordova.js</key>
 		<data>
-		/dczSMPeerMWvh34eyPVl4kzhJY=
+		sCZ4ZLLiNlt97b78qK/WWROBa8A=
 		</data>
 		<key>www/cordova_plugins.js</key>
 		<data>
-		UvM5/Cc1AT5MlprWqjx+SgmAd8c=
+		juohFJM+b8feUwUg+Caxc8bZZXw=
 		</data>
 		<key>www/index.html</key>
 		<data>
@@ -544,13 +688,9 @@
 		<data>
 		HR505fpvAsEq+F1n9SBsE8vpVSQ=
 		</data>
-		<key>www/plugins/com-badrit-base64/www/Base64.js</key>
-		<data>
-		159GfN0VLD/zx/txkmvhGscy0cQ=
-		</data>
 		<key>www/plugins/cordova-plugin-android-permissions/www/permissions-dummy.js</key>
 		<data>
-		ml+cRy/0/YnAVjvnjUU9q/0BZX8=
+		7Xy0Np90B8G33BnFtSc//hxLSQA=
 		</data>
 		<key>www/plugins/cordova-plugin-app-version/www/AppVersionPlugin.js</key>
 		<data>
@@ -578,7 +718,7 @@
 		</data>
 		<key>www/plugins/cordova-plugin-device/www/device.js</key>
 		<data>
-		1GfO/IDwwyLde/veo05ABQB5yTk=
+		cNhFOKAP2X2rVmuujDxkQbGnVXg=
 		</data>
 		<key>www/plugins/cordova-plugin-file-opener2/www/plugins.FileOpener2.js</key>
 		<data>
@@ -672,6 +812,14 @@
 		<data>
 		p7A9a+/7es1E4aKJPkx0j6eQwuw=
 		</data>
+		<key>www/plugins/cordova-plugin-firebasex-core/www/firebasex-core.js</key>
+		<data>
+		0bCIRFs0D51d8ihQGPldnaExf7s=
+		</data>
+		<key>www/plugins/cordova-plugin-firebasex-messaging/www/firebasex-messaging.js</key>
+		<data>
+		TnsUDD4PSJeh2SwcqXW0MJS0j88=
+		</data>
 		<key>www/plugins/cordova-plugin-inappbrowser/www/inappbrowser.js</key>
 		<data>
 		SYsklvOH/+qpKSbz3LHmv5XDAQ8=
@@ -694,15 +842,11 @@
 		</data>
 		<key>www/plugins/cordova-plugin-network-information/www/Connection.js</key>
 		<data>
-		eFkXRtFkv02NAgFnyI+/4nqBHjM=
+		VgRJWMubnCOhXiNZuOEMsgwL1R4=
 		</data>
 		<key>www/plugins/cordova-plugin-network-information/www/network.js</key>
 		<data>
-		lbbWdv+iqfYJ9YIXXbdxSn8svrQ=
-		</data>
-		<key>www/plugins/cordova-plugin-splashscreen/www/splashscreen.js</key>
-		<data>
-		n2E0W8B/grOxM2ORx/haAYOWIcA=
+		+i6SPxFeJZ8z6gDxxVlAN7h7Lvs=
 		</data>
 		<key>www/plugins/cordova-plugin-statusbar/www/statusbar.js</key>
 		<data>
@@ -723,14 +867,6 @@
 		<key>www/plugins/es6-promise-plugin/www/promise.js</key>
 		<data>
 		SaYUot7eUOO74AAVeBga+HSnf/E=
-		</data>
-		<key>www/plugins/phonegap-plugin-mobile-accessibility/www/MobileAccessibilityNotifications.js</key>
-		<data>
-		t3a7us8FS9fLMMQdff97LVWgCMw=
-		</data>
-		<key>www/plugins/phonegap-plugin-mobile-accessibility/www/mobile-accessibility.js</key>
-		<data>
-		c1KdOkStTj8k0FR+/tjNOEWXCEc=
 		</data>
 		<key>www/service-worker.js</key>
 		<data>
@@ -770,21 +906,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			hhCWpmi7SDh+28dr55dHm3FSS4pXJPX5dOUBAOb42e0=
+			ZkDGTUOuchZ1lzKtbvS2cOWpFha/3ZY44Z0LImp3PDY=
 			</data>
 		</dict>
-		<key>CDVLaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/objects-13.0+.nib</key>
+		<key>CDVLaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			2vHYXhU7pwLVytDzcoc0JTM1OJdq479IGwJZKcVe4dI=
-			</data>
-		</dict>
-		<key>CDVLaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/runtime.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			DgmjNUu7nwFehOhUJN1BhMUWnHSgQyRKkmC9dqH5BIg=
+			M3RAltz5OllONYRhb4gtGaRs9ocW2yydR/acY8TvEwE=
 			</data>
 		</dict>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
@@ -794,14 +923,7 @@
 			HyVdXMU7Ux4/KalAao30mpWOK/lEPT4gvYN09wf31cg=
 			</data>
 		</dict>
-		<key>CDVLaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib/objects-13.0+.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			VPNjf2cf66XxnoLsT0p/tEi7PPwPsYDwiapXH8jwU+I=
-			</data>
-		</dict>
-		<key>CDVLaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib/runtime.nib</key>
+		<key>CDVLaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
@@ -812,7 +934,322 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			geZ5eZpYFxfR0NB9NNMD3mJpmZvybndlMpGqFf5Nv4k=
+			EdBFlJFRCJ+/nvraEipNvxpemK0A5BOO2N19BByHKCc=
+			</data>
+		</dict>
+		<key>Frameworks/FBLPromises.framework/FBLPromises</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Etyqd8rs3gbk9I39yB5AfsWVZF8MXFmv1sbGyQGC5co=
+			</data>
+		</dict>
+		<key>Frameworks/FBLPromises.framework/FBLPromises_Privacy.bundle/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Vp+ZCXGYJ4hPEY/Qfg2e++sMbmEGXQaNeH9OmOJuk6M=
+			</data>
+		</dict>
+		<key>Frameworks/FBLPromises.framework/FBLPromises_Privacy.bundle/PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			dLDNcvwjwe8wLyLuJ1P2GBfNxa8P96fy0GMrUk+4rOo=
+			</data>
+		</dict>
+		<key>Frameworks/FBLPromises.framework/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			8RCudIwQQxgQ5+H1z/BKSo7zLhP54u2oZkjHm7Jst+Q=
+			</data>
+		</dict>
+		<key>Frameworks/FBLPromises.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			1J//Uz+fOfHJkghvp5o0wGbN0N1GXfklBWpdwCIJZfc=
+			</data>
+		</dict>
+		<key>Frameworks/FirebaseCore.framework/FirebaseCore</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			csUBs+ZUFNd5bMlCewXPwgzhTfuPIcXl4UEdhkC5zLM=
+			</data>
+		</dict>
+		<key>Frameworks/FirebaseCore.framework/FirebaseCore_Privacy.bundle/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			5tEoCnMAYkjaqPJkZRAJKW0ziO5pNnezWOSrLMvMBk4=
+			</data>
+		</dict>
+		<key>Frameworks/FirebaseCore.framework/FirebaseCore_Privacy.bundle/PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			EeMfX2tg6A69WQFUn85QQ/mvPmg/h0AilFAAtAUwbD8=
+			</data>
+		</dict>
+		<key>Frameworks/FirebaseCore.framework/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			sgRD+ePfhIv/tKvgWc2nUYBJ6NICna6JDfmkb5J+GME=
+			</data>
+		</dict>
+		<key>Frameworks/FirebaseCore.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			MkxZ5zy4Aup1vjW5tLhKUW8SSSMsxgT+0JKQ8iR1C4E=
+			</data>
+		</dict>
+		<key>Frameworks/FirebaseCoreExtension.framework/FirebaseCoreExtension</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			EGkNzCFTx1aqXM9iAlpuobrU09ZKDhBsBYVnE5lwRfE=
+			</data>
+		</dict>
+		<key>Frameworks/FirebaseCoreExtension.framework/FirebaseCoreExtension_Privacy.bundle/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			JbkTS47vBAsUL6dHkzIlZoCVvuuI94PQiF7xRfeZ+/o=
+			</data>
+		</dict>
+		<key>Frameworks/FirebaseCoreExtension.framework/FirebaseCoreExtension_Privacy.bundle/PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			E3fszt/4+DIPeAQOnJ0+F+zA6laVlLVq8O8XvkQZfHo=
+			</data>
+		</dict>
+		<key>Frameworks/FirebaseCoreExtension.framework/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			tuuPNlJEQZyX4lfbuOKjGEnLtp1lN6uN0vAF3WMwd1s=
+			</data>
+		</dict>
+		<key>Frameworks/FirebaseCoreExtension.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			qrkv/49p/12C/QVuxDhHEJmUao5D4EvsuoVZCADpgcA=
+			</data>
+		</dict>
+		<key>Frameworks/FirebaseCoreInternal.framework/FirebaseCoreInternal</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			pNy4u78EXL1rXsDW1cOZkiBqPph/KqXL5vh9jPkktF0=
+			</data>
+		</dict>
+		<key>Frameworks/FirebaseCoreInternal.framework/FirebaseCoreInternal_Privacy.bundle/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			FDnZxZmPNynkFY3uBbTnWQCZ4SAe+L9tHnAipgSS3GQ=
+			</data>
+		</dict>
+		<key>Frameworks/FirebaseCoreInternal.framework/FirebaseCoreInternal_Privacy.bundle/PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			W3/peUI97ePgivwppC8A9ghiddxUioTCl3QjWGPu0+8=
+			</data>
+		</dict>
+		<key>Frameworks/FirebaseCoreInternal.framework/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			mKLpabhAWMC1qFHaFHv6sn7JrQeB3ofibxEcocvpeds=
+			</data>
+		</dict>
+		<key>Frameworks/FirebaseCoreInternal.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			OZ2E5+FGtdxOTqR0PPkGR/YAiIjCTByi//1PvYCo5G8=
+			</data>
+		</dict>
+		<key>Frameworks/FirebaseInstallations.framework/FirebaseInstallations</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			VJ5YOnG9Gybzsvfr3CZuUoGI8q9xSiKEX/+vGvBOQXk=
+			</data>
+		</dict>
+		<key>Frameworks/FirebaseInstallations.framework/FirebaseInstallations_Privacy.bundle/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			RcMbKieil41a17eheoTQ9oe30PTcdvTWkAEH1NISvog=
+			</data>
+		</dict>
+		<key>Frameworks/FirebaseInstallations.framework/FirebaseInstallations_Privacy.bundle/PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			z7s8T3ambVNpi66R9xEMAPIUjm5vE619MlkpCbwBDlE=
+			</data>
+		</dict>
+		<key>Frameworks/FirebaseInstallations.framework/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			+cSRMrYhLRwAWcjeusfLzb8fzU3sRfUXZGjNkPhf2Nc=
+			</data>
+		</dict>
+		<key>Frameworks/FirebaseInstallations.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			xzFHwwz58yHVFiN35R0cZ0xXH/GhzQDn9QGHwS9fKks=
+			</data>
+		</dict>
+		<key>Frameworks/FirebaseMessaging.framework/FirebaseMessaging</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			VJT7mXZ93A6fIgmAXPyhZ2CVonOkYgh3HwZOQPe9bZE=
+			</data>
+		</dict>
+		<key>Frameworks/FirebaseMessaging.framework/FirebaseMessaging_Privacy.bundle/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			+4FHx9Fd6G84iZ6CMDOTQ/jgg68Vtsp4JQFCjERUxjY=
+			</data>
+		</dict>
+		<key>Frameworks/FirebaseMessaging.framework/FirebaseMessaging_Privacy.bundle/PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			mHYgljcqwn9eiIxzctUS8NP1zzKDxkAGBw9M3hpyoHE=
+			</data>
+		</dict>
+		<key>Frameworks/FirebaseMessaging.framework/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			VqDfR9dgwvBF5VrNMh78zYpZsSMme6nedsxXimRi8Kw=
+			</data>
+		</dict>
+		<key>Frameworks/FirebaseMessaging.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			o+9Vn5STQPtdEHd1S2UuhIf1IsdNhM3I91ZHTQOUNek=
+			</data>
+		</dict>
+		<key>Frameworks/GoogleDataTransport.framework/GoogleDataTransport</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			tbSvQRjks033+Mgt8Umg2NiFB5e9M5uU058JNvQoRDU=
+			</data>
+		</dict>
+		<key>Frameworks/GoogleDataTransport.framework/GoogleDataTransport_Privacy.bundle/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			amURFEKRXsoePYGW5SlZ0UB2MmSQ5ayg1kR1bymcXDU=
+			</data>
+		</dict>
+		<key>Frameworks/GoogleDataTransport.framework/GoogleDataTransport_Privacy.bundle/PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			z7s8T3ambVNpi66R9xEMAPIUjm5vE619MlkpCbwBDlE=
+			</data>
+		</dict>
+		<key>Frameworks/GoogleDataTransport.framework/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			WKq5ZsgTXcoLqchKnxv7hW+p5L1tkX/hY3SgPNmobpY=
+			</data>
+		</dict>
+		<key>Frameworks/GoogleDataTransport.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			/w6YbaNJhuGoQ1r+FbZbgCd18pII+GW2T3MOeehkgXA=
+			</data>
+		</dict>
+		<key>Frameworks/GoogleUtilities.framework/GoogleUtilities</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			2U2WWS8nY93VhzJAcCMjIGDwf3ossbivb4qcq7WUkrI=
+			</data>
+		</dict>
+		<key>Frameworks/GoogleUtilities.framework/GoogleUtilities_Privacy.bundle/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ja7gABX7vVfB8I1Dm/KKUBg6238JfmUyQpXbxSePeGQ=
+			</data>
+		</dict>
+		<key>Frameworks/GoogleUtilities.framework/GoogleUtilities_Privacy.bundle/PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			+Btc+PBDZicS7KnpeFdnJkzxkAJf5720l3cpbAaN5Tw=
+			</data>
+		</dict>
+		<key>Frameworks/GoogleUtilities.framework/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			JaB6u9pkCfAPOGYtRpvLKk7W3jDGiZJn4SNstInU7Cg=
+			</data>
+		</dict>
+		<key>Frameworks/GoogleUtilities.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			oJSERmY2/louOG+LKLOWVNzQ3oROpQEgCycUzJfbPpA=
+			</data>
+		</dict>
+		<key>Frameworks/nanopb.framework/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			fpaFXc4zOvMIvhhw2zTBL6MuN7z1jupcY9m46riX3YM=
+			</data>
+		</dict>
+		<key>Frameworks/nanopb.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			bNS/oxyeMvXiS3tbcopjIVDwy6wbtpjiZnPY8PnnrzU=
+			</data>
+		</dict>
+		<key>Frameworks/nanopb.framework/nanopb</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			yOL8x7g3nqbXYOxMTyj7ribDQjtEQnwad7OtsJdw+Z4=
+			</data>
+		</dict>
+		<key>Frameworks/nanopb.framework/nanopb_Privacy.bundle/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			4dwxu3wq9nSMrL3FwF7I6PChJspZ1KfRLp6B4QYvhQs=
+			</data>
+		</dict>
+		<key>Frameworks/nanopb.framework/nanopb_Privacy.bundle/PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			cpujy9D0WMeM1h7fFzUO2v4ONMqG4xTsZMjLIszSG1Q=
 			</data>
 		</dict>
 		<key>GMEmptyFolder@1x.png</key>
@@ -857,11 +1294,25 @@
 			McXaRs5WmUfBR9h6zvmlcfJEQde/ZFYytguL7r4MTnk=
 			</data>
 		</dict>
+		<key>GoogleService-Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			HVVB+r6kkugqNBmhoz0OC8bjQES/ghDgDivgPgD9IGs=
+			</data>
+		</dict>
 		<key>MainViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
 			6k6aNYFcVVKRmg+ADjPrD8Cc41QPMbeiXck4TNJvhMg=
+			</data>
+		</dict>
+		<key>PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			4/ew6fTz7GvX8TF66KLhvCIUpso4rpZ9zfzCuk0Kozw=
 			</data>
 		</dict>
 		<key>ca.lproj/GMImagePicker.strings</key>
@@ -877,7 +1328,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			RDyfBKaVIf9gi8SGJPkueSQ2OrI138UVuBACMepGy+U=
+			kR80g6itdnrhfqnJzG0nlknRgqE+b/7b3mrcwZN7AOo=
 			</data>
 		</dict>
 		<key>de.lproj/GMImagePicker.strings</key>
@@ -893,7 +1344,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ueq7xAg+PaD2XX9XIKVXGetJ2zsRHQCw9RgwzM3JVr0=
+			eOq1WMfs3LCXQ1XL+bEiuNLWJuFKx+a6kafnbQPZ6t0=
 			</data>
 		</dict>
 		<key>en.lproj/GMImagePicker.strings</key>
@@ -1507,28 +1958,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			yZ3HGAqe9OwQBPffcChjVJLCUiBltzCoiSsflIxBnfM=
-			</data>
-		</dict>
-		<key>www/build/main.css.map</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			dCNOmK/nSY+12vHzasLXiswzlGT5UHA7jAGYkvmCuQs=
+			1rxHEV4IK2iav90ZYxKGKx5GIi7f9J22PbYb+gAocH4=
 			</data>
 		</dict>
 		<key>www/build/main.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IXubTWj3xzV3HBxadYxDpIc73uomVo2lFcl9EPeQdRY=
-			</data>
-		</dict>
-		<key>www/build/main.js.map</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			QWp0SNvufUKyQZYaTlq+iu2kNuF/dPpoZBSnqJrqi5c=
+			H3C0Fm16Bmab0Uko8SRwU+kvSQNFnhEXZYuzCHJu89E=
 			</data>
 		</dict>
 		<key>www/build/polyfills.js</key>
@@ -1549,70 +1986,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+ocbKPDHJWj80HZEEnthW9QboRvgDj9gfNofwq8q4Ig=
-			</data>
-		</dict>
-		<key>www/build/vendor.js.map</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			PISBjHFczgnrrlXma2WI9nyPzJTFVAOAkEClMZ69QU0=
-			</data>
-		</dict>
-		<key>www/cordova-js-src/exec.js</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			FnDGh2PMtuKxE9b8Wg/ZWdrBgDuB+vndel99cBgN5aM=
-			</data>
-		</dict>
-		<key>www/cordova-js-src/platform.js</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			nwRHFguFy7vK+gjXcCcfSr+M+JvGtEcFxHjtk4IL+zA=
-			</data>
-		</dict>
-		<key>www/cordova-js-src/plugin/ios/console.js</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			HuL9WB5RqLOMFMdAR++aP57rv/LQG5T9zKeVR9nn5Gw=
-			</data>
-		</dict>
-		<key>www/cordova-js-src/plugin/ios/launchscreen.js</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Z662XHG69WWif7omIBCAH7nyqPc3Sfi+OzQbNaxjTL4=
-			</data>
-		</dict>
-		<key>www/cordova-js-src/plugin/ios/logger.js</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			XbC6O2UB458r+PaXfBMthdABxHwJ5TICU7fhTKmnsr4=
-			</data>
-		</dict>
-		<key>www/cordova-js-src/plugin/ios/wkwebkit.js</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			JAZIg4JGZCV/JFGR55NsvTovDSAKoRwd/+TnHryUMwA=
+			OtpRcg1lQ/SP/lSG7rDzCrV4dWeBymfYsGi8Z6xgaVU=
 			</data>
 		</dict>
 		<key>www/cordova.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Q2J+JAXTKNDB6NaTWFSBjuPrJ2CrzBUs5UnylVdhVJU=
+			huNjF6m3OzYfgm6mrd9lQWUyou/p/i2WV4xS11kVcvw=
 			</data>
 		</dict>
 		<key>www/cordova_plugins.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			1MK9l8AdzmQ4Teggn3RaDujGHr84F8qq2PSMHeHcsMM=
+			tHcNMAnGgPTie1Im1l5cDJewfyP9hBb3rRLP5sek+UM=
 			</data>
 		</dict>
 		<key>www/index.html</key>
@@ -1629,18 +2017,11 @@
 			bhy0OvcYM5NzmPBTU92oxj81eQtM3+z12l08DTKg4bs=
 			</data>
 		</dict>
-		<key>www/plugins/com-badrit-base64/www/Base64.js</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			nAPTyv8YTj1+SdyyXCANKX1MY+j/8AiOU6m/UpGBQYI=
-			</data>
-		</dict>
 		<key>www/plugins/cordova-plugin-android-permissions/www/permissions-dummy.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ideTLlZKfM52ma38KNCYcUPhT8uh5f+abJ4K7hRAhEw=
+			4/NApQF17/rLqrsCn2MqArU/nDsQOT7J08lh9oc3TmQ=
 			</data>
 		</dict>
 		<key>www/plugins/cordova-plugin-app-version/www/AppVersionPlugin.js</key>
@@ -1689,7 +2070,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			lxEtW0KU6QKkPs5VCr3ZhsLIA3wAu5RMxZ4W4izq3gE=
+			VYM1/YaTIg809xWE5ACp1K2CXanbdYxiBt7ecFqkU9E=
 			</data>
 		</dict>
 		<key>www/plugins/cordova-plugin-file-opener2/www/plugins.FileOpener2.js</key>
@@ -1853,6 +2234,20 @@
 			2r19nzz0vvRYaDlexf+ZC0go3w4I74oCafncQ2Noe3U=
 			</data>
 		</dict>
+		<key>www/plugins/cordova-plugin-firebasex-core/www/firebasex-core.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			IXcT1C2d/X3I9KivswWDNFdE3OvyIlodcnOLz2Z4u9E=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-firebasex-messaging/www/firebasex-messaging.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			mTAaQVjoKsIJs5xLdvPjXJhwPWwnpoBuS8CJRVzwP9k=
+			</data>
+		</dict>
 		<key>www/plugins/cordova-plugin-inappbrowser/www/inappbrowser.js</key>
 		<dict>
 			<key>hash2</key>
@@ -1892,21 +2287,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			xcTT1VQ1B43gprpg0dBgmDlL2grVMuBeTalDsgusxuE=
+			HhLS6Sg5NCakih7qP4xnf+zbScc5/VcqYtmapKVjL+I=
 			</data>
 		</dict>
 		<key>www/plugins/cordova-plugin-network-information/www/network.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			mQIc+Vzy6X9FsCMCY6E19vLl165ea4NWQQFIqEgO5+o=
-			</data>
-		</dict>
-		<key>www/plugins/cordova-plugin-splashscreen/www/splashscreen.js</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			YSn19P0zRIG9MxdesT37iqYB1WqXVOFIXyjmnTn6foU=
+			m9vmJ+PYRY+yUSWUV6Cyg3W691rmDyJJ4/Pv+Og2fU4=
 			</data>
 		</dict>
 		<key>www/plugins/cordova-plugin-statusbar/www/statusbar.js</key>
@@ -1942,20 +2330,6 @@
 			<key>hash2</key>
 			<data>
 			9CIW7f5Dk7yEK84D9evgQc6ryThptFDJtCnHYeOvWAo=
-			</data>
-		</dict>
-		<key>www/plugins/phonegap-plugin-mobile-accessibility/www/MobileAccessibilityNotifications.js</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			7323rwMqe/9pyFO/uBg8YNnamSAXRxKeCyQBpBpMT8s=
-			</data>
-		</dict>
-		<key>www/plugins/phonegap-plugin-mobile-accessibility/www/mobile-accessibility.js</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			CO1P78ku8IWPi2uQH/5dhxd/W7R+DVt8Mp/fT4By16c=
 			</data>
 		</dict>
 		<key>www/service-worker.js</key>

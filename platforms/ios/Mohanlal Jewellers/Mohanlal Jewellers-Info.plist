@@ -17,17 +17,59 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.0.8</string>
+	<string>2.0.9</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>app-1-730901897062-ios-1961e0d5c53786880572a7</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
-	<string>2.0.8</string>
+	<string>2.0.9</string>
+	<key>FIREBASEX_IOS_FCM_ENABLED</key>
+	<string>true</string>
+	<key>FIREBASE_MESSAGING_IMMEDIATE_PAYLOAD_DELIVERY</key>
+	<string>false</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>whatsapp</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>localhost</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>The camera is used to take photos of jewellery designs you attach to a custom order.</string>
 	<key>NSMainNibFile</key>
 	<string/>
 	<key>NSMainNibFile~ipad</key>
 	<string/>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Photo library access is used to save product images you choose to download or share.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Your photo library is used to choose jewellery design images you attach to a custom order.</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>remote-notification</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>CDVLaunchScreen</string>
 	<key>UIRequiresFullScreen</key>
@@ -45,30 +87,25 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSExceptionDomains</key>
+	<key>UTImportedTypeDeclarations</key>
+	<array>
 		<dict>
-			<key>localhost</key>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.data</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>WebAssembly</string>
+			<key>UTTypeIdentifier</key>
+			<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+			<key>UTTypeTagSpecification</key>
 			<dict>
-				<key>NSExceptionAllowsInsecureHTTPLoads</key>
-				<true/>
+				<key>public.filename-extension</key>
+				<string>wasm</string>
+				<key>public.mime-type</key>
+				<string>application/wasm</string>
 			</dict>
 		</dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-	</dict>
-	<key>LSApplicationQueriesSchemes</key>
-	<array>
-		<string>whatsapp</string>
 	</array>
-    <key>NSCameraUsageDescription</key>
-    <string>This app uses the camera to capture a photo for setting or updating your profile picture.</string>
-    <key>NSPhotoLibraryUsageDescription</key>
-    <string>This app allows you to select a photo from your library to set or update your profile picture.</string>
-    <key>NSPhotoLibraryAddUsageDescription</key>
-    <string>This app saves the selected or captured profile picture to your photo library.</string>
-    <key>NSLocationWhenInUseUsageDescription</key>
-    <string>This app collects your location when you clock in and clock out for attendance tracking purposes.</string>
 </dict>
 </plist>

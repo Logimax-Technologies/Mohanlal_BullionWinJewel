@@ -1,0 +1,34 @@
+{
+  "name": "cordova-plugin-firebasex-core",
+  "version": "2.0.1",
+  "description": "Core Firebase plugin for Cordova - handles Firebase initialization, installations, and shared utilities",
+  "cordova": {
+    "id": "cordova-plugin-firebasex-core",
+    "platforms": ["android", "ios"]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dpa99c/cordova-plugin-firebasex-core.git"
+  },
+  "keywords": ["cordova", "firebase", "firebasex", "core"],
+  "author": "Dave Alden",
+  "license": "MIT",
+  "engines": {
+    "cordovaDependencies": {
+      "1.0.0": {
+        "cordova": ">=12.0.0",
+        "cordova-android": ">=14.0.0",
+        "cordova-ios": ">=7.0.0"
+      }
+    }
+  },
+  "types": "types/index.d.ts",
+  "dependencies": {
+    "plist": "^3.0.1",
+    "xcode": "^3.0.1",
+    "xml-js": "^1.6.11"
+  },
+  "devDependencies": {
+    "cordova-ios": "*"
+  }
+}
