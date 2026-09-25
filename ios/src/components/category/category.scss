@@ -1,0 +1,44 @@
+category {
+.card-ios{
+	width: 100% !important;	
+}
+.button_color{
+	background-color: white;
+	border:1px solid grey;
+	color:black;
+	padding:5px !important;
+	float:right;
+	font-size:20px;
+	margin-left:5px;
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
+}
+.button_color:active{
+	background:rgb(235, 234, 234);
+}
+.outofstock{
+	font-size: 11px;
+	color: red;
+}
+.instock{
+	font-size: 11px;
+	color: #5ca7e2;
+}	
+.hide {
+	display: none !important;
+  }
+.prod_collect{
+	padding-left:5px;
+	border-bottom:1px solid  rgb(226, 235, 253);
+}
+.item.item-block.item-md{
+	padding:0px !important;
+}
+p.col.col-70{
+	margin:0px !important;
+}
+.category_list{
+	padding:0px !important;
+	border-bottom: 1px solid rgb(226, 235, 253);
+}
+}

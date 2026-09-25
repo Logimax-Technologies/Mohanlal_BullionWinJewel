@@ -1,0 +1,10 @@
+    <ion-row style="padding: 3px;">
+        <ion-col col-4 style="padding: 3px;"  [ngClass]="animateClass" *ngFor=" let item of animateItems; let i=index "  (click)="openCategory(item.name)">
+            <ion-card style="margin: 0px 0px 0px 0px;    width: calc(100%);">
+                <img src="{{item.image}}" style="    padding: 3px;" />
+                <p style="    margin-top: 0px;color: #fff;    text-align: center;    text-shadow: 1px 2px 2px #000;">
+                    <!-- {{item.name}} -->
+                </p>
+            </ion-card>
+        </ion-col>
+    </ion-row>

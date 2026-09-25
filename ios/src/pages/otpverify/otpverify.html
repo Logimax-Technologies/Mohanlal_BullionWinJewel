@@ -1,0 +1,64 @@
+<!-- <ion-header align-title=”center”>
+  <ion-navbar align-title=”center”>
+    <ion-title align-title=”center”><img alt="logo" height="55" cache="true" src="assets/imgs/header.svg" ></ion-title>
+  </ion-navbar>
+</ion-header> -->
+<ion-header>
+  <ion-navbar>
+    <ion-title style="text-align: center !important;"><img alt="logo" height="55" cache="true" src="assets/imgs/header.svg" ></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content text-center padding>
+  <ion-card>
+    <ion-card-header text-center>
+     OTP Verify
+   </ion-card-header>
+    <form [formGroup]="otpverifyForm" novalidate padding>
+               <ion-list>
+               <ion-item class="errMsg" *ngIf="errorMessage != ''">{{errorMessage}}</ion-item>
+                   <ion-item>
+                       <ion-label floating>OTP(*)</ion-label>
+                       <ion-input [formControl]="receivedotp" type="number" minlength="6" maxlength="6"></ion-input>
+                   </ion-item>
+               </ion-list>
+               <br>
+               <button [disabled]="!otpverifyForm.valid || isDisabled" (click)="onSubmit(otpverifyForm.value)" style="background: #aa792b !important;color: #FFF !important;" ion-button class="button-login" block color="dark">Submit</button>
+
+               <ion-row>
+                <ion-col style="margin: auto !important;"><span class="jost-500" style="color: black;">Resend will be</span> <span class="jost-500" style="color: #8030d1;">{{countDown | async | formattime}}</span></ion-col>
+                <ion-col align="end">
+               <!--    <ion-note style="float: right">
+                    <a (click)="resendotp()" [disabled]="data !='1'" style="text-transform: initial;" ion-button clear>Resend OTP </a>
+                 </ion-note> -->
+                 <button (click)="resendotp()" [disabled]="data !='1'" style="background: #aa792b !important;color: #FFF !important;" ion-button class="button-login" block color="dark">Resend</button>
+                </ion-col>
+               </ion-row>
+              <!--  <div style="">
+				          <ion-note style="float: right">
+                    <a (click)="resendotp()" style="text-transform: initial;" ion-button clear>Resend OTP </a>
+                 </ion-note>
+            </div> -->
+            <ion-row style="border: none !important;" *ngIf="type=='new'">
+
+              <ion-col style="font-weight: bolder;">
+                  Already having account?<span style="color: blue !important;" (click)="skip()"> Sign in </span>
+              </ion-col>
+          </ion-row>
+          <ion-row style="border: none !important;" *ngIf="type!='new'">
+
+            <ion-col style="font-weight: bolder;">
+                If you remember password? Please<span style="color: blue !important;" (click)="skip()"> Sign in </span>
+            </ion-col>
+        </ion-row>
+           </form>
+  </ion-card>
+</ion-content>
+<ion-footer class="footer-bottom">
+  <ion-grid>
+    <ion-row>
+      <ion-col>&copy;Mohanlal Jewellers 2020</ion-col>
+      <ion-col text-right>LOGIMAX</ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>

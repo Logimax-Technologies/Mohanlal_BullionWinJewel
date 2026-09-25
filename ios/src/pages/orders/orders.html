@@ -1,0 +1,49 @@
+<ion-header> <ion-navbar>
+<button ion-button menuToggle>
+	<ion-icon name="menu"></ion-icon>
+</button>
+<ion-title>{{title}}</ion-title> </ion-navbar> </ion-header>
+<ion-content> 
+ <p *ngIf="myorders.length == 0" class="empty">No result found</p>
+	<ion-card 
+		 *ngFor=" let order of myorders let i=index " [@flyAlternameSlow]="i%2"> 
+	<ion-item> <ion-badge color="light">{{order.productcode}} -	{{order.orderstatus}}</ion-badge></ion-item>
+	<button ion-item>
+		<ion-avatar item-left> <img src="{{order.image}}"> </ion-avatar>
+		<h3>
+			<p>
+				Order No :
+				<ion-badge>{{order.orderno}}</ion-badge>
+			</p>
+			<p>{{order.productname}}</p>
+			<p style="display:none">Customer : {{order.orderfor}}</p>
+		</h3>
+		<ion-row no-padding> 
+		<ion-col>
+		<h3>Wt : {{order.weight}}</h3>
+		</ion-col> 
+		<ion-col *ngIf="listType != 'PO'">
+		<h3>Qty : {{order.totalitems}}</h3>
+		</ion-col> 
+		<ion-col *ngIf="listType == 'PO'">
+			<h3>Qty : {{order.delivery_qty}}</h3>
+			</ion-col>
+		</ion-row>
+		<ion-row no-padding> <ion-col>
+		<h4>O.Dt: {{order.order_date}}</h4>
+		</ion-col> <ion-col *ngIf="order.status == 3">
+		<h4>D.Dt: {{order.delivery_date}}</h4>
+		</ion-col> </ion-row> 
+		<h4>{{order.sample_details}}</h4>
+	</button>
+	</ion-card>
+</ion-content>
+<!-- <ion-footer>
+<ion-toolbar color="primary">
+    <ion-buttons>
+      <button ion-button  (click)="openModal()">
+        <ion-icon name="options"></ion-icon> Filter
+      </button>
+    </ion-buttons>
+</ion-toolbar>
+</ion-footer> -->

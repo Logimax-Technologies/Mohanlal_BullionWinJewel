@@ -1,0 +1,48 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Filter</ion-title>
+		<ion-buttons end>
+			<button  ion-button (click)="dismiss_modal()">
+				<ion-icon name="close"></ion-icon>
+			</button>
+		</ion-buttons>
+
+    </ion-navbar>
+</ion-header>
+<ion-grid has-header has-footer style="max-width: 300px !important;min-width: 300px !important;">
+  <ion-row>
+    <ion-col col-5>
+      <ion-scroll scrollX="true" scrollY="true" style="bottom: 1%;top:1%;height:100% !important;">
+        <ion-list>
+          <ion-item  *ngFor="let item of filters | myfilter:{show:1}; let idx = index"  (tap)="showfilterOptions(item.id_filter)" >
+            <ion-label> {{item.filter_head}}</ion-label>
+          </ion-item>
+        </ion-list>
+ 	    </ion-scroll>
+    </ion-col>
+
+	  <ion-col col-7>
+      <ion-scroll scrollX="true" scrollY="true" style="height: 500px !important;">
+		    <ion-list>
+		      <ion-item *ngFor="let item of filter_options  | myfilter:filterargs; let idx = index" >
+			      <ion-label>{{item.filter}}</ion-label>
+			      <ion-checkbox  [(ngModel)]="item.is_selected" (ionChange)="get_filterAndOptions(item.id_filter,item.id_opt)"></ion-checkbox>
+          </ion-item>
+		    </ion-list>
+	    </ion-scroll>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+<ion-footer>
+<ion-toolbar color="primary">
+    <ion-buttons>
+      <button ion-button (click)="reset_filter()"> Reset
+      </button>
+    </ion-buttons>
+	<ion-buttons  end>
+       <button ion-button (click)="apply_filter()"> Apply
+      </button>
+    </ion-buttons>
+</ion-toolbar>
+</ion-footer>
+

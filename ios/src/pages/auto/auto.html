@@ -1,0 +1,26 @@
+
+<ion-header style="min-height:56px;">
+   <ion-row style="margin-top:2px">
+    <ion-col>
+      <ion-searchbar no-padding [(ngModel)]="input" (ionChange)="search()" (ionBlur)="removeFocus()"></ion-searchbar>
+    </ion-col>
+    <ion-col col-2 (click)="goback()">
+        <ion-icon style="font-size: 1.8em;color: #aa792b;margin-top:8px;float:right" name="close"></ion-icon>
+    </ion-col>
+    </ion-row>
+</ion-header>
+
+
+<!-- <ion-content padding> -->
+    <ion-content padding>
+      <ion-list>
+        <ion-item *ngFor="let data of temp" (click)="onItemSelect(data)">
+          {{data['name_design']}}
+        </ion-item>
+      </ion-list>
+      <div class="itemempty" *ngIf="temp.length == 0 && status == true">
+          No Result Found
+      </div>
+    </ion-content>
+
+<!-- </ion-content> -->

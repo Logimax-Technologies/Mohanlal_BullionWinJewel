@@ -1,0 +1,20 @@
+<!--
+  Generated template for the ImagePopupPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!-- 	<ion-header>
+        <ion-navbar>
+            <ion-title></ion-title>
+            <ion-buttons end>
+                <button ion-button icon-only (click)="closeModal()">
+                    <ion-icon item-right name="ios-close-outline" style="color:white;"></ion-icon>
+                </button>
+            </ion-buttons>
+        </ion-navbar>
+    </ion-header> -->
+<ion-content no-padding>
+    <ion-row><ion-col style="text-align:right !important;"><ion-icon item-right name="close-circle" style="color:black;" (click)="closeModal()"></ion-icon></ion-col></ion-row>
+	<ion-row><img alt="popup" style="height:180px !important;width:100% !important" [src]="popup" ></ion-row>
+</ion-content>

@@ -1,0 +1,27 @@
+page-forgot-pass {
+    .toolbar-background-md {
+        border-color: none;
+        background: transparent;
+    }
+    .button-outline-md-dark {
+        border-color: #ffffff;
+        color: #ffffff;
+        background-color: transparent;
+    }
+    .scroll-content {
+        background-size: cover;
+        background-image: url(../assets/img/back.jpg) !important;
+    }
+    .button-md {
+        text-transform: none;
+    }
+    .card-md {
+        opacity: 0.9;
+    }
+	.errMsg{
+		color:red !important;
+	}
+	ion-label{
+	white-space: normal !important;
+	}
+}

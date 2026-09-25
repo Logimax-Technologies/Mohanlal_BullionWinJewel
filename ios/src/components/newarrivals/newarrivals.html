@@ -1,0 +1,72 @@
+<!--<ion-row style="background:#eee;">
+         <ion-col col-12 align="right">
+            <ion-icon   *ngIf="!checkStatus" (click)="grid()" name="grid" ></ion-icon>
+            <ion-icon  *ngIf="checkStatus"  (click)="listgrid()" name="list"></ion-icon>
+        </ion-col>
+    </ion-row> -->
+
+<!-- <ion-row [class.hide]="checkStatus">
+    <ion-col col-6 [ngClass]="animateClass" *ngFor=" let item of productItems; let i=index " (click)="openProductdetails(item.id_product)">
+         <ion-card style="margin:0px;border: 1px solid #e4e4e4;height: 173px;border-radius: 20px">
+           <div style="margin: 3px;"><span *ngIf="item.is_stock_avail==1 && item.stock_manage == 1" class="instock">Instock</span><span *ngIf="item.is_stock_avail==0 && item.stock_manage == 1"  class="outofstock">Out of stock</span></div>
+            <img style="height: 120px;width: auto;margin: 0 auto;" *ngIf='item.imgurl != null' src='{{item.imgurl}}' imageCache/>
+            <img style="height: 120px;margin: 0 auto;" *ngIf='item.imgurl == null' src='assets/images/no-img.png' imageCache/>
+        </ion-card>
+        <div style="text-align:center;margin-top:7px;margin-bottom:10px; font-weight:bold; text-overflow: ellipsis;padding: 4%;font-size: 14px;overflow: hidden;color: black; white-space: nowrap; ">
+            {{item.name}}
+        </div>
+    </ion-col>
+    <div class="itemempty" *ngIf="productItems?.length == 0">No item to display</div>
+</ion-row> -->
+
+
+
+<ion-row [class.hide]="checkStatus">
+  <ion-col col-6 [ngClass]="animateClass" *ngFor="let item of productItems; let i = index" (click)="openProductdetails(item.id_product)">
+<!--     <ion-card style="height: 250px !important;margin: 0px !important; border: 1px solid #e0e0e0; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);">
+      <ng-container>
+        <div style="display: flex; justify-content: center; align-items: center; height: 170px;">
+          <img *ngIf='item.imgurl != null' src='{{item.imgurl}}' style="max-height: 100%; max-width: 100%;object-fit: contain;" />
+          <img *ngIf="item.imgurl == null" src="assets/images/no-img.png" style="max-height: 100%; max-width: 100%;object-fit: contain;" />
+        </div>
+      </ng-container>
+
+
+      <div style="text-align: center; font-weight: 600; padding: 4px 8px; font-size: 15px; color: #444;">
+        {{ item.name }}
+      </div>
+
+
+      <div style="text-align: center; font-size: 14px; color: #666; padding-bottom: 6px;font-weight: 400;" *ngIf="item.weight > 0" >
+        Weight: {{ item.weight }}
+      </div>
+
+    </ion-card> -->
+    <ion-card style="width: 100% !important;height: 250px; margin: 0px; border: 1px solid #e0e0e0; border-radius: 10px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);">
+      <div style="display: flex; justify-content: center; align-items: center; height: 170px;">
+        <img *ngIf='item.imgurl != null' [src]="item.imgurl" style="max-height: 100%; max-width: 100%; object-fit: contain;" />
+        <img *ngIf="item.imgurl == null" src="assets/images/no-img.png" style="max-height: 100%; max-width: 100%; object-fit: contain;" />
+      </div>
+
+      <div style="text-align: center; font-weight: 600; padding: 4px 6px 2px 6px; font-size: 15px; color: #444;">
+        {{ item.name }}
+      </div>
+
+      <div style="text-align: center; font-size: 14px; color: #666; padding-bottom: 4px; font-weight: 400;" *ngIf="item.weight > 0">
+        Weight: {{ item.weight }}
+      </div>
+    </ion-card>
+
+  </ion-col>
+
+  <!-- Empty State -->
+  <div class="itemempty" *ngIf="productItems.length == 0">No item to display</div>
+</ion-row>
+
+<ion-infinite-scroll  (ionInfinite)="doInfinite($event)">
+  <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data..."></ion-infinite-scroll-content>
+</ion-infinite-scroll>
+
+
+
+

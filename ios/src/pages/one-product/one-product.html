@@ -1,0 +1,97 @@
+<ion-header style="background: #000">
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Product Details</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content [@flyInTopSlow]="0">
+    <div style="margin-top: 0px;color: #515151;padding: 10px;word-wrap: break-word;background:#fff;border-bottom:1px solid #4958b2;text-align: center;font-size: 15px;">
+        {{item.name}}
+    </div>
+    <ion-card style="margin-bottom: 10px;box-shadow: none">
+        <ion-row style="background:#fff;color: #b7b7b7;">
+            <ion-col width-50><img src={{image}} imageViewer /></ion-col>
+            <ion-col width-50>
+                <ion-row style="background:#fff;color: #b7b7b7;" *ngFor=" let rating of item.allRatings; let i=index ">
+                    <div style="  text-overflow: ellipsis;    width: 100%;font-size: 12px;overflow: hidden;color: #656565; white-space: nowrap; ">
+                        <div style="float:left;    color: #5a5a5a;margin-right: 3px">{{5-i}} </div>
+                        <ion-icon style="float:left;font-size: 12px;    color: #5a5a5a;" name="star"> </ion-icon>
+                        <!-- Division to show the Rating -->
+                        <div style="float:left;width: 63%;height: 5px;background: #e6e6e6;margin: 5px 5px 5px 10px;"><span [ngClass]='getClass(5-i)'></span></div>
+                        <div style="float:right;">{{rating[5-i]}}</div>
+                    </div>
+                </ion-row>
+                <hr>
+                <ion-scroll scrollX="true" style="height:70px">
+                    <ion-row>
+                        <ion-col width-33 style="padding: 5px;" *ngFor=" let image of item.images; let i=index " (click)="changeImage(image)">
+                            <ion-card style="margin: 0px 0px 0px 0px;box-shadow: none;width: calc(100%);">
+                                <img src='assets/img/Products/{{item.id}}/{{image}}' />
+                            </ion-card>
+                        </ion-col>
+                    </ion-row>
+                </ion-scroll>
+            </ion-col>
+        </ion-row>
+    </ion-card>
+    <ion-list>
+        <ion-item style="background-color: #fff;border-top: 0px solid #ccc;height: 25px;border-bottom: 0px solid #ccc;margin-bottom: -15px;">
+            <ion-note item-left>
+                <ion-icon style="font-size: 18px;color: #4477cd;" name="star"> {{item.rating}} <i>({{item.reviews}})</i></ion-icon>
+                <!-- <span style="text-decoration: line-through;float: right">$2,599</span> -->
+            </ion-note>
+            <ion-note item-right style="color:#548eec;">
+                <button (click)="reviewsratings()" style="text-transform: none;" ion-button icon-only clear>
+                    See Reviews & Ratings
+                </button>
+            </ion-note>
+        </ion-item>
+    </ion-list>
+    <ion-list>
+        <ion-item style="background-color: #f4f4f4;border-top: 1px solid #ccc;height: 25px;border-bottom: 1px solid #ccc;">
+            <ion-note item-left>
+                <span style="color: #5e5e5e;font-size: 24px;">${{item.price}}</span>
+                <span style="color: #2d9a4d;"> In Stock</span>
+            </ion-note>
+            <ion-note item-right style="color:#548eec;">
+                <button ion-button icon-only clear><ion-icon style="color: #ff8585;" name="heart"></ion-icon></button>
+            </ion-note>
+        </ion-item>
+    </ion-list>
+    <ion-segment [(ngModel)]="segment" style="margin-top: -16px;">
+        <ion-segment-button class="isegment" value="color">Color</ion-segment-button>
+        <ion-segment-button value="size">Size</ion-segment-button>
+    </ion-segment>
+    <div [ngSwitch]="segment">
+        <div style="text-align: center;height: 55px;padding: 10px;background: #f4f4f4;" *ngSwitchCase="'color'">
+            <button style="margin: 0 auto;background: #fc3635;width: 20%;" ion-button small></button>
+            <button style="margin: 0 auto;background: #763492;width: 20%;" ion-button small></button>
+            <button style="margin: 0 auto;background: #000000;width: 20%;" ion-button small></button>
+        </div>
+        <div style="text-align: center;height: 55px;padding: 10px;background: #f4f4f4;" *ngSwitchCase="'size'">
+            <button style="margin: 0 auto;background: #ccc" ion-button small>S</button>
+            <button style="margin: 0 auto;background: #ccc" ion-button small>M</button>
+            <button style="margin: 0 auto;background: #ccc" ion-button small>L</button>
+        </div>
+    </div>
+    <hr>
+    <p style="background:#fff;padding: 10px;color: #797979;margin-top: -20px;">{{item.desc}}</p>
+</ion-content>
+<ion-footer>
+    <ion-toolbar style="padding: 0px;min-height: 0px;">
+        <ion-grid style="padding: 0px;">
+            <ion-row style="padding: 0px;">
+                <ion-col style="padding: 0px;" width-50>
+                    <button class="footer-b1" ion-button full><ion-icon style="padding-right:7px" name="cart"></ion-icon> + Add to Cart</button>
+                </ion-col>
+                <ion-col style="padding: 0px;" width-50>
+                    <button class="footer-b1" ion-button full>Buy Now
+                        <ion-icon style="padding-left:10px" name="ios-arrow-forward"></ion-icon>
+                    </button>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-toolbar>
+</ion-footer>

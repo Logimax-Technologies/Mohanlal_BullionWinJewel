@@ -1,0 +1,148 @@
+<!-- <ion-nav [root]="rootPage"></ion-nav> -->
+
+<ion-menu [content]="content"> <ion-header>
+    <div class="header-background-image">
+        <ion-thumbnail> <img src="assets/log.svg" style="width: auto;height: auto; max-width: 62% !important">
+        </ion-thumbnail>
+        <!-- <h2 item-title class="menu-title">JEWELLERY</h2> -->
+    </div>
+    </ion-header> <ion-content> <ion-row
+        style="background: #aa792b;color: black;height: 50px;"> <ion-card
+        style="font-weight: bold;background: #aa792b; margin-top: 1px; padding: 0px;box-shadow: none">
+    <ion-card-content style="font-size:15px !important;font-weight: 400;color:white"
+        *ngIf="!loginstatus"> Welcome Guest <a
+        style="font-size: 15px; padding-left: 15px;" color="light"
+        (click)="login()" clear menuToggle> (Sign In)</a> </ion-card-content> <ion-card-content
+        style="font-size:15px !important;font-weight: 400;text-transform:capitalize;color:white" *ngIf="loginstatus">
+    Welcome {{dispname}}
+    </ion-card-content> </ion-card> </ion-row> <ion-list>
+    <!-- <button menuClose ion-item (click)="Homes()" *ngIf="loginstatus">
+        <ion-icon name="home" item-left></ion-icon>
+        Home
+    </button>
+    <button menuClose ion-item (click)="openPage(home)">
+        <ion-icon name="{{home.icon}}" item-left></ion-icon>
+        {{home.title}} -->
+    <!-- </button> -->
+    <!-- <button menuClose ion-item (click)="openCart()" *ngIf="loginstatus">
+        <ion-icon name="cart" item-left></ion-icon>
+        Cart
+        <ion-note item-right style="color:#548eec;"> <ion-badge>
+        {{totalcartitems}}</ion-badge> </ion-note>
+
+    </button> -->
+    <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        <ion-icon name="{{p.icon}}" item-left></ion-icon>
+        {{p.title}}
+        <ion-note *ngIf="p.title == 'Cart'" item-right style="color:#548eec;">
+            <ion-badge>
+            {{totalcartitems}}
+        </ion-badge>
+        </ion-note>
+
+    </button>
+    <button menuClose ion-item  style="display:none;" (click)="contactus()">
+        <ion-icon name="locate" item-left></ion-icon>
+        Contact Us
+    </button>
+    <!-- <button menuClose ion-item (click)="category()" *ngIf="!loginstatus">
+        <ion-icon name="pricetags" item-left></ion-icon>
+        Category
+    </button> -->
+    <button menuClose ion-item (click)="login()" *ngIf="!loginstatus">
+        <ion-icon name="lock" item-left></ion-icon>
+        Login
+    </button>
+    <button menuClose ion-item (click)="register()" *ngIf="!loginstatus">
+            <ion-icon name="person-add" item-left></ion-icon>
+            Register
+        </button>
+    <!--  <button menuClose ion-item (click)="register()" *ngIf="!loginstatus">
+        <ion-icon name="person-add" item-left></ion-icon>
+        Register
+    </button> -->
+    <button menuClose ion-item (click)="logout()" *ngIf="loginstatus">
+        <ion-icon name="log-out" item-left></ion-icon>
+        (Sign Out)
+    </button>
+    </ion-list> </ion-content> </ion-menu>
+    <div class="my-overlay" padding [hidden]="overlayHidden">
+        <br/>
+        <h3>You are Offline.</h3><br/>
+        <h4>Turn on Wi-Fi or mobile data.</h4>
+    </div>
+    <ion-nav #content [root]="rootPage"></ion-nav>
+
+    <ion-footer *ngIf="!enter" style=" background-color: #f9c52e !important;;margin-bottom: 25px;">
+        <ion-row>
+            <ion-col (click)="color(1)"  style="font-weight: bold;color:black;margin: auto;text-align: center;">
+                <span [ngClass]="page == 1 ? 'ch':'noch'"><ion-icon name="home"></ion-icon></span><br>
+                <div style="margin-top: 5px;">LIVERATE</div>
+            </ion-col>
+
+            <ion-col  (click)="color(2)" style="font-weight: bold;color:black;margin: auto;text-align: center;">
+                <span [ngClass]="page == 2 ? 'ch':'noch'"><ion-icon name="person"></ion-icon></span><br>
+                <div style="margin-top: 5px;">ABOUT US</div>
+            </ion-col>
+            <ion-col  (click)="color(3)" style="font-weight: bold;color:black;margin: auto;text-align: center;">
+                <span [ngClass]="page == 3 ? 'ch':'noch'"><ion-icon name="basket"></ion-icon></span><br>
+                <div style="margin-top: 5px;">PRODUCT</div>
+            </ion-col>
+
+            <ion-col  (click)="color(4)" style="font-weight: bold;color:black;margin: auto;text-align: center;">
+                <span [ngClass]="page == 4 ? 'ch':'noch'"><ion-icon name="list-box"></ion-icon></span><br>
+                <div style="margin-top: 5px;">ENQUIRY</div>
+            </ion-col>
+            <ion-col  (click)="color(5)" style="font-weight: bold;color:black;margin: auto;text-align: center;">
+                <span [ngClass]="page == 5 ? 'ch':'noch'"><ion-icon name="call"></ion-icon></span><br>
+                <div style="margin-top: 5px;">CONTACT US</div>
+            </ion-col>
+
+        </ion-row>
+    </ion-footer>
+
+    <ion-footer class="footer-bottom">
+        <ion-grid>
+          <ion-row>
+            <ion-col>&copy;Mohanlal Jewellers {{currYear}}</ion-col>
+            <ion-col text-right>LOGIMAX</ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-footer>
+
+
+<!--       <ion-footer *ngIf="!enter" style=" background-color: #630b23 !important;margin-bottom: 30px;">
+        <ion-row>
+            <ion-col (click)="color(1)" [ngClass]="page == 1 ? 'ch':'noch'"  style="font-weight: bold;margin: auto;text-align: center;">
+                <span ><ion-icon name="home"></ion-icon></span><br>
+                <div style="margin-top: 5px;">HOME</div>
+            </ion-col>
+            <ion-col  (click)="color(2)"  [ngClass]="page == 2 ? 'ch':'noch'" style="font-weight: bold;margin: auto;text-align: center;">
+                <span><ion-icon name="basket"></ion-icon></span><br>
+                <div style="margin-top: 5px;">CATEGORY</div>
+            </ion-col>
+            <ion-col  (click)="color(3)"  [ngClass]="page == 3 ? 'ch':'noch'" style="font-weight: bold;margin: auto;text-align: center;">
+                <span><ion-icon name="cart"></ion-icon></span><br>
+                <div style="margin-top: 5px;">CART</div>
+            </ion-col>
+            <ion-col  (click)="color(4)" [ngClass]="page == 4 ? 'ch':'noch'" style="font-weight: bold;margin: auto;text-align: center;">
+                <span ><ion-icon name="contact"></ion-icon></span><br>
+                <div style="margin-top: 5px;">PROFILE</div>
+            </ion-col>
+            <ion-col  (click)="color(5)" [ngClass]="page == 5 ? 'ch':'noch'" style="font-weight: bold;margin: auto;text-align: center;">
+                <span ><ion-icon name="menu"></ion-icon></span><br>
+                <div style="margin-top: 5px;">MENU</div>
+            </ion-col>
+        </ion-row>
+    </ion-footer>
+
+    <ion-footer *ngIf="foot == true" style=" background-color: #630b23 !important">
+        <ion-row>
+            <ion-col col-10 style="font-weight: bold;color:black;margin: auto;">
+                @ Mohanlal Jewellers
+            </ion-col>
+            <ion-col col-2>
+            <img src='assets/logimax.png'>
+            </ion-col>
+        </ion-row>
+    </ion-footer> -->

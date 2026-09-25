@@ -1,0 +1,250 @@
+<ion-content>
+    <ion-slides *ngIf="slides && slides.length"  [ngClass]="animateClass" style="height: auto !important;margin-top: 10px;" autoplay='4000' zoom ='true' speed='500' loop='true' initialSlide='0' pager='true'>
+        <ion-slide *ngFor="let slide of slides">
+          <img [src]="slide.image" class="slide-image"/>
+        </ion-slide>
+      </ion-slides>
+    <div *ngFor=" let c of catprod; let i=index ">
+    <ion-row>
+        <ion-col no-padding>
+          <p style="margin-left: 15px;color: white;font-weight: bold;border-bottom-left-radius: 10px;border-top-right-radius: 10px;background: #f9c52e;    padding: 8px;    width: max-content;">{{c.name}}</p>
+        </ion-col>
+        <ion-col style="margin: auto;">
+            <span (click)="opensubCategories(c.id_category)" style="float: right;background: #3c3a3a;padding: 5px;color: white;border-radius: 5px;font-weight: bold !important;">View All ></span>
+        </ion-col>
+      </ion-row>
+
+      <ion-scroll  scrollX="true" style="height:175px;margin-left: 8px !important;" >
+
+      <ion-row nowrap>
+        <ion-col col-5  *ngFor=" let item of c['subcategory_records']; let i=index"  (click)="openproducts(item['id_subcategory'])">
+            <ion-card style="margin:0px;border: 1px solid #e4e4e4;height: 142px;border-radius: 7px">
+                <!-- <div style="margin: 3px;"><span *ngIf="item.is_stock_avail==1 && item.stock_manage == 1" class="instock">Instock</span><span *ngIf="item.is_stock_avail==0 && item.stock_manage == 1"  class="outofstock">Out of stock</span></div> -->
+                 <img style="height: 100px;width: auto;margin: 0 auto;" *ngIf='item.imgurl != null' src='{{item.imgurl}}' imageCache/>
+                 <img style="height: 100px;margin: 0 auto;" *ngIf='item.imgurl == null' src='assets/images/no-img.png' imageCache/>
+                  <div style="font-weight: bold;text-align: center;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;padding: 5px;font-size: 14px;color: #656565;">
+                     <span>{{item['subcategory_name']}}</span>
+                 </div>
+             </ion-card>
+             <!-- <div style="text-align:center;margin-top:3px;margin-bottom:10px; font-weight:bold; text-overflow: ellipsis;padding: 5px;font-size: 14px;overflow: hidden;color: #656565; white-space: nowrap; ">
+                 {{item['subcategory_name']}}
+             </div> -->
+
+      </ion-col>
+      </ion-row>
+      </ion-scroll>
+    </div>
+    <!-- <ion-scroll  scrollX="true" style="height:175px;margin-left: 8px !important;" >
+
+        <ion-row nowrap>
+          <ion-col col-5  *ngFor=" let item of bottom; let i=index " >
+                <img style="width: 155px !important;height: 182px" src='{{item.img}}'  imageViewer="{{item.img}}" imageCache/>
+
+        </ion-col>
+        </ion-row>
+        </ion-scroll> -->
+        <div style="text-align: center;margin-bottom: 20px;margin-top: 10px;">
+            <img style="width: 90%;
+            border-radius: 20px;" src='assets/img/slides/three.jpg' imageCache/>
+        </div>
+
+
+    <ion-row *ngIf="newarr.length != 0">
+        <ion-col no-padding>
+          <p style="margin-left: 15px;color: white;font-weight: bold;border-bottom-left-radius: 10px;border-top-right-radius: 10px;background: #f9c52e;padding: 8px;width: max-content;">NEW ARRIVAL</p>
+        </ion-col>
+        <ion-col style="margin: auto;">
+            <span (click)="new()" style="float: right;background: #3c3a3a;padding: 5px;color: white;border-radius: 5px;font-weight: bold !important;">View All ></span>
+        </ion-col>
+      </ion-row>
+
+      <ion-scroll *ngIf="newarr.length != 0" scrollX="true" style="height:175px;margin-left: 8px !important;" >
+
+      <ion-row nowrap>
+        <ion-col col-5  *ngFor=" let item of newarr; let i=index "  (click)="openProductdetails(item.id_product)">
+            <ion-card style="margin:0px;border: 1px solid #e4e4e4;height: 142px;border-radius: 7px">
+                <div style="margin: 3px;"><span *ngIf="item.is_stock_avail==1 && item.stock_manage == 1" class="instock">Instock</span><span *ngIf="item.is_stock_avail==0 && item.stock_manage == 1"  class="outofstock">Out of stock</span></div>
+                 <img style="height: 100px;width: auto;margin: 0 auto;" *ngIf='item.imgurl != null' src='{{item.imgurl}}' imageCache/>
+                 <img style="height: 100px;margin: 0 auto;" *ngIf='item.imgurl == null' src='assets/images/no-img.png' imageCache/>
+                  <div style="font-weight: bold;text-align: center;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;padding: 5px;font-size: 14px;color: #656565;">
+                     <span >{{item.name}}</span>
+                 </div>
+             </ion-card>
+             <!-- <div style="text-align:center;margin-top:3px;margin-bottom:10px; font-weight:bold; text-overflow: ellipsis;padding: 5px;font-size: 14px;overflow: hidden;color: #656565; white-space: nowrap; ">
+                 {{item.name}}
+             </div> -->
+
+      </ion-col>
+      </ion-row>
+      </ion-scroll>
+      <div style="text-align: center;margin-bottom: 20px;margin-top: 10px;">
+        <img style="width: 90%;border-radius: 20px;" src='assets/img/slides/four.jpg' imageCache/>
+    </div>
+      <!-- <ion-row *ngIf="newarr.length == 0">
+        <ion-col style="text-align: center;font-weight: bold;">
+          No Products Found
+        </ion-col>
+      </ion-row> -->
+<!-- <ion-row style="background:#eee;">
+    <ion-col col-12 align="right">
+        <ion-icon   *ngIf="!checkStatus" (click)="grid()" name="grid" ></ion-icon>
+        <ion-icon  *ngIf="checkStatus"  (click)="listgrid()" name="list"></ion-icon>
+    </ion-col>
+</ion-row> -->
+
+
+
+
+<!-- <ion-row *ngIf="productItems?.length > 0">
+    <ion-col>
+        <b><div class="text-centre" style="color: white !important;    margin-left: 15px;background: #f9c52e;border-bottom-left-radius: 10px;
+            border-top-right-radius: 10px;    padding: 8px;    width: max-content;" >COLLECTIONS</div></b>
+    </ion-col>
+    <ion-col style="margin: auto;">
+        <span (click)="go()" style="float: right;background: black;padding: 5px;color: white;border-radius: 5px;">View All ></span>
+    </ion-col>
+</ion-row>
+<ion-scroll *ngIf="productItems.length != 0 && show == true" scrollX="true" style="height:192px;margin-left: 8px !important;"  [class.hide]="checkStatus">
+<ion-row nowrap>
+    <ion-col col-5  [ngClass]="animateClass" *ngFor=" let item of productItems; let i=index " (click)="opensubCategories(item.id_category)">
+        <ion-card style="margin:0px;border: 1px solid #e4e4e4;height: 162px;border-radius:7px">
+            <div style="margin: 3px;"><span *ngIf="item.is_stock_avail==1 && item.stock_manage == 1" class="instock">Instock</span><span *ngIf="item.is_stock_avail==0 && item.stock_manage == 1"  class="outofstock">Out of stock</span><span *ngIf="item.is_new == 1" style="float:right;"><ion-badge color="secondary">New</ion-badge></span></div>
+            <img style="height: 118px;width: auto;margin: 0 auto;" *ngIf='item.imgurl != null' src='{{item.imgurl}}' imageCache/>
+            <img style="height: 118px;margin: 0 auto;" *ngIf='item.imgurl == null' src='assets/images/no-img.png' imageCache/>
+
+        </ion-card>
+        <div style="    text-align: center;margin-top:3px;margin-bottom: 10px;
+        font-weight: bold;text-overflow: ellipsis;padding: 5px;font-size: 14px;overflow: hidden;color: #656565; white-space: nowrap; ">
+            {{item.name}}
+        </div>
+    </ion-col>
+</ion-row>
+</ion-scroll>
+<ion-scroll *ngIf="productItems.length != 0 && show == false" scrollX="true" style="height:192px;margin-left: 8px !important;"  [class.hide]="checkStatus">
+<ion-row nowrap>
+        <ion-col col-5  [ngClass]="animateClass" *ngFor=" let item of productItems; let i=index " (click)="openProductdetails(item.id_product)">
+            <ion-card style="margin:0px;border: 1px solid #e4e4e4;height: 162px;border-radius:7px">
+                <div style="margin: 3px;"><span *ngIf="item.is_stock_avail==1 && item.stock_manage == 1" class="instock">Instock</span><span *ngIf="item.is_stock_avail==0 && item.stock_manage == 1"  class="outofstock">Out of stock</span><span *ngIf="item.is_new == 1" style="float:right;"><ion-badge color="secondary">New</ion-badge></span></div>
+                <img style="height: 118px;width: auto;margin: 0 auto;" *ngIf='item.imgurl != null' src='{{item.imgurl}}' imageCache/>
+                <img style="height: 118px;margin: 0 auto;" *ngIf='item.imgurl == null' src='assets/images/no-img.png' imageCache/>
+
+            </ion-card>
+            <div style="    text-align: center;margin-top:3px;margin-bottom: 10px;
+            font-weight: bold;text-overflow: ellipsis;padding: 5px;font-size: 14px;overflow: hidden;color: #656565; white-space: nowrap; ">
+                {{item.name}}
+            </div>
+        </ion-col>
+    </ion-row>
+</ion-scroll> -->
+
+    <!-- <p *ngIf="show == true" [class.hide]="!checkStatus" >
+        <ion-row *ngFor=" let item of productItems; let i=index ">
+        <ion-col col-3>
+
+        </ion-col>
+            <ion-col col-6  [ngClass]="animateClass"  (click)="opensubCategories(item.id_category)">
+                <ion-card style="margin:0px;border: 1px solid #e4e4e4;height: 173px;border-radius: 7px;">
+                    <div style="margin: 3px;"><span *ngIf="item.is_stock_avail==1 && item.stock_manage == 1" class="instock">Instock</span><span *ngIf="item.is_stock_avail==0 && item.stock_manage == 1"  class="outofstock">Out of stock</span><span *ngIf="item.is_new == 1" style="float:right;"><ion-badge color="secondary">New</ion-badge></span></div>
+                    <img style="height: 118px;width: auto;margin: 0 auto;" *ngIf='item.imgurl != null' src='{{item.imgurl}}' imageCache/>
+                    <img style="height: 118px;margin: 0 auto;" *ngIf='item.imgurl == null' src='assets/images/no-img.png' imageCache/>
+                    <div style="    text-align: center;margin-top:3px;margin-bottom:10px;
+                    font-weight: bold;text-overflow: ellipsis;padding: 5px;font-size: 14px;overflow: hidden;color: #656565; white-space: nowrap; ">
+                        {{item.name}}
+                    </div>
+                </ion-card>
+                <div style="    text-align: center;margin-top:3px;margin-bottom:10px;
+                font-weight: bold;text-overflow: ellipsis;padding: 5px;font-size: 14px;overflow: hidden;color: #656565; white-space: nowrap; ">
+                    {{item.name}}
+                </div>
+            </ion-col>
+            <ion-col col-3>
+
+                </ion-col>
+                </ion-row>
+            </p>
+    <p *ngIf="show == false" [class.hide]="!checkStatus">
+            <ion-row *ngFor=" let item of productItems; let i=index ">
+
+            <ion-col col-3>
+
+                </ion-col>
+            <ion-col col-6  [ngClass]="animateClass"  (click)="openProductdetails(item.id_product)">
+                <ion-card style="margin:0px;border: 1px solid #e4e4e4;height: 173px;border-radius: 7px;">
+                    <div style="margin: 3px;"><span *ngIf="item.is_stock_avail==1 && item.stock_manage == 1" class="instock">Instock</span><span *ngIf="item.is_stock_avail==0 && item.stock_manage == 1"  class="outofstock">Out of stock</span><span *ngIf="item.is_new == 1" style="float:right;"><ion-badge color="secondary">New</ion-badge></span></div>
+                    <img style="height: 118px;width: auto;margin: 0 auto;" *ngIf='item.imgurl != null' src='{{item.imgurl}}' imageCache/>
+                    <img style="height: 118px;margin: 0 auto;" *ngIf='item.imgurl == null' src='assets/images/no-img.png' imageCache/>
+                    <div style="    text-align: center;margin-top:3px;margin-bottom:10px;
+                    font-weight: bold;text-overflow: ellipsis;padding: 5px;font-size: 14px;overflow: hidden;color: #656565; white-space: nowrap; ">
+                        {{item.name}}
+                    </div>
+                </ion-card>
+                <div style="    text-align: center;margin-top:3px;margin-bottom:10px;
+                font-weight: bold;text-overflow: ellipsis;padding: 5px;font-size: 14px;overflow: hidden;color: #656565; white-space: nowrap; ">
+                    {{item.name}}
+                </div>
+            </ion-col>
+            <ion-col col-3>
+
+                </ion-col>
+                </ion-row>
+
+        </p> -->
+<!-- <ion-list *ngIf="show == true"  class="prod_collect" [class.hide]="!checkStatus">
+    <div class="list_view"  [ngClass]="animateClass" *ngFor=" let item of productItems; let i=index " (click)="opensubCategories(item.id_category)" style="padding-right:30px;padding-left:30px;">
+        <div  class="custom_design" item-start style="margin-right:10px;margin-top:10px;">
+            <div class="row">
+                    <div class="col">
+                        </div>
+
+                            <div class="col" style="margin:15px">
+                    <ion-card no-margin>
+                        <div class=""><span *ngIf="item.is_new == 1" style="float:right !important; margin:3px"><ion-badge color="secondary">New</ion-badge></span></div>
+                        <img style="text-align:center;height:118px; border:1px solid rgb(240, 233, 233)" *ngIf='item.imgurl != null' src='{{item.imgurl}}' imageCache/>
+                        <img *ngIf='item.imgurl == null' src='assets/images/no-img.png' imageCache/>
+                        <div class="" style="margin: 3px; text-align:center;"><span *ngIf="item.is_stock_avail==1&& item.stock_manage == 1" class="instock">Instock</span><span *ngIf="item.is_stock_avail==0&& item.stock_manage == 1"  class="outofstock">Out of stock</span></div>
+                    </ion-card>
+                    <div class="col col-100" style="    text-align: center;
+                    font-weight: bold; text-overflow: ellipsis;font-size: 14px;color: #656565; white-space: nowrap;" item-end>
+                            {{item.name}}
+                </div>
+            </div>
+            <div class="col">
+                </div>
+            </div>
+        </div>
+    </div>
+</ion-list> -->
+<!-- <ion-list *ngIf="show == false"  class="prod_collect" [class.hide]="!checkStatus">
+        <div class="list_view"  [ngClass]="animateClass" *ngFor=" let item of productItems; let i=index " (click)="openProductdetails(item.id_category)" style="padding-right:30px;padding-left:30px;">
+            <div  class="custom_design" item-start style="margin-right:10px;margin-top:10px;">
+                <div class="row">
+                        <div class="col">
+                            </div>
+                    <div class="col" style="margin:15px">
+                        <ion-card no-margin>
+                            <div class=""><span *ngIf="item.is_new == 1" style="float:right !important; margin:3px"><ion-badge color="secondary">New</ion-badge></span></div>
+                            <img style="text-align:center;height:118px; border:1px solid rgb(240, 233, 233)" *ngIf='item.imgurl != null' src='{{item.imgurl}}' imageCache/>
+                            <img *ngIf='item.imgurl == null' src='assets/images/no-img.png' imageCache/>
+                            <div class="" style="margin: 3px; text-align:center;"><span *ngIf="item.is_stock_avail==1&& item.stock_manage == 1" class="instock">Instock</span><span *ngIf="item.is_stock_avail==0&& item.stock_manage == 1"  class="outofstock">Out of stock</span></div>
+                        </ion-card>
+                        <div class="col col-100" style="    text-align: center;
+                        font-weight: bold; text-overflow: ellipsis;font-size: 14px;color: #656565; white-space: nowrap;" item-end>
+                                {{item.name}}
+                    </div>
+                </div>
+                <div class="col">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-list> -->
+<ion-row *ngIf="load == true" style="text-align:center">
+    <ion-col>
+        <div  class="itemempty" >No item to display</div>
+    </ion-col>
+</ion-row>
+<ion-refresher (ionRefresh)="doRefresh($event)">
+  <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles" refreshingText="Refreshing...">
+    </ion-refresher-content>
+</ion-refresher>
+</ion-content>

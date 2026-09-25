@@ -1,0 +1,10 @@
+page-checkout {
+    .scroll-content{
+        background: white !important;
+        margin-bottom: 110px !important;
+
+    }
+    .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+        top: 0px !important;
+    }
+}

@@ -1,0 +1,21 @@
+page-customorder {
+    .scroll-content{
+        margin-bottom: 110px !important;
+    }
+    .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+        top: 0px !important;
+    }
+    // ion-fab[bottom] {
+    //     bottom: 87px !important;
+    // }
+
+        .input-cover{
+            border-bottom: 1px solid #ccc ;
+        }
+
+
+    .toolbar .toolbar-background {
+        background-color: transparent !important;
+    }
+    
+}

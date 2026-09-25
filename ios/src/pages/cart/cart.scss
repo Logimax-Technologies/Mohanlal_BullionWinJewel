@@ -1,0 +1,88 @@
+page-cart {
+
+ion-label {
+    white-space: normal;
+}
+.item-ios ion-avatar img {
+    max-width: 3.6rem;
+    max-height: 3.6rem;
+    border-radius: 0;
+}
+.scroll-content{
+	margin-bottom: 110px !important;
+	background: white !important;
+}
+.item-md ion-avatar img {
+    max-width: 4rem;
+    max-height: 4rem;
+    border-radius: 0;
+}
+.total{
+	margin: 0px;
+	padding:0;
+	font-size: 22px;
+	border:none;
+}
+.top{
+	text-align: center;
+	font-family: fantasy;
+	font-size: 22px;
+}
+.add{
+	color:#ccc;
+	font-size: 17px;
+	padding: 11px;
+	line-height: 25px;
+}
+.footer{
+	padding: 0px;
+	min-height: 0px;
+}
+.grid{
+	padding: 0px;
+}
+.cartButton{
+	margin: 0px;
+	height: 50px;
+	background: #EC644B;
+	text-transform: none;
+}
+.send{
+	padding-left:10px
+}
+.totalHeader{
+	margin: 0px;padding:0
+}
+.footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+	top: 0px !important;
+}
+
+
+
+.item-md.item-block .item-inner {
+    padding-right: 8px;
+    border-bottom: 0px solid #dedede;
+}
+#notification-button {            
+    position: relative;
+    width: 42px;
+    top:1px;
+    right: 1px;
+    overflow: visible!important;
+}
+
+
+#notifications-badge {
+    background-color: gold;
+    position: absolute;
+    top: -9px;
+    right: -2px;
+    border-radius: 100%;
+}
+.ion-badge{
+
+
+    font-size: 1rem !important;
+}
+
+}

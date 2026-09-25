@@ -1,0 +1,143 @@
+<!-- <ion-header align-title=”center”>
+  <ion-navbar align-title=”center”>
+    <ion-title align-title=”center”><img alt="logo" height="55" cache="true" src="assets/imgs/header.svg" ></ion-title>
+  </ion-navbar>
+  <ion-toolbar class="marquee-text">
+    <ion-title><p class="marquee">{{marqueetext}}</p></ion-title>
+    </ion-toolbar>
+</ion-header> -->
+
+<ion-header align-title=”center”>
+	<ion-navbar align-title=”center”>
+		<ion-row style="align-items: center;">
+			<ion-col col-2>
+				
+			</ion-col>
+			<ion-col col-8 style="text-align: center !important;"><img alt="logo" height="55" cache="true" src="assets/imgs/header.svg"></ion-col>
+			<ion-col col-2>
+				
+			</ion-col>
+		</ion-row>	
+		
+	</ion-navbar>
+	<div class="marquee-text">
+		<ion-row>
+			<ion-col col-12 >
+				<ion-title class="marquee-text">
+					<p class="marquee">{{marqueetext}}</p>
+				</ion-title>
+			</ion-col>
+		</ion-row>
+	</div>
+</ion-header>
+
+<ion-content (ionScrollStart)="scrollStart($event)" (ionScrollEnd)="scrollStart($event)">
+  <div>
+    <br>
+<ion-card>
+  <ion-grid card-subtitle class="grid-table Last_table" style="margin-bottom:10px !important"  *ngIf="old_base_rates?.length != 0 && base_rates?.length != 0">
+    <ion-row class="light-border-btm headercol">
+     <ion-col col-3 class="head_desc1">DESCRIPTION</ion-col>
+     <ion-col col-3 class="head_desc1">BID</ion-col>
+     <ion-col col-3 class="head_desc1">ASK</ion-col>
+     <ion-col col-3 class="head_desc1">HIGH | LOW</ion-col>
+   </ion-row>
+   <div *ngFor="let baserate of base_rates; let i = index">
+    <ion-row class="light-border-btm align-items raterow1">
+      <ion-col col-3 class="com-name1">{{baserate.symbol}} </ion-col>
+      <ion-col col-3><span [ngClass]="{'ratehigh' : (baserate.bid > old_base_rates[i].bid), 'ratelow':(baserate.bid < old_base_rates[i].bid), 'ratenormal': (baserate.bid == old_base_rates[i].bid)}">{{baserate.bid}}</span></ion-col>
+      <ion-col col-3><span [ngClass]="{'ratehigh' : (baserate.ask > old_base_rates[i].ask), 'ratelow':(baserate.ask < old_base_rates[i].ask), 'ratenormal': (baserate.ask == old_base_rates[i].ask)}">{{baserate.ask}}</span></ion-col>
+      <ion-col col-3 style="padding-left: 0px !important;padding-right: 0px !important;"><span class="h2-col">{{ baserate.high }}</span>|<span class="h2-col">{{ baserate.low }}</span></ion-col>
+    </ion-row>
+   </div>
+  </ion-grid>
+</ion-card>
+
+<ion-card>
+  <ion-grid card-subtitle class="grid-table" *ngIf="old_current_rates?.length != 0 && current_rates?.length != 0">
+		<ion-row class="light-border-btm headercol">
+			 <ion-col col-3 class="head_desc1">DESCRIPTION</ion-col>
+			 <ion-col col-3 class="head_desc1">BID</ion-col>
+       <ion-col col-3 class="head_desc1">ASK</ion-col>
+       <ion-col col-3 class="head_desc1">HIGH | LOW</ion-col>
+    </ion-row>
+		<ion-row class="light-border-btm align-items raterow1" *ngFor="let mcxrates of current_rates; let i = index">
+			<ion-col col-3 class="com-name1" style="padding-left:0px;padding-top:6px">{{mcxrates.symbol}}</ion-col>
+      <ion-col col-3><span [ngClass]="{'ratehigh' : (mcxrates.bid > old_current_rates[i].bid), 'ratelow':(mcxrates.bid < old_current_rates[i].bid), 'ratenormal': (mcxrates.bid == old_current_rates[i].bid)}">
+        {{mcxrates.bid}}</span>
+			</ion-col>
+      <ion-col col-3><span [ngClass]="{'ratehigh' : (mcxrates.ask > old_current_rates[i].ask), 'ratelow':(mcxrates.ask < old_current_rates[i].ask), 'ratenormal': (mcxrates.ask == old_current_rates[i].ask)}">{{mcxrates.ask}}</span></ion-col>
+      <ion-col col-3><span class="hl-col span_design1">{{ mcxrates.high }}</span>|<span class="hl-col span_design1">{{ mcxrates.low }}</span></ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-card>
+
+<ion-card>
+  <ion-grid card-subtitle class="grid-table" *ngIf="oldliverates?.length != 0 && liverates?.length != 0 && marketstatus == 1">
+	  <ion-row class="light-border-btm headercol">
+	    <ion-col col-6 class="head_desc1">COMMODITY</ion-col>
+      <!-- <ion-col col-4 class="head_desc1">BUY</ion-col> -->
+       <ion-col col-6 class="head_desc1">SELLING RATE (&#x20B9;)</ion-col>
+    </ion-row>
+    <ion-row class="light-border-btm align-items raterow" *ngFor="let liverate of liverates; let i = index">
+      <ion-col col-6 class="com-name"><div style="padding-top:5px !important" *ngIf="liverate.com_roundoff==0">{{liverate.com_name}}</div><div style="" *ngIf="liverate.com_roundoff!=0">{{liverate.com_name}}</div></ion-col>
+     <ion-col col-6 class="custom_space"><div  [ngClass]="{'ratehigh1' : (liverate.selling_rate > oldliverates[i].selling_rate), 'ratelow1':(liverate.selling_rate < oldliverates[i].selling_rate), 'ratenormal1': (liverate.selling_rate == oldliverates[i].selling_rate)}"><div [innerHTML]="liverate.selling_rate | safeHtml"></div></div></ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-row class="light-border-btm marketclosemsg" *ngIf="marketstatus == 0">
+     <ion-col text-center [innerHTML]="marketclosedmsg"></ion-col>
+  </ion-row>
+</ion-card>
+
+  <ion-grid card-subtitle class="grid-table Last_table" style="margin-bottom:30px !important" *ngIf="mjdmarates.display == 1">
+    <ion-row class="light-border-btm headercol">
+     <ion-col col-4 text-center style="font-weight: bold !important;">MJDMA RATE</ion-col>
+     <ion-col col-8 text-right class="updatetime">UPDATE TIME&nbsp;:&nbsp;{{mjdmarates.updatetime*1000 |date:'yyyy-MM-dd HH:mm:ss'}}</ion-col>
+   </ion-row>
+   <ion-row class="light-border-btm raterow">
+     <ion-col col-6 class="com-name" style="text-align: left !important;">GOLD 1GRM 22CT</ion-col>
+     <ion-col col-6>{{mjdmarates.goldrate_22ct}}</ion-col>
+   </ion-row>
+   <ion-row class="light-border-btm raterow">
+     <ion-col col-6 class="com-name" style="text-align: left !important;">SILVER 1GRM</ion-col>
+     <ion-col col-6>{{mjdmarates.silverrate_1gm}}</ion-col>
+   </ion-row>
+ </ion-grid>
+
+ <ion-grid>
+   <ion-row class="lbma_table">
+     <ion-col>TODAY'S RATES - LBMA LONDON</ion-col>
+   </ion-row>
+   <ion-row class="lbma_row">
+     <ion-col style="color: dimgrey;font-size: 16px;">GOLD AM FIX</ion-col>
+     <ion-col col-3  style="color: #000;font-size: 16px;font-weight: bold !important">{{lbmarates.goldrate_am}}</ion-col>
+     <ion-col  style="color: dimgrey;font-size: 12px;">{{lbmarates.gold_am_date *1000| date:'dd-MM-yyyy HH:mm:ss'}}</ion-col>
+   </ion-row>
+   <ion-row class="lbma_row">
+    <ion-col style="color: dimgrey;font-size: 16px;">GOLD PM FIX</ion-col>
+    <ion-col col-3 style="color: #000;font-size: 16px;font-weight: bold !important;">{{lbmarates.goldrate_pm}}</ion-col>
+    <ion-col style="color: dimgrey;font-size: 12px;">{{lbmarates.gold_pm_date *1000| date:'dd-MM-yyyy HH:mm:ss'}}</ion-col>
+  </ion-row>
+  <ion-row class="lbma_row">
+    <ion-col style="color: dimgrey;font-size: 16px;">SILVER FIX</ion-col>
+    <ion-col col-3 style="color: #000;font-size: 16px;font-weight: bold !important">{{lbmarates.silverrate}}</ion-col>
+    <ion-col style="color: dimgrey;font-size: 12px;">{{lbmarates.silver_date *1000| date:'dd-MM-yyyy HH:mm:ss'}}</ion-col>
+  </ion-row>
+ </ion-grid>
+</div>
+<ion-grid style="margin-bottom: 40px !important;">
+  <ion-row>
+    <ion-col>
+      <div id="fxst_calendar" class="last-table" style="position: relative; width: 100%; overflow: auto; margin-bottom: 10px;"></div>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+  <ion-fab id="step1" bottom left style="margin-bottom:80px !important;" *ngIf="isShown"> <!-- margin-bottom:130px !important; -->
+    <button  ion-fab (click)="openCallMenu()" class="quick"><img src="./assets/imgs/quickcall.svg"/></button>
+  </ion-fab>
+  <ion-fab id="step2" bottom right margin-bottom style="margin-bottom:80px !important;" *ngIf="isShown">
+    <button  ion-fab (click)="openWhatsappMenu()"><img src="./assets/imgs/whatsapp.svg"/></button>
+  </ion-fab>
+
+</ion-content>

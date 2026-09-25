@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Search {{name}}
+    </ion-title>
+    <ion-buttons end>
+        <button ion-button icon-only (click)="dismiss()">
+            <ion-icon item-right name="ios-close-outline"></ion-icon>
+        </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-searchbar [(ngModel)]="input" placeholder="Search {{name}}" (ionChange)="search()"></ion-searchbar>
+    <ion-list style="overflow: auto;height: 80vh;" *ngIf="name!='Country Code'">
+        <ion-item *ngFor="let data of details" (click)="selected(data)">
+            <span *ngIf="data['name']">  {{data['name']}} </span>
+            <span>{{data['village_name']}}</span>
+        </ion-item>
+    </ion-list>
+    <ion-list style="overflow: auto;height: 80vh;" *ngIf="name=='Country Code'">
+      <ion-item *ngFor="let data of details" (click)="selected(data)">
+         <span>  {{data['cty_codeno']}} </span> - 
+          <span>{{data['ct_name']}}</span>
+      </ion-item>
+  </ion-list>
+</ion-content>

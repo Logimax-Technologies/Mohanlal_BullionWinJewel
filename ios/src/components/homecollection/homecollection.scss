@@ -1,0 +1,87 @@
+homecollection {
+	.card-ios{
+		width: 100% !important;
+	}
+.itemempty{
+	font-weight:bold;
+}
+.swiper-slide img{
+	max-width:90% !important;
+	border-radius: 10px;
+}
+.card-ios{
+	width: 100% !important;
+}
+.card-md{
+	width: 100% !important;
+	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.14), 0 4px 4px 1px rgba(0, 0, 0, 0.2), 0 4px 6px 0 rgba(0, 0, 0, 0.12) !important;
+	}
+[col-6] {
+   padding: 10px !important;
+}
+.row .itemempty{
+	text-align:center;
+	margin:0 auto;
+	 top: 50%;
+  left: 50%;
+	}
+	.outofstock{
+ 		font-size: 11px;
+		 color: red;
+		 margin-left: 7px;
+
+	 }
+	 .alert-md .alert-button{
+		 text-transform: none !important;
+	 }
+  .instock{
+ 		font-size: 11px;
+		 color: #5ca7e2;
+		 margin-left: 7px;
+
+	 }	
+.button_color{
+	background-color: white;
+	border:1px solid grey;
+	color:black;
+	padding:5px !important;
+	float:right;
+	font-size:20px;
+	margin-left:5px;
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
+}
+.button_color:active{
+	background:rgb(235, 234, 234);
+}
+.hide {
+	display: none !important;
+  }
+.prod_collect{
+	
+  }
+  .item.item-block.item-md{
+	  padding:0px !important;
+  }
+  p.col.col-70{
+	  margin:0px !important;
+  }
+  .list_view{
+	  border-bottom:1px solid  rgb(226, 235, 253) !important;
+  }
+  .list-ios .item-block .item-inner{
+	  border:0px !important;
+  }
+  .custom_design{
+	/* text-align: center; */
+  }
+
+  .scroll-content{
+	//margin-bottom:20px !important;
+  }
+  ion-scroll.scroll-x .scroll-content{
+	  margin-bottom: 0px !important;
+  }
+  
+}
+

@@ -1,0 +1,87 @@
+<!--
+  Generated template for the ReviewsRatings page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar>
+        <ion-title>Reviews & Ratings</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content [@flyInTopSlow]="0">
+    <div style="margin-top: 0px;color: #515151;padding: 10px;word-wrap: break-word;background:#fff;border-bottom:1px solid #4958b2;text-align: center;font-size: 15px;">
+        {{item.name}}
+    </div>
+    <ion-list>
+        <ion-item style="background-color: #fff;color:#548eec;border-top: 0px solid #ccc;height: 25px;    text-align: center;border-bottom: 0px solid #ccc;margin-bottom: -15px;">
+            <ion-note style="color:#548eec;">
+               {{item.rating}} <i>({{item.reviews}})</i>
+            </ion-note>
+        </ion-item>
+        <ion-item style="background-color: #fff;color:#548eec;border-top: 0px solid #ccc;height: 25px;border-bottom: 0px solid #ccc;margin-bottom: -15px;">
+            <ion-note style="color:#548eec;">
+                <rating [(ngModel)]="item.rating" readOnly="true"></rating>
+            </ion-note>
+        </ion-item>
+    </ion-list>
+
+    <ion-card>
+        <ion-item>
+            <span item-left><ion-icon style="font-size: 18px;color: #4477cd;" name="star"> 5</ion-icon></span>
+            <span item-left>Just wow!</span>
+        </ion-item>
+        <ion-card-content>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed ultrices est. Cras cursus magna non varius gravida. 
+        </ion-card-content>
+        <ion-item>
+            <span item-left>Puja Routh</span>
+            <span icon-left item-right style="font-size: 9px;">
+                <ion-icon name="calendar">15 Feb, 2017</ion-icon>
+            </span>
+        </ion-item>
+    </ion-card>
+    <ion-card>
+        <ion-item>
+            <span item-left><ion-icon style="font-size: 18px;color: #4477cd;" name="star"> 5</ion-icon></span>
+            <span item-left>Highly recommended</span>
+        </ion-item>
+        <ion-card-content>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed ultrices est. Cras cursus magna non varius gravida. 
+        </ion-card-content>
+        <ion-item>
+            <span item-left>Shivechchha Sengar</span>
+            <span icon-left item-right style="font-size: 9px;">
+                <ion-icon name="calendar">15 Feb, 2017</ion-icon>
+            </span>
+        </ion-item>
+    </ion-card>
+    <ion-card>
+        <ion-item>
+            <span item-left><ion-icon style="font-size: 18px;color: #4477cd;" name="star"> 5</ion-icon></span>
+            <span item-left>Good product with nice look</span>
+        </ion-item>
+        <ion-card-content>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed ultrices est. Cras cursus magna non varius gravida. 
+        </ion-card-content>
+        <ion-item>
+            <span item-left>Liza Mohanty</span>
+            <span icon-left item-right style="font-size: 9px;">
+                <ion-icon name="calendar">15 Feb, 2017</ion-icon>
+            </span>
+        </ion-item>
+    </ion-card>
+</ion-content>
+<ion-footer>
+    <ion-toolbar style="padding: 0px;min-height: 0px;">
+        <ion-grid style="padding: 0px;">
+            <ion-row style="padding: 0px;">
+                <ion-col style="padding: 0px;">
+                    <button  class="footer-b1" ion-button full (click)="writeReview()">Rate and Review product
+                        <ion-icon style="padding-left:10px" name="clipboard"></ion-icon>
+                    </button>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-toolbar>
+</ion-footer>

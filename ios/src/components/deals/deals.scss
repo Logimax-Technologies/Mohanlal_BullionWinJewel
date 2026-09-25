@@ -1,0 +1,48 @@
+deals {
+
+.dealsHeader1{
+	margin-bottom: 0px;
+	border:none;
+	background:#3d3d3d;
+	text-align: left;
+	font-size: 16px;
+}
+
+.name{
+	text-overflow: ellipsis;
+	padding: 4%;
+	font-size: 14px;
+	overflow: hidden;
+	color: #656565;
+	 white-space: nowrap; 
+}
+
+.price{
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	padding: 4%;
+	font-size: 12px;   
+	 background: rgba(41, 71, 119, 0.17);
+	 color: #656565;  
+}
+
+.reviewsBlock{
+	 text-overflow: ellipsis;
+	 padding: 4%;
+	 font-size: 14px;
+	 overflow: hidden;
+	 color: #656565;
+	  white-space: nowrap; 
+}
+
+.reviews{
+	font-size: 12px;
+	color: #4477cd;
+}
+.item-md.item-block .item-inner {
+    padding-right: 8px;
+    border-bottom: 0px solid #dedede;
+}
+
+}

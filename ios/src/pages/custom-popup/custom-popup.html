@@ -1,0 +1,72 @@
+<!--
+  Generated template for the CustomPopupPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title style="text-align: center">Quote Details</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <ion-card style="font-weight:bold;">
+        <ion-row>
+          <ion-col>
+            Item Name
+          </ion-col>
+          <ion-col>
+              {{product.name}}
+            </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            Purity
+          </ion-col>
+          <ion-col>
+              {{purityname}}
+            </ion-col>
+        </ion-row>
+          
+              <ion-row>
+                  <ion-col>
+                    Weight
+                  </ion-col>
+                  <ion-col>
+                      {{product.reqweight}} g
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                    Size
+                    </ion-col>
+                    <ion-col>
+                        {{product.sizeorlen}}
+                      </ion-col>
+                  </ion-row>
+                  <ion-row>
+                      <ion-col>
+                      Tax
+                      </ion-col>
+                      <ion-col>
+                          {{product.tax}}
+                        </ion-col>
+                    </ion-row>
+                
+              
+                        
+                                  <ion-row [hidden]="product.prodefaultimg == null">
+                                        <ion-col>
+                                                Sample Image
+                                        </ion-col>
+                                      <ion-col >
+                                      <img style="height:100px;width:100px;"  [src]='product.prodefaultimg' imageViewer="{{product.prodefaultimg}}" alt="image"/>
+                                    </ion-col>
+                                  </ion-row>
+                               
+         </ion-card>
+</ion-content>

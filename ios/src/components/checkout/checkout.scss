@@ -1,0 +1,21 @@
+checkout {
+	.no-margin{
+		margin:0px !important;
+	}
+	.title-border{
+		border-bottom:1px solid rgb(240, 237, 237);
+		font-size:15px;
+		font-weight:bold;
+		padding-left:10px;
+	}
+	.card-content{
+		/* padding-left:10px; */
+	}
+	.scroll-content{
+		background: white !important;
+	}
+	.badge-md{
+		color: black;
+		background: gold !important;
+	}
+}

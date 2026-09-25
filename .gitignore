@@ -1,0 +1,19 @@
+# dependencies
+node_modules/
+
+# ionic build output
+www/
+dist/
+.sourcemaps/
+
+# cordova generated native projects (rebuilt by `cordova platform add` / `cordova prepare`)
+platforms/
+plugins/
+
+# macOS
+.DS_Store
+._*
+
+# Firebase service-account private keys - never commit
+*firebase-adminsdk*.json
+*-fcm.json

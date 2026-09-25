@@ -1,0 +1,163 @@
+
+<!--  <ion-grid>
+	  <ion-row>
+		<ion-col col-9 col-sm-6 col-md-4 col-lg-2 col-xl-2>
+		   <ion-item>
+			<ion-input type="number" placeholder="Enter order no."></ion-input>
+		  </ion-item>
+		</ion-col>
+		<ion-col col-3 col-sm-3 col-md-2 col-lg-2 col-xl-1>
+		  <button ion-button clear>Go</button>
+		</ion-col>
+	  </ion-row>
+  </ion-grid> -->
+
+
+  <ion-list-header style="background: #fff;color: black !important;font-weight: 500 !important;"> ORDER
+	DETAILS <ion-badge item-end color="danger">{{
+	dashboarddata.allorders.deliveryready +
+	dashboarddata.allorders.workinprocess +
+	dashboarddata.allorders.pendingacceptence +
+	dashboarddata.allorders.rejected +
+	dashboarddata.allorders.accepted +
+	dashboarddata.allorders.overdue }}</ion-badge> </ion-list-header>
+
+<ion-row style="text-align: center;margin-bottom: 5px;">
+	<ion-col col-4 [ngClass]="animateClass" (click)="openList('PD')"> <ion-icon
+		style="font-size: xx-large;color: black;" name="ios-alert-outline"></ion-icon>
+	<div style="padding: 3px; color: black;font-weight: 500;">Pending Orders</div>
+	<div *ngIf="showSpinner" ><ion-spinner name="dots" ></ion-spinner></div>
+	<div style='display:none !important;font-weight: bold; color: #D48D77' *ngIf="!showSpinner">{{dashboarddata.allorders.pendingacceptence}}({{dashboarddata.catalogorders.pendingacceptence}}
+		/ {{dashboarddata.customerorders.pendingacceptence}})</div>
+		<div style='font-weight: bold; color: #D48D77' *ngIf="!showSpinner">{{dashboarddata.allorders.pendingacceptence}}</div>
+
+	</ion-col>
+
+	<ion-col col-4 [ngClass]="animateClass" (click)="openList('AC')"> <ion-icon
+		style="font-size: xx-large;color: black;" name="ios-timer-outline"></ion-icon>
+	<div style="padding: 3px; color: black;font-weight: 500;">Accept Orders</div>
+	<div *ngIf="showSpinner" ><ion-spinner name="dots" ></ion-spinner></div>
+	<div style='display:none !important;font-weight: bold; color: #D48D77' *ngIf="!showSpinner">{{dashboarddata.allorders.accepted}}({{dashboarddata.catalogorders.accepted}}
+		/ {{dashboarddata.customerorders.accepted}})</div>
+		<div style='font-weight: bold; color: #D48D77' *ngIf="!showSpinner">{{dashboarddata.allorders.accepted}}</div>
+
+	</ion-col>
+
+	<ion-col col-4 [ngClass]="animateClass" (click)="openList('IP')">  <ion-icon
+		style="font-size: xx-large; color: black;" name="sync"></ion-icon>
+	<div style="padding: 3px; color: black;font-weight: 500;">In progress</div>
+	<div *ngIf="showSpinner" ><ion-spinner name="dots" ></ion-spinner></div>
+	<div  *ngIf="!showSpinner" style='display:none !important;font-weight: bold; color: #D48D77'>{{dashboarddata.allorders.workinprocess}}({{dashboarddata.catalogorders.workinprocess}}
+		/ {{dashboarddata.customerorders.workinprocess}})</div>
+	<div  *ngIf="!showSpinner" style='font-weight: bold; color: #D48D77'>{{dashboarddata.allorders.workinprocess}}</div>
+</ion-col>
+
+ </ion-row>
+
+<ion-row style="text-align: center;margin-bottom: 5px;">
+
+	<ion-col (click)="openList('RD')"
+	col-4 [ngClass]="animateClass"> <ion-icon
+	style="font-size: xx-large; color: black;"
+	name="checkmark-circle-outline"></ion-icon>
+<div style="padding: 3px; color: black;font-weight: 500;" >Ready</div>
+<div *ngIf="showSpinner"><ion-spinner name="dots" ></ion-spinner></div>
+<div  *ngIf="!showSpinner" style='display:none !important;font-weight: bold; color: #D48D77' >{{dashboarddata.allorders.deliveryready}}({{dashboarddata.catalogorders.deliveryready}}
+	/ {{dashboarddata.customerorders.deliveryready}})</div>
+	<div  *ngIf="!showSpinner" style='font-weight: bold; color: #D48D77' >{{dashboarddata.allorders.deliveryready}}</div>
+
+</ion-col>
+
+<ion-col (click)="openList('RJ')"
+col-4 [ngClass]="animateClass">
+<ion-icon
+	style="font-size: xx-large;color: black;" name="remove-circle"></ion-icon>
+<div style="padding: 3px; color: black;font-weight: 500;">Rejected</div>
+<div *ngIf="showSpinner" ><ion-spinner name="dots" ></ion-spinner></div>
+<div  *ngIf="!showSpinner" style='display:none !important;font-weight: bold; color: #D48D77'>{{dashboarddata.allorders.rejected}}({{dashboarddata.catalogorders.rejected}}
+	/ {{dashboarddata.customerorders.rejected}})</div>
+<div  *ngIf="!showSpinner" style='font-weight: bold; color: #D48D77'>{{dashboarddata.allorders.rejected}}</div>
+
+</ion-col>
+
+<ion-col col-4 [ngClass]="animateClass" (click)="openList('OD')" ><ion-icon
+	style="font-size: xx-large;    color: black;" name="ios-time-outline"></ion-icon>
+<div style="padding: 3px; color: black;font-weight: 500;">Over due</div>
+<div *ngIf="showSpinner" ><ion-spinner name="dots" ></ion-spinner></div>
+<div  *ngIf="!showSpinner" style='display:none !important;font-weight: bold; color: #D48D77'>{{dashboarddata.allorders.overdue}}({{dashboarddata.catalogorders.overdue}}
+	/ {{dashboarddata.customerorders.overdue}})</div>
+<div  *ngIf="!showSpinner" style='font-weight: bold; color: #D48D77'>{{dashboarddata.allorders.overdue}}</div>
+</ion-col>  </ion-row>
+
+<ion-row style="text-align: center;margin-bottom: 5px;">
+	<ion-col col-4 [ngClass]="animateClass" (click)="openList('TO')"> <ion-icon
+		style="font-size: xx-large; color: black;" name="ios-cart-outline"></ion-icon>
+	<div style="padding: 3px; color: black;font-weight: 500;">Today's Order</div>
+	<div *ngIf="showSpinner" ><ion-spinner name="dots" ></ion-spinner></div>
+	<div *ngIf="!showSpinner" style='display:none !important;font-weight: bold; color: #D48D77'>{{dashboarddata.allorders.todayorder}}({{dashboarddata.catalogorders.todayorder}}
+		/ {{dashboarddata.customerorders.todayorder}})</div>
+	<div *ngIf="!showSpinner" style='font-weight: bold; color: #D48D77'>{{dashboarddata.allorders.todayorder}}</div>
+	</ion-col>
+	<ion-col col-4 [ngClass]="animateClass" (click)="openList('PO')"> <ion-icon
+		style="font-size: xx-large; color: black;" name="ios-pie-outline"></ion-icon>
+	<div style="padding: 3px; color: black;font-weight: 500;">Partial Order</div>
+	<div *ngIf="showSpinner" ><ion-spinner name="dots" ></ion-spinner></div>
+	<div *ngIf="!showSpinner" style='display:none !important;font-weight: bold; color: #D48D77'>{{dashboarddata.allorders.partialorder}}({{dashboarddata.catalogorders.partialorder}}
+		/ {{dashboarddata.customerorders.partialorder}})</div>
+	<div *ngIf="!showSpinner" style='font-weight: bold; color: #D48D77'>{{dashboarddata.allorders.partialorder}}</div>
+	</ion-col>
+</ion-row>
+
+
+<!-- <ion-list-header style="background: #eee;"> URGENT
+ORDERS <ion-badge item-end color="danger">{{
+dashboarddata.urgentorders.deliveryready +
+dashboarddata.urgentorders.workinprocess +
+dashboarddata.urgentorders.pendingacceptence +
+dashboarddata.urgentorders.rejected }}
+
+</ion-badge>
+</ion-list-header>
+<ion-row style="text-align: center;margin-bottom: 5px;"> <ion-col
+	col-4 [ngClass]="animateClass"> <ion-icon
+	style="font-size: xx-large; color: #848080;"
+	name="checkmark-circle-outline"></ion-icon>
+<div style="padding: 3px; color: #848080;">Ready</div>
+<div style='font-weight: bold; color: #D48D77'>{{dashboarddata.urgentorders.deliveryready}}({{dashboarddata.urgentcatalogorders.deliveryready}}
+	/ {{dashboarddata.urgentcustomerorders.deliveryready}})</div>
+
+</ion-col> <ion-col col-4 [ngClass]="animateClass"> <ion-icon
+	style="font-size: xx-large; color: #848080;" name="sync"></ion-icon>
+<div style="padding: 3px; color: #848080;">In progress</div>
+<div style='font-weight: bold; color: #D48D77'>{{dashboarddata.urgentorders.workinprocess}}({{dashboarddata.urgentcatalogorders.workinprocess}}
+	/ {{dashboarddata.urgentcustomerorders.workinprocess}})</div>
+
+</ion-col> <ion-col col-4 [ngClass]="animateClass"> <ion-icon
+	style="font-size: xx-large;color: #848080;" name="ios-timer-outline"></ion-icon>
+<div style="padding: 3px; color: #848080;">Pending</div>
+<div style='font-weight: bold; color: #D48D77'>{{dashboarddata.urgentorders.pendingacceptence}}({{dashboarddata.urgentcatalogorders.pendingacceptence}}
+	/ {{dashboarddata.urgentcustomerorders.pendingacceptence}})</div>
+
+</ion-col> </ion-row>
+
+<ion-row style="text-align: center;margin-bottom: 5px;"> <ion-col
+	col-4 [ngClass]="animateClass"> <ion-icon
+	style="font-size: xx-large;color: #848080;" name="remove-circle"></ion-icon>
+<div style="padding: 3px; color: #848080;">Rejected</div>
+<div style='font-weight: bold; color: #D48D77'>{{dashboarddata.urgentorders.rejected}}({{dashboarddata.urgentcatalogorders.rejected}}
+	/ {{dashboarddata.urgentcustomerorders.rejected}})</div>
+
+</ion-col> <ion-col col-4 [ngClass]="animateClass"> <ion-icon
+	style="font-size: xx-large;    color: #848080;" name="ios-time-outline"></ion-icon>
+<div style="padding: 3px; color: #848080;">Over due</div>
+<div style='font-weight: bold; color: #D48D77'>{{dashboarddata.urgentorders.overdue}}({{dashboarddata.urgentcatalogorders.overdue}}
+	/ {{dashboarddata.urgentcustomerorders.overdue}})</div>
+</ion-col> <ion-col col-4 [ngClass]="animateClass"> <ion-icon
+	style="font-size: xx-large; color: #848080;" name="ios-cart-outline"></ion-icon>
+<div style="padding: 3px; color: #848080;">Today's Order</div>
+<div style='font-weight: bold; color: #D48D77'>{{dashboarddata.urgentorders.todayorder}}({{dashboarddata.urgentcatalogorders.todayorder}}
+	/ {{dashboarddata.urgentcustomerorders.todayorder}})</div>
+</ion-col> </ion-row> -->
+
+
+

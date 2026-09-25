@@ -1,0 +1,117 @@
+page-product-detail {
+.card-header-md{
+	 padding:6px !important;
+	}
+ion-card-header
+	{
+		padding:6px !important;
+	}
+    ion-card {
+        position: relative;
+        /*height: 130px;*/
+        width: 100% !important;
+    }
+    .card-md{
+        box-shadow: none !important;
+    }
+    ion-navbar.toolbar {
+        padding-top: 3px !important;
+    }
+    .text-input-ios{
+        text-align: center;
+        // font-weight: bold;
+        margin: 10px 8px !important;
+
+    }
+    .gallery-title {
+        position: absolute;
+        left: 0;
+        right: 0;
+        padding: 10px;
+        background-color: rgba(37, 37, 37, 0.5)!important;
+        bottom: 0;
+        min-height: 45px;
+        border-bottom: 1px solid transparent !important;
+        ion-icon {
+            position: absolute;
+            right: 10px;
+            top: 20px;
+            color: theme-colors('textColors', 'primary');
+            font-size: icon-size('icon-small');
+        }
+    }
+    .blk{
+        color: black !important;
+    }
+    .label-md{
+        font-weight: initial !important;
+    }
+    .noblk{
+        color: white !important;
+    }
+    ion-row {
+        display: block;
+        &[responsive-md] [width-25] {
+            width: 50%;
+            display: block;
+            float: left;
+        }
+    }
+    .zoom-in {
+        -webkit-animation: zoomIn 500ms;
+        -moz-animation: zoomIn 500ms;
+        -o-animation: zoomIn 500ms;
+        animation: zoomIn 500ms;
+    }
+   ion-card img {
+   	width: unset;
+   	}
+	.block {
+	
+	  .deleteIcon {
+		position: absolute !important;
+		color: red !important;
+		margin-left: 80% !important;
+	  }
+	  .deleteIcon:before {
+		font-size: 30px !important;
+	  }
+     }
+     .subcat{
+         padding:10px !important;
+         border-bottom:3px solid #387ef5 !important;
+         color:#387ef5;
+         font-weight: bold;
+     }
+     .outofstock{
+		font-size: 11px;
+        color: red;
+        margin-left: 7px;
+
+	}
+    .instock{
+		font-size: 11px;
+        color: #5ca7e2;
+        margin-left: 7px;
+
+    }
+    .item-md{
+        background-color: transparent !important;
+    }
+    .scroll-content{
+        margin-bottom: 0px !important;
+    }
+    .button-md{
+        border-radius: 10px !important;
+    }
+    .scroll-content{
+        margin-bottom: 50px !important;
+    }
+    ion-scroll.scroll-x .scroll-content{
+        margin-bottom: 0px !important;
+    }
+    textarea.text-input{
+        height: 60px !important;
+    }
+    
+}
